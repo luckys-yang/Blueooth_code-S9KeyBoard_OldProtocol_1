@@ -1,0 +1,10 @@
+.\objects\ls_hal_dmac.o: hal_driver\src\ls_hal_dmac.c
+.\objects\ls_hal_dmac.o: .\hal_driver\api\ls_hal_dmac.h
+.\objects\ls_hal_dmac.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\ls_hal_dmac.o: .\soc\arm_cm\le501x\integration\dmac_config.h
+.\objects\ls_hal_dmac.o: .\soc\arm_cm\le501x\integration\ls_msp_dmac.h
+.\objects\ls_hal_dmac.o: .\hal_driver\inc\reg_dmac_type.h
+.\objects\ls_hal_dmac.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\ls_hal_dmac.o: .\soc\arm_cm\le501x\integration\reg_base_addr.h
+.\objects\ls_hal_dmac.o: .\soc\field_manipulate.h
+.\objects\ls_hal_dmac.o: .\soc\cpu.h

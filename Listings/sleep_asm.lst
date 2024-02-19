@@ -1,0 +1,123 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000         #line   1                "soc\\arm_cm\\le501x\\compiler\
+\armcc\\sleep_asm.S"
+    1 00000000                 PRESERVE8
+    2 00000000                 THUMB
+    3 00000000                 AREA             |.xip_banned.sleep_recover_asm|
+, CODE, READONLY
+    4 00000000         cpu_sleep_asm
+                               PROC
+    5 00000000                 EXPORT           cpu_sleep_asm
+    6 00000000                 IMPORT           before_wfi
+    7 00000000                 IMPORT           store_psp_return_msp_and_addr
+    8 00000000 4640            mov              r0, r8
+    9 00000002 4649            mov              r1, r9
+   10 00000004 4652            mov              r2, r10
+   11 00000006 465B            mov              r3, r11
+   12 00000008 B5FF            PUSH             {R0,R1,R2,R3,R4,R5,R6,R7,LR}
+   13 0000000A F7FF FFFE       BL               store_psp_return_msp_and_addr
+   14 0000000E 6008            STR              R0,[R1,#0]
+   15 00000010 F7FF FFFE       BL               before_wfi
+   16 00000014 BF30            WFI
+   17 00000016                 ENDP
+   18 00000016         
+   19 00000016                 AREA             |.xip_banned.sleep_recover_asm|
+, CODE, READONLY
+   20 00000016         cpu_recover_asm
+                               PROC
+   21 00000016                 EXPORT           cpu_recover_asm
+   22 00000016                 IMPORT           restore_psp
+   23 00000016                 IMPORT           after_wfi
+   24 00000016 F7FF FFFE       BL               restore_psp
+   25 0000001A F7FF FFFE       BL               after_wfi
+   26 0000001E BCFF            POP              {R0,R1,R2,R3,R4,R5,R6,R7}
+   27 00000020 4680            mov              r8, r0
+   28 00000022 4689            mov              r9, r1
+   29 00000024 4692            mov              r10, r2
+   30 00000026 469B            mov              r11, r3
+   31 00000028 BD00            POP              {PC}
+   32 0000002A                 ENDP
+   33 0000002A         
+   34 0000002A                 END
+Command Line: --debug --xref --cpreproc --diag_suppress=9931,1 --cpu=Cortex-M0 
+--apcs=interwork --depend=.\objects\sleep_asm.d -o.\objects\sleep_asm.o -IC:\Us
+ers\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Includ
+e -IC:\Keil_v5\ARM\CMSIS\Include --predefine="__MICROLIB SETA 1" --predefine="_
+_UVISION_VERSION SETA 536" --predefine="LE501X SETA 1" --cpreproc_opts=-DLE501X
+ --list=.\listings\sleep_asm.lst soc\arm_cm\le501x\compiler\armcc\sleep_asm.S
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+.xip_banned.sleep_recover_asm 00000000
+
+Symbol: .xip_banned.sleep_recover_asm
+   Definitions
+      At line 3 in file soc\\arm_cm\\le501x\\compiler\\armcc\\sleep_asm.S
+   Uses
+      None
+Comment: .xip_banned.sleep_recover_asm unused
+cpu_recover_asm 00000016
+
+Symbol: cpu_recover_asm
+   Definitions
+      At line 20 in file soc\\arm_cm\\le501x\\compiler\\armcc\\sleep_asm.S
+   Uses
+      At line 21 in file soc\\arm_cm\\le501x\\compiler\\armcc\\sleep_asm.S
+Comment: cpu_recover_asm used once
+cpu_sleep_asm 00000000
+
+Symbol: cpu_sleep_asm
+   Definitions
+      At line 4 in file soc\\arm_cm\\le501x\\compiler\\armcc\\sleep_asm.S
+   Uses
+      At line 5 in file soc\\arm_cm\\le501x\\compiler\\armcc\\sleep_asm.S
+Comment: cpu_sleep_asm used once
+3 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+External symbols
+
+after_wfi 00000000
+
+Symbol: after_wfi
+   Definitions
+      At line 23 in file soc\\arm_cm\\le501x\\compiler\\armcc\\sleep_asm.S
+   Uses
+      At line 25 in file soc\\arm_cm\\le501x\\compiler\\armcc\\sleep_asm.S
+Comment: after_wfi used once
+before_wfi 00000000
+
+Symbol: before_wfi
+   Definitions
+      At line 6 in file soc\\arm_cm\\le501x\\compiler\\armcc\\sleep_asm.S
+   Uses
+      At line 15 in file soc\\arm_cm\\le501x\\compiler\\armcc\\sleep_asm.S
+Comment: before_wfi used once
+restore_psp 00000000
+
+Symbol: restore_psp
+   Definitions
+      At line 22 in file soc\\arm_cm\\le501x\\compiler\\armcc\\sleep_asm.S
+   Uses
+      At line 24 in file soc\\arm_cm\\le501x\\compiler\\armcc\\sleep_asm.S
+Comment: restore_psp used once
+store_psp_return_msp_and_addr 00000000
+
+Symbol: store_psp_return_msp_and_addr
+   Definitions
+      At line 7 in file soc\\arm_cm\\le501x\\compiler\\armcc\\sleep_asm.S
+   Uses
+      At line 13 in file soc\\arm_cm\\le501x\\compiler\\armcc\\sleep_asm.S
+Comment: store_psp_return_msp_and_addr used once
+4 symbols
+340 symbols in table

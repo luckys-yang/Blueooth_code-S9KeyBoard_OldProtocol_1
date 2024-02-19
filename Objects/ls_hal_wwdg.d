@@ -1,0 +1,9 @@
+.\objects\ls_hal_wwdg.o: hal_driver\src\ls_hal_wwdg.c
+.\objects\ls_hal_wwdg.o: .\hal_driver\api\ls_hal_wwdg.h
+.\objects\ls_hal_wwdg.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\ls_hal_wwdg.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\ls_hal_wwdg.o: .\hal_driver\api\HAL_def.h
+.\objects\ls_hal_wwdg.o: .\soc\arm_cm\le501x\integration\ls_msp_wwdg.h
+.\objects\ls_hal_wwdg.o: .\hal_driver\inc\reg_wwdg_type.h
+.\objects\ls_hal_wwdg.o: .\soc\arm_cm\le501x\integration\reg_base_addr.h
+.\objects\ls_hal_wwdg.o: .\soc\field_manipulate.h

@@ -1,0 +1,10 @@
+.\objects\ls_hal_adcv2_dma.o: hal_driver\src\ls_hal_adcv2_dma.c
+.\objects\ls_hal_adcv2_dma.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\objects\ls_hal_adcv2_dma.o: .\hal_driver\api\ls_hal_adcv2.h
+.\objects\ls_hal_adcv2_dma.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\ls_hal_adcv2_dma.o: .\hal_driver\api\HAL_def.h
+.\objects\ls_hal_adcv2_dma.o: .\soc\arm_cm\le501x\integration\ls_msp_adc.h
+.\objects\ls_hal_adcv2_dma.o: .\soc\arm_cm\le501x\integration\reg_base_addr.h
+.\objects\ls_hal_adcv2_dma.o: .\hal_driver\inc\reg_adc_type.h
+.\objects\ls_hal_adcv2_dma.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\ls_hal_adcv2_dma.o: .\hal_driver\api\ls_hal_dmacv2.h

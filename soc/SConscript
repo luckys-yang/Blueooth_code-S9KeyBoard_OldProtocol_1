@@ -1,0 +1,51 @@
+import os
+
+Import('env')
+plf = {
+    'le501x': 'arm_cm',
+    'lm3050': 'arm_cm',
+    'sccc9xx': 'arm_cm',
+}
+if env.get('IC') is None:
+    env['IC'] = ARGUMENTS.get('ic','le501x')
+env['BASE_ARCH'] = plf[env['IC']]
+env['CPPDEFINES'] = [env['IC'].upper()]
+
+def variant_dir_source(self,srcs):
+    def variant_dir_map(x):
+        relpath = os.path.relpath(self.subst(x),Dir('#').abspath)
+        variant_src = os.path.join('build/$IC/',relpath.replace('..','__'))
+        self.VariantDir(os.path.dirname(variant_src),os.path.normpath(os.path.dirname(relpath)),duplicate = 0)
+        return self.subst(variant_src)
+    return [variant_dir_map(x) for x in srcs]
+
+def inc_dirs(self,dirs):
+    return [os.path.relpath(self.subst(x),Dir('#').abspath) for x in dirs]
+
+def image_build(self,name,src,inc,ble=False,mesh=False,rtos = None,with_startup = True,objprefix = ''):
+    self.Append(CPPPATH = self.inc_dirs(inc))
+    self.Append(CCFLAGS = ['-Werror'])
+    self.Append(LINKFLAGS = ' $GC_OPTION ')
+    return self.plf_build(name,src,rtos,with_startup,ble,mesh,objprefix)
+
+def app_build(self,app_name,src,inc,ble = True,mesh = False,rtos = None):
+    target = self.image_build(app_name,src,inc,ble,mesh,rtos)
+    self.plf_postaction(target)
+
+env.AddMethod(image_build)
+env.AddMethod(app_build)
+env.AddMethod(variant_dir_source)
+env.AddMethod(inc_dirs)
+
+SConscript(dirs = env['BASE_ARCH'], exports = ['env'])
+flags = env.ParseFlags(ARGUMENTS.get('flags'))
+env.MergeFlags(flags)
+
+### default build parameters
+for v in flags['CCFLAGS']:
+    print(v)
+    if '-O' in v:
+        env['DEFAULT_OPT_LVL'] = ''
+        break
+env.MergeFlags(env['DEFAULT_OPT_LVL'])
+

@@ -1,0 +1,12 @@
+.\objects\ls_hal_iwdgv2.o: hal_driver\src\ls_hal_iwdgv2.c
+.\objects\ls_hal_iwdgv2.o: .\hal_driver\api\ls_hal_iwdgv2.h
+.\objects\ls_hal_iwdgv2.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\ls_hal_iwdgv2.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+.\objects\ls_hal_iwdgv2.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\ls_hal_iwdgv2.o: .\hal_driver\api\HAL_def.h
+.\objects\ls_hal_iwdgv2.o: .\soc\arm_cm\le501x\integration\ls_msp_iwdg.h
+.\objects\ls_hal_iwdgv2.o: .\hal_driver\inc\reg_iwdg_type.h
+.\objects\ls_hal_iwdgv2.o: .\soc\arm_cm\le501x\integration\reg_base_addr.h
+.\objects\ls_hal_iwdgv2.o: .\soc\field_manipulate.h
+.\objects\ls_hal_iwdgv2.o: .\soc\cpu.h
+.\objects\ls_hal_iwdgv2.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h

@@ -1,0 +1,15 @@
+.\objects\ls_hal_timer.o: hal_driver\src\ls_hal_timer.c
+.\objects\ls_hal_timer.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\objects\ls_hal_timer.o: .\hal_driver\api\ls_hal_timer.h
+.\objects\ls_hal_timer.o: .\soc\arm_cm\le501x\integration\ls_msp_timer.h
+.\objects\ls_hal_timer.o: .\soc\arm_cm\le501x\integration\reg_base_addr.h
+.\objects\ls_hal_timer.o: .\hal_driver\inc\reg_timer_type.h
+.\objects\ls_hal_timer.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\ls_hal_timer.o: .\soc\sdk_config.h
+.\objects\ls_hal_timer.o: .\USER\User_SDK_Config.h
+.\objects\ls_hal_timer.o: .\soc\arm_cm\le501x\sdk_default_config.h
+.\objects\ls_hal_timer.o: .\hal_driver\api\HAL_def.h
+.\objects\ls_hal_timer.o: .\soc\field_manipulate.h
+.\objects\ls_hal_timer.o: .\module\debug\ls_dbg.h
+.\objects\ls_hal_timer.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+.\objects\ls_hal_timer.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h

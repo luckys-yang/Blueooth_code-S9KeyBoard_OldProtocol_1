@@ -1,0 +1,10 @@
+.\objects\cpu.o: soc\arm_cm\le501x\cpu.c
+.\objects\cpu.o: soc\arm_cm\le501x\le501x.h
+.\objects\cpu.o: .\soc\arm_cm\cmsis\core_cm0.h
+.\objects\cpu.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\cpu.o: .\soc\arm_cm\cmsis\cmsis_version.h
+.\objects\cpu.o: .\soc\arm_cm\cmsis\cmsis_compiler.h
+.\objects\cpu.o: .\soc\arm_cm\cmsis\cmsis_armcc.h
+.\objects\cpu.o: .\soc\cpu.h
+.\objects\cpu.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\cpu.o: .\soc\compile_flag.h

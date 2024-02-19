@@ -1,0 +1,11 @@
+.\objects\ls_hal_pdm.o: hal_driver\src\ls_hal_pdm.c
+.\objects\ls_hal_pdm.o: .\hal_driver\api\ls_hal_pdm.h
+.\objects\ls_hal_pdm.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\ls_hal_pdm.o: .\hal_driver\api\HAL_def.h
+.\objects\ls_hal_pdm.o: .\soc\arm_cm\le501x\integration\ls_msp_pdm.h
+.\objects\ls_hal_pdm.o: .\hal_driver\inc\reg_pdm_type.h
+.\objects\ls_hal_pdm.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\ls_hal_pdm.o: .\soc\arm_cm\le501x\integration\reg_base_addr.h
+.\objects\ls_hal_pdm.o: .\soc\field_manipulate.h
+.\objects\ls_hal_pdm.o: .\module\common\common.h
+.\objects\ls_hal_pdm.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h

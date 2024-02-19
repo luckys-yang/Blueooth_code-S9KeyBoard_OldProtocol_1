@@ -1,0 +1,13 @@
+.\objects\sw_timer.o: module\common\sw_timer.c
+.\objects\sw_timer.o: module\common\sw_timer_int.h
+.\objects\sw_timer.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\sw_timer.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\sw_timer.o: module\common\sw_timer.h
+.\objects\sw_timer.o: module\common\circular_doubly_linked_list.h
+.\objects\sw_timer.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\objects\sw_timer.o: .\soc\arm_cm\le501x\sw_timer_port.h
+.\objects\sw_timer.o: module\common\common.h
+.\objects\sw_timer.o: .\soc\cpu.h
+.\objects\sw_timer.o: .\soc\compile_flag.h
+.\objects\sw_timer.o: .\module\debug\ls_dbg.h
+.\objects\sw_timer.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h

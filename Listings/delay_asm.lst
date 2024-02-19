@@ -1,0 +1,54 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000         #line   1                "soc\\arm_cm\\le501x\\compiler\
+\armcc\\delay_asm.S"
+    1 00000000                 PRESERVE8
+    2 00000000                 THUMB
+    3 00000000                 AREA             |.xip_banned.arm_cm_delay_asm|,
+ CODE, READONLY
+    4 00000000                 FRAME            UNWIND ON
+    5 00000000         arm_cm_delay_asm
+                               PROC
+    6 00000000                 EXPORT           arm_cm_delay_asm
+    7 00000000 1E40            SUBS             r0,r0,#1
+    8 00000002 2800            CMP              r0,#0
+    9 00000004 D1FE            BNE              arm_cm_delay_asm
+   10 00000006 4770            BX               LR
+   11 00000008                 ENDP
+   12 00000008         
+   13 00000008                 END
+Command Line: --debug --xref --cpreproc --diag_suppress=9931,1 --cpu=Cortex-M0 
+--apcs=interwork --depend=.\objects\delay_asm.d -o.\objects\delay_asm.o -IC:\Us
+ers\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Includ
+e -IC:\Keil_v5\ARM\CMSIS\Include --predefine="__MICROLIB SETA 1" --predefine="_
+_UVISION_VERSION SETA 536" --predefine="LE501X SETA 1" --cpreproc_opts=-DLE501X
+ --list=.\listings\delay_asm.lst soc\arm_cm\le501x\compiler\armcc\delay_asm.S
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+.xip_banned.arm_cm_delay_asm 00000000
+
+Symbol: .xip_banned.arm_cm_delay_asm
+   Definitions
+      At line 3 in file soc\\arm_cm\\le501x\\compiler\\armcc\\delay_asm.S
+   Uses
+      None
+Comment: .xip_banned.arm_cm_delay_asm unused
+arm_cm_delay_asm 00000000
+
+Symbol: arm_cm_delay_asm
+   Definitions
+      At line 5 in file soc\\arm_cm\\le501x\\compiler\\armcc\\delay_asm.S
+   Uses
+      At line 6 in file soc\\arm_cm\\le501x\\compiler\\armcc\\delay_asm.S
+      At line 9 in file soc\\arm_cm\\le501x\\compiler\\armcc\\delay_asm.S
+
+2 symbols
+335 symbols in table

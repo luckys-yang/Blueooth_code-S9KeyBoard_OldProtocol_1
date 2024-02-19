@@ -1,0 +1,95 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000         #line   1                "soc\\arm_cm\\le501x\\compiler\
+\armcc\\svcall_asm.S"
+    1 00000000                 PRESERVE8
+    2 00000000                 THUMB
+    3 00000000                 AREA             |.text.SVC_Handler|, CODE, READ
+ONLY
+    4 00000000                 FRAME            UNWIND ON
+    5 00000000         SVC_Handler
+                               PROC
+    6 00000000                 EXPORT           SVC_Handler
+    7 00000000                 IMPORT           SVC_Handler_C
+    8 00000000 2004            MOVS             R0,#4
+    9 00000002 4671            MOV              R1,LR
+   10 00000004 4208            TST              R0,R1
+   11 00000006 D002            BEQ              stacking_used_MSP
+   12 00000008 F3EF 8009       MRS              R0,PSP
+   13 0000000C E001            B                SVC_C_Routine
+   14 0000000E         stacking_used_MSP
+   15 0000000E F3EF 8008       MRS              R0,MSP
+   16 00000012         SVC_C_Routine
+   17 00000012 4901            LDR              R1,=SVC_Handler_C
+   18 00000014 4708            BX               R1
+   19 00000016 00 00           ALIGN
+   20 00000018                 ENDP
+   21 00000018         
+   22 00000018                 END
+              00000000 
+Command Line: --debug --xref --cpreproc --diag_suppress=9931,1 --cpu=Cortex-M0 
+--apcs=interwork --depend=.\objects\svcall_asm.d -o.\objects\svcall_asm.o -IC:\
+Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Incl
+ude -IC:\Keil_v5\ARM\CMSIS\Include --predefine="__MICROLIB SETA 1" --predefine=
+"__UVISION_VERSION SETA 536" --predefine="LE501X SETA 1" --cpreproc_opts=-DLE50
+1X --list=.\listings\svcall_asm.lst soc\arm_cm\le501x\compiler\armcc\svcall_asm
+.S
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+.text.SVC_Handler 00000000
+
+Symbol: .text.SVC_Handler
+   Definitions
+      At line 3 in file soc\\arm_cm\\le501x\\compiler\\armcc\\svcall_asm.S
+   Uses
+      None
+Comment: .text.SVC_Handler unused
+SVC_C_Routine 00000012
+
+Symbol: SVC_C_Routine
+   Definitions
+      At line 16 in file soc\\arm_cm\\le501x\\compiler\\armcc\\svcall_asm.S
+   Uses
+      At line 13 in file soc\\arm_cm\\le501x\\compiler\\armcc\\svcall_asm.S
+Comment: SVC_C_Routine used once
+SVC_Handler 00000000
+
+Symbol: SVC_Handler
+   Definitions
+      At line 5 in file soc\\arm_cm\\le501x\\compiler\\armcc\\svcall_asm.S
+   Uses
+      At line 6 in file soc\\arm_cm\\le501x\\compiler\\armcc\\svcall_asm.S
+Comment: SVC_Handler used once
+stacking_used_MSP 0000000E
+
+Symbol: stacking_used_MSP
+   Definitions
+      At line 14 in file soc\\arm_cm\\le501x\\compiler\\armcc\\svcall_asm.S
+   Uses
+      At line 11 in file soc\\arm_cm\\le501x\\compiler\\armcc\\svcall_asm.S
+Comment: stacking_used_MSP used once
+4 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+External symbols
+
+SVC_Handler_C 00000000
+
+Symbol: SVC_Handler_C
+   Definitions
+      At line 7 in file soc\\arm_cm\\le501x\\compiler\\armcc\\svcall_asm.S
+   Uses
+      At line 17 in file soc\\arm_cm\\le501x\\compiler\\armcc\\svcall_asm.S
+Comment: SVC_Handler_C used once
+1 symbol
+340 symbols in table

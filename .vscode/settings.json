@@ -1,0 +1,19 @@
+{
+    "editor.fontSize": 14,
+    "editor.fontFamily": "YaHei Consolas Hybrid, Consolas",
+    "files.associations": {
+        "allhead.h": "c",
+        "log.h": "c",
+        "limits": "c",
+        "memory": "c",
+        "string": "c",
+        "ls_hal_dmac.h": "c",
+        "reg_uart_type.h": "c",
+        "ls_dbg.h": "c",
+        "ls_soc_gpio.h": "c",
+        "ls_hal_iwdg.h": "c",
+        "ls_ble.h": "c",
+        "builtin_timer.h": "c",
+        "cmsis_armcc.h": "c"
+    }
+}

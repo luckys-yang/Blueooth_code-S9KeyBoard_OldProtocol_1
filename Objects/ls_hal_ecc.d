@@ -1,0 +1,11 @@
+.\objects\ls_hal_ecc.o: hal_driver\src\ls_hal_ecc.c
+.\objects\ls_hal_ecc.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\ls_hal_ecc.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\ls_hal_ecc.o: .\hal_driver\api\ls_hal_ecc.h
+.\objects\ls_hal_ecc.o: .\soc\arm_cm\le501x\integration\ls_msp_ecc.h
+.\objects\ls_hal_ecc.o: .\soc\arm_cm\le501x\integration\reg_base_addr.h
+.\objects\ls_hal_ecc.o: .\hal_driver\inc\reg_ecc_type.h
+.\objects\ls_hal_ecc.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\ls_hal_ecc.o: .\module\common\common.h
+.\objects\ls_hal_ecc.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\objects\ls_hal_ecc.o: .\soc\field_manipulate.h

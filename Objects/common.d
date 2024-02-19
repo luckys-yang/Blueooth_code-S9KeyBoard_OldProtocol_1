@@ -1,0 +1,9 @@
+.\objects\common.o: module\common\common.c
+.\objects\common.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\common.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\common.o: module\common\common.h
+.\objects\common.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\common.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\objects\common.o: .\soc\compile_flag.h
+.\objects\common.o: module\common\co_math.h
+.\objects\common.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h

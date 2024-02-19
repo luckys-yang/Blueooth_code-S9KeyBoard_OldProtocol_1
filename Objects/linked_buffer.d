@@ -1,0 +1,11 @@
+.\objects\linked_buffer.o: module\static_buffer\linked_buffer.c
+.\objects\linked_buffer.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+.\objects\linked_buffer.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\linked_buffer.o: module\static_buffer\linked_buffer.h
+.\objects\linked_buffer.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\objects\linked_buffer.o: .\module\common\co_list.h
+.\objects\linked_buffer.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\linked_buffer.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\linked_buffer.o: .\module\common\common.h
+.\objects\linked_buffer.o: .\module\debug\ls_dbg.h
+.\objects\linked_buffer.o: .\soc\compile_flag.h

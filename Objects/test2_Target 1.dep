@@ -1,0 +1,1214 @@
+Dependencies for Project 'test2', Target 'Target 1': (DO NOT MODIFY !)
+CompilerVersion: 5060960::V5.06 update 7 (build 960)::.\ARMCC
+F (.\USER\main.c)(0x65C0741D)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\USER -I .\soc\arm_cm\le501x\integration -I .\soc\arm_cm\cmsis -I .\soc\arm_cm\le501x -I .\soc -I .\soc\arm_cm -I .\soc\arm_cm\le501x\compiler -I .\soc\arm_cm\le501x\bin -I .\soc\arm_cm\le501x\compiler\armcc -I .\hal_driver\api -I .\hal_driver\inc -I .\module\debug -I .\module\common -I .\module\tinyfs -I .\module\ble -I .\module\static_buffer -I .\module\crc -I .\module\ble\prf -I .\module\debug\RTT -I .\module\tinycrypt\lib\include -I .\module\settings  --diag_suppress=1,61,68,188,1295-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="536" -DLE501X -DLE501X-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+I (.\soc\arm_cm\le501x\integration\ls_soc_gpio.h)(0x64F84C22)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x63E9E314)
+I (.\soc\arm_cm\le501x\integration\ls_soc_pinmux.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\platform.h)(0x64F7E1A4)
+I (.\soc\sdk_config.h)(0x65C0740C)
+I (.\soc\arm_cm\le501x\sdk_default_config.h)(0x6563EA00)
+I (.\soc\compile_flag.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\le501x.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\core_cm0.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\cmsis_version.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\cmsis_compiler.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\cmsis_armcc.h)(0x63FF3646)
+I (.\module\debug\RTT\SEGGER_RTT.h)(0x63FF3646)
+I (.\module\debug\RTT\SEGGER_RTT_Conf.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x60252376)
+F (.\hal_driver\src\calc_div.c)(0x63FF3646)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\USER -I .\soc\arm_cm\le501x\integration -I .\soc\arm_cm\cmsis -I .\soc\arm_cm\le501x -I .\soc -I .\soc\arm_cm -I .\soc\arm_cm\le501x\compiler -I .\soc\arm_cm\le501x\bin -I .\soc\arm_cm\le501x\compiler\armcc -I .\hal_driver\api -I .\hal_driver\inc -I .\module\debug -I .\module\common -I .\module\tinyfs -I .\module\ble -I .\module\static_buffer -I .\module\crc -I .\module\ble\prf -I .\module\debug\RTT -I .\module\tinycrypt\lib\include -I .\module\settings  --diag_suppress=1,61,68,188,1295-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="536" -DLE501X -DLE501X-o .\objects\calc_div.o --omf_browse .\objects\calc_div.crf --depend .\objects\calc_div.d)
+I (.\hal_driver\api\calc_div.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x63E9E314)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (.\soc\field_manipulate.h)(0x63FF3646)
+I (.\hal_driver\inc\reg_calc_type.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\integration\reg_base_addr.h)(0x63FF3646)
+F (.\hal_driver\src\ls_hal_adc.c)(0x63FF3646)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\USER -I .\soc\arm_cm\le501x\integration -I .\soc\arm_cm\cmsis -I .\soc\arm_cm\le501x -I .\soc -I .\soc\arm_cm -I .\soc\arm_cm\le501x\compiler -I .\soc\arm_cm\le501x\bin -I .\soc\arm_cm\le501x\compiler\armcc -I .\hal_driver\api -I .\hal_driver\inc -I .\module\debug -I .\module\common -I .\module\tinyfs -I .\module\ble -I .\module\static_buffer -I .\module\crc -I .\module\ble\prf -I .\module\debug\RTT -I .\module\tinycrypt\lib\include -I .\module\settings  --diag_suppress=1,61,68,188,1295-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="536" -DLE501X -DLE501X-o .\objects\ls_hal_adc.o --omf_browse .\objects\ls_hal_adc.crf --depend .\objects\ls_hal_adc.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
+I (.\hal_driver\api\ls_hal_adc.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x63E9E314)
+I (.\hal_driver\api\HAL_def.h)(0x63FF3646)
+I (.\module\debug\ls_dbg.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x60252376)
+I (.\soc\sdk_config.h)(0x65C0740C)
+I (.\soc\arm_cm\le501x\sdk_default_config.h)(0x6563EA00)
+I (.\soc\arm_cm\le501x\integration\ls_msp_adc.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\integration\reg_base_addr.h)(0x63FF3646)
+I (.\hal_driver\inc\reg_adc_type.h)(0x63FF3646)
+I (.\soc\field_manipulate.h)(0x63FF3646)
+I (.\module\debug\log.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x6025237E)
+I (.\soc\systick.h)(0x63FF3646)
+F (.\hal_driver\src\ls_hal_adc_dma.c)(0x63FF3646)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\USER -I .\soc\arm_cm\le501x\integration -I .\soc\arm_cm\cmsis -I .\soc\arm_cm\le501x -I .\soc -I .\soc\arm_cm -I .\soc\arm_cm\le501x\compiler -I .\soc\arm_cm\le501x\bin -I .\soc\arm_cm\le501x\compiler\armcc -I .\hal_driver\api -I .\hal_driver\inc -I .\module\debug -I .\module\common -I .\module\tinyfs -I .\module\ble -I .\module\static_buffer -I .\module\crc -I .\module\ble\prf -I .\module\debug\RTT -I .\module\tinycrypt\lib\include -I .\module\settings  --diag_suppress=1,61,68,188,1295-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="536" -DLE501X -DLE501X-o .\objects\ls_hal_adc_dma.o --omf_browse .\objects\ls_hal_adc_dma.crf --depend .\objects\ls_hal_adc_dma.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x6025237E)
+I (.\hal_driver\api\ls_hal_adc.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x63E9E314)
+I (.\hal_driver\api\HAL_def.h)(0x63FF3646)
+I (.\module\debug\ls_dbg.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x60252376)
+I (.\soc\sdk_config.h)(0x65C0740C)
+I (.\soc\arm_cm\le501x\sdk_default_config.h)(0x6563EA00)
+I (.\soc\arm_cm\le501x\integration\ls_msp_adc.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\integration\reg_base_addr.h)(0x63FF3646)
+I (.\hal_driver\inc\reg_adc_type.h)(0x63FF3646)
+I (.\hal_driver\api\ls_hal_dmac.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\integration\dmac_config.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\integration\ls_msp_dmac.h)(0x63FF3646)
+I (.\hal_driver\inc\reg_dmac_type.h)(0x63FF3646)
+I (.\soc\field_manipulate.h)(0x63FF3646)
+F (.\hal_driver\src\ls_hal_cache.c)(0x63FF3646)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\USER -I .\soc\arm_cm\le501x\integration -I .\soc\arm_cm\cmsis -I .\soc\arm_cm\le501x -I .\soc -I .\soc\arm_cm -I .\soc\arm_cm\le501x\compiler -I .\soc\arm_cm\le501x\bin -I .\soc\arm_cm\le501x\compiler\armcc -I .\hal_driver\api -I .\hal_driver\inc -I .\module\debug -I .\module\common -I .\module\tinyfs -I .\module\ble -I .\module\static_buffer -I .\module\crc -I .\module\ble\prf -I .\module\debug\RTT -I .\module\tinycrypt\lib\include -I .\module\settings  --diag_suppress=1,61,68,188,1295-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="536" -DLE501X -DLE501X-o .\objects\ls_hal_cache.o --omf_browse .\objects\ls_hal_cache.crf --depend .\objects\ls_hal_cache.d)
+I (.\hal_driver\api\ls_hal_cache.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (.\soc\arm_cm\le501x\integration\ls_msp_cache.h)(0x63FF3646)
+I (.\hal_driver\inc\reg_cache_type.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\integration\reg_base_addr.h)(0x63FF3646)
+I (.\soc\field_manipulate.h)(0x63FF3646)
+I (.\soc\compile_flag.h)(0x63FF3646)
+F (.\hal_driver\src\ls_hal_crypt.c)(0x63FF3646)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\USER -I .\soc\arm_cm\le501x\integration -I .\soc\arm_cm\cmsis -I .\soc\arm_cm\le501x -I .\soc -I .\soc\arm_cm -I .\soc\arm_cm\le501x\compiler -I .\soc\arm_cm\le501x\bin -I .\soc\arm_cm\le501x\compiler\armcc -I .\hal_driver\api -I .\hal_driver\inc -I .\module\debug -I .\module\common -I .\module\tinyfs -I .\module\ble -I .\module\static_buffer -I .\module\crc -I .\module\ble\prf -I .\module\debug\RTT -I .\module\tinycrypt\lib\include -I .\module\settings  --diag_suppress=1,61,68,188,1295-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="536" -DLE501X -DLE501X-o .\objects\ls_hal_crypt.o --omf_browse .\objects\ls_hal_crypt.crf --depend .\objects\ls_hal_crypt.d)
+I (.\hal_driver\api\ls_hal_crypt.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x63E9E314)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (.\hal_driver\api\HAL_def.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\integration\ls_msp_crypt.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\integration\reg_base_addr.h)(0x63FF3646)
+I (.\hal_driver\inc\reg_crypt_type.h)(0x63FF3646)
+I (.\soc\field_manipulate.h)(0x63FF3646)
+I (.\module\debug\ls_dbg.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x60252376)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
+F (.\hal_driver\src\ls_hal_dmac.c)(0x63FF3646)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\USER -I .\soc\arm_cm\le501x\integration -I .\soc\arm_cm\cmsis -I .\soc\arm_cm\le501x -I .\soc -I .\soc\arm_cm -I .\soc\arm_cm\le501x\compiler -I .\soc\arm_cm\le501x\bin -I .\soc\arm_cm\le501x\compiler\armcc -I .\hal_driver\api -I .\hal_driver\inc -I .\module\debug -I .\module\common -I .\module\tinyfs -I .\module\ble -I .\module\static_buffer -I .\module\crc -I .\module\ble\prf -I .\module\debug\RTT -I .\module\tinycrypt\lib\include -I .\module\settings  --diag_suppress=1,61,68,188,1295-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="536" -DLE501X -DLE501X-o .\objects\ls_hal_dmac.o --omf_browse .\objects\ls_hal_dmac.crf --depend .\objects\ls_hal_dmac.d)
+I (.\hal_driver\api\ls_hal_dmac.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x63E9E314)
+I (.\soc\arm_cm\le501x\integration\dmac_config.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\integration\ls_msp_dmac.h)(0x63FF3646)
+I (.\hal_driver\inc\reg_dmac_type.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (.\soc\arm_cm\le501x\integration\reg_base_addr.h)(0x63FF3646)
+I (.\soc\field_manipulate.h)(0x63FF3646)
+I (.\soc\cpu.h)(0x63FF3646)
+F (.\hal_driver\src\ls_hal_ecc.c)(0x63FF3646)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\USER -I .\soc\arm_cm\le501x\integration -I .\soc\arm_cm\cmsis -I .\soc\arm_cm\le501x -I .\soc -I .\soc\arm_cm -I .\soc\arm_cm\le501x\compiler -I .\soc\arm_cm\le501x\bin -I .\soc\arm_cm\le501x\compiler\armcc -I .\hal_driver\api -I .\hal_driver\inc -I .\module\debug -I .\module\common -I .\module\tinyfs -I .\module\ble -I .\module\static_buffer -I .\module\crc -I .\module\ble\prf -I .\module\debug\RTT -I .\module\tinycrypt\lib\include -I .\module\settings  --diag_suppress=1,61,68,188,1295-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="536" -DLE501X -DLE501X-o .\objects\ls_hal_ecc.o --omf_browse .\objects\ls_hal_ecc.crf --depend .\objects\ls_hal_ecc.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x63E9E314)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
+I (.\hal_driver\api\ls_hal_ecc.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\integration\ls_msp_ecc.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\integration\reg_base_addr.h)(0x63FF3646)
+I (.\hal_driver\inc\reg_ecc_type.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (.\module\common\common.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x6025237E)
+I (.\soc\field_manipulate.h)(0x63FF3646)
+F (.\hal_driver\src\ls_hal_flash.c)(0x658BD61B)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\USER -I .\soc\arm_cm\le501x\integration -I .\soc\arm_cm\cmsis -I .\soc\arm_cm\le501x -I .\soc -I .\soc\arm_cm -I .\soc\arm_cm\le501x\compiler -I .\soc\arm_cm\le501x\bin -I .\soc\arm_cm\le501x\compiler\armcc -I .\hal_driver\api -I .\hal_driver\inc -I .\module\debug -I .\module\common -I .\module\tinyfs -I .\module\ble -I .\module\static_buffer -I .\module\crc -I .\module\ble\prf -I .\module\debug\RTT -I .\module\tinycrypt\lib\include -I .\module\settings  --diag_suppress=1,61,68,188,1295-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="536" -DLE501X -DLE501X-o .\objects\ls_hal_flash.o --omf_browse .\objects\ls_hal_flash.crf --depend .\objects\ls_hal_flash.d)
+I (.\hal_driver\inc\hal_flash_int.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x63E9E314)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x6025237E)
+I (.\soc\sdk_config.h)(0x65C0740C)
+I (.\soc\arm_cm\le501x\sdk_default_config.h)(0x6563EA00)
+I (.\hal_driver\api\ls_hal_flash.h)(0x655AD648)
+I (.\hal_driver\inc\hal_flash_svcall.h)(0x63FF3646)
+I (.\soc\cpu.h)(0x63FF3646)
+I (.\soc\compile_flag.h)(0x63FF3646)
+I (.\module\debug\ls_dbg.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x60252376)
+I (.\soc\arm_cm\le501x\platform.h)(0x64F7E1A4)
+I (.\soc\arm_cm\le501x\le501x.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\core_cm0.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\cmsis_version.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\cmsis_compiler.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\cmsis_armcc.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\flash_svcall_int.h)(0x63FF3646)
+I (.\soc\arm_cm\svcall.h)(0x63FF3646)
+I (.\soc\systick.h)(0x63FF3646)
+F (.\hal_driver\src\ls_hal_flash_qspi.c)(0x63FF3646)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\USER -I .\soc\arm_cm\le501x\integration -I .\soc\arm_cm\cmsis -I .\soc\arm_cm\le501x -I .\soc -I .\soc\arm_cm -I .\soc\arm_cm\le501x\compiler -I .\soc\arm_cm\le501x\bin -I .\soc\arm_cm\le501x\compiler\armcc -I .\hal_driver\api -I .\hal_driver\inc -I .\module\debug -I .\module\common -I .\module\tinyfs -I .\module\ble -I .\module\static_buffer -I .\module\crc -I .\module\ble\prf -I .\module\debug\RTT -I .\module\tinycrypt\lib\include -I .\module\settings  --diag_suppress=1,61,68,188,1295-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="536" -DLE501X -DLE501X-o .\objects\ls_hal_flash_qspi.o --omf_browse .\objects\ls_hal_flash_qspi.crf --depend .\objects\ls_hal_flash_qspi.d)
+I (.\hal_driver\inc\hal_flash_int.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x63E9E314)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x6025237E)
+I (.\soc\sdk_config.h)(0x65C0740C)
+I (.\soc\arm_cm\le501x\sdk_default_config.h)(0x6563EA00)
+I (.\hal_driver\api\ls_hal_flash.h)(0x655AD648)
+I (.\hal_driver\inc\hal_flash_svcall.h)(0x63FF3646)
+I (.\soc\cpu.h)(0x63FF3646)
+I (.\soc\compile_flag.h)(0x63FF3646)
+I (.\module\debug\ls_dbg.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x60252376)
+I (.\soc\arm_cm\le501x\platform.h)(0x64F7E1A4)
+I (.\soc\arm_cm\le501x\le501x.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\core_cm0.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\cmsis_version.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\cmsis_compiler.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\cmsis_armcc.h)(0x63FF3646)
+I (.\hal_driver\inc\ls_hal_qspi.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\integration\ls_msp_qspi.h)(0x63FF3646)
+I (.\hal_driver\inc\reg_qspi_type.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\integration\reg_base_addr.h)(0x63FF3646)
+F (.\hal_driver\src\ls_hal_flash_svcall.c)(0x63FF3646)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\USER -I .\soc\arm_cm\le501x\integration -I .\soc\arm_cm\cmsis -I .\soc\arm_cm\le501x -I .\soc -I .\soc\arm_cm -I .\soc\arm_cm\le501x\compiler -I .\soc\arm_cm\le501x\bin -I .\soc\arm_cm\le501x\compiler\armcc -I .\hal_driver\api -I .\hal_driver\inc -I .\module\debug -I .\module\common -I .\module\tinyfs -I .\module\ble -I .\module\static_buffer -I .\module\crc -I .\module\ble\prf -I .\module\debug\RTT -I .\module\tinycrypt\lib\include -I .\module\settings  --diag_suppress=1,61,68,188,1295-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="536" -DLE501X -DLE501X-o .\objects\ls_hal_flash_svcall.o --omf_browse .\objects\ls_hal_flash_svcall.crf --depend .\objects\ls_hal_flash_svcall.d)
+I (.\hal_driver\inc\hal_flash_svcall.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x63E9E314)
+I (.\soc\arm_cm\le501x\flash_svcall_int.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\le501x.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\core_cm0.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\cmsis_version.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\cmsis_compiler.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\cmsis_armcc.h)(0x63FF3646)
+I (.\soc\arm_cm\svcall.h)(0x63FF3646)
+I (.\hal_driver\inc\hal_flash_int.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x6025237E)
+I (.\soc\sdk_config.h)(0x65C0740C)
+I (.\soc\arm_cm\le501x\sdk_default_config.h)(0x6563EA00)
+I (.\hal_driver\api\ls_hal_flash.h)(0x655AD648)
+I (.\soc\cpu.h)(0x63FF3646)
+I (.\soc\compile_flag.h)(0x63FF3646)
+I (.\module\debug\ls_dbg.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x60252376)
+I (.\soc\arm_cm\le501x\platform.h)(0x64F7E1A4)
+F (.\hal_driver\src\ls_hal_i2c.c)(0x653C6993)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\USER -I .\soc\arm_cm\le501x\integration -I .\soc\arm_cm\cmsis -I .\soc\arm_cm\le501x -I .\soc -I .\soc\arm_cm -I .\soc\arm_cm\le501x\compiler -I .\soc\arm_cm\le501x\bin -I .\soc\arm_cm\le501x\compiler\armcc -I .\hal_driver\api -I .\hal_driver\inc -I .\module\debug -I .\module\common -I .\module\tinyfs -I .\module\ble -I .\module\static_buffer -I .\module\crc -I .\module\ble\prf -I .\module\debug\RTT -I .\module\tinycrypt\lib\include -I .\module\settings  --diag_suppress=1,61,68,188,1295-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="536" -DLE501X -DLE501X-o .\objects\ls_hal_i2c.o --omf_browse .\objects\ls_hal_i2c.crf --depend .\objects\ls_hal_i2c.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
+I (.\hal_driver\api\ls_hal_i2c.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x63E9E314)
+I (.\hal_driver\api\HAL_def.h)(0x63FF3646)
+I (.\module\debug\ls_dbg.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x60252376)
+I (.\hal_driver\api\ls_ll_i2c.h)(0x63FF3646)
+I (.\hal_driver\inc\reg_i2c_type.h)(0x63FF3646)
+I (.\soc\sdk_config.h)(0x65C0740C)
+I (.\soc\arm_cm\le501x\sdk_default_config.h)(0x6563EA00)
+I (.\hal_driver\inc\i2c_misc.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\integration\ls_msp_i2c.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\integration\reg_base_addr.h)(0x63FF3646)
+I (.\soc\field_manipulate.h)(0x63FF3646)
+I (.\module\debug\log.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x6025237E)
+I (.\soc\systick.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\platform.h)(0x64F7E1A4)
+I (.\soc\compile_flag.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\le501x.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\core_cm0.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\cmsis_version.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\cmsis_compiler.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\cmsis_armcc.h)(0x63FF3646)
+I (.\soc\cpu.h)(0x63FF3646)
+F (.\hal_driver\src\ls_hal_i2c_dma.c)(0x63FF3646)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\USER -I .\soc\arm_cm\le501x\integration -I .\soc\arm_cm\cmsis -I .\soc\arm_cm\le501x -I .\soc -I .\soc\arm_cm -I .\soc\arm_cm\le501x\compiler -I .\soc\arm_cm\le501x\bin -I .\soc\arm_cm\le501x\compiler\armcc -I .\hal_driver\api -I .\hal_driver\inc -I .\module\debug -I .\module\common -I .\module\tinyfs -I .\module\ble -I .\module\static_buffer -I .\module\crc -I .\module\ble\prf -I .\module\debug\RTT -I .\module\tinycrypt\lib\include -I .\module\settings  --diag_suppress=1,61,68,188,1295-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="536" -DLE501X -DLE501X-o .\objects\ls_hal_i2c_dma.o --omf_browse .\objects\ls_hal_i2c_dma.crf --depend .\objects\ls_hal_i2c_dma.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x6025237E)
+I (.\soc\sdk_config.h)(0x65C0740C)
+I (.\soc\arm_cm\le501x\sdk_default_config.h)(0x6563EA00)
+I (.\soc\arm_cm\le501x\platform.h)(0x64F7E1A4)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x63E9E314)
+I (.\soc\compile_flag.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\le501x.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\core_cm0.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\cmsis_version.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\cmsis_compiler.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\cmsis_armcc.h)(0x63FF3646)
+I (.\hal_driver\api\ls_hal_i2c.h)(0x63FF3646)
+I (.\hal_driver\api\HAL_def.h)(0x63FF3646)
+I (.\module\debug\ls_dbg.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x60252376)
+I (.\hal_driver\api\ls_ll_i2c.h)(0x63FF3646)
+I (.\hal_driver\inc\reg_i2c_type.h)(0x63FF3646)
+I (.\hal_driver\inc\i2c_misc.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\integration\ls_msp_i2c.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\integration\reg_base_addr.h)(0x63FF3646)
+I (.\soc\field_manipulate.h)(0x63FF3646)
+I (.\module\debug\log.h)(0x63FF3646)
+I (.\hal_driver\api\ls_hal_dmac.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\integration\dmac_config.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\integration\ls_msp_dmac.h)(0x63FF3646)
+I (.\hal_driver\inc\reg_dmac_type.h)(0x63FF3646)
+F (.\hal_driver\src\ls_hal_iwdg.c)(0x63FF3646)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\USER -I .\soc\arm_cm\le501x\integration -I .\soc\arm_cm\cmsis -I .\soc\arm_cm\le501x -I .\soc -I .\soc\arm_cm -I .\soc\arm_cm\le501x\compiler -I .\soc\arm_cm\le501x\bin -I .\soc\arm_cm\le501x\compiler\armcc -I .\hal_driver\api -I .\hal_driver\inc -I .\module\debug -I .\module\common -I .\module\tinyfs -I .\module\ble -I .\module\static_buffer -I .\module\crc -I .\module\ble\prf -I .\module\debug\RTT -I .\module\tinycrypt\lib\include -I .\module\settings  --diag_suppress=1,61,68,188,1295-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="536" -DLE501X -DLE501X-o .\objects\ls_hal_iwdg.o --omf_browse .\objects\ls_hal_iwdg.crf --depend .\objects\ls_hal_iwdg.d)
+I (.\hal_driver\api\ls_hal_iwdg.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x60252376)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (.\hal_driver\api\HAL_def.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\integration\ls_msp_iwdg.h)(0x63FF3646)
+I (.\hal_driver\inc\reg_iwdg_type.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\integration\reg_base_addr.h)(0x63FF3646)
+I (.\soc\field_manipulate.h)(0x63FF3646)
+I (.\soc\cpu.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x63E9E314)
+F (.\hal_driver\src\ls_hal_pdm.c)(0x63FF3646)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\USER -I .\soc\arm_cm\le501x\integration -I .\soc\arm_cm\cmsis -I .\soc\arm_cm\le501x -I .\soc -I .\soc\arm_cm -I .\soc\arm_cm\le501x\compiler -I .\soc\arm_cm\le501x\bin -I .\soc\arm_cm\le501x\compiler\armcc -I .\hal_driver\api -I .\hal_driver\inc -I .\module\debug -I .\module\common -I .\module\tinyfs -I .\module\ble -I .\module\static_buffer -I .\module\crc -I .\module\ble\prf -I .\module\debug\RTT -I .\module\tinycrypt\lib\include -I .\module\settings  --diag_suppress=1,61,68,188,1295-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="536" -DLE501X -DLE501X-o .\objects\ls_hal_pdm.o --omf_browse .\objects\ls_hal_pdm.crf --depend .\objects\ls_hal_pdm.d)
+I (.\hal_driver\api\ls_hal_pdm.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x63E9E314)
+I (.\hal_driver\api\HAL_def.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\integration\ls_msp_pdm.h)(0x63FF3646)
+I (.\hal_driver\inc\reg_pdm_type.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (.\soc\arm_cm\le501x\integration\reg_base_addr.h)(0x63FF3646)
+I (.\soc\field_manipulate.h)(0x63FF3646)
+I (.\module\common\common.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x6025237E)
+F (.\hal_driver\src\ls_hal_pdm_dma.c)(0x63FF3646)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\USER -I .\soc\arm_cm\le501x\integration -I .\soc\arm_cm\cmsis -I .\soc\arm_cm\le501x -I .\soc -I .\soc\arm_cm -I .\soc\arm_cm\le501x\compiler -I .\soc\arm_cm\le501x\bin -I .\soc\arm_cm\le501x\compiler\armcc -I .\hal_driver\api -I .\hal_driver\inc -I .\module\debug -I .\module\common -I .\module\tinyfs -I .\module\ble -I .\module\static_buffer -I .\module\crc -I .\module\ble\prf -I .\module\debug\RTT -I .\module\tinycrypt\lib\include -I .\module\settings  --diag_suppress=1,61,68,188,1295-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="536" -DLE501X -DLE501X-o .\objects\ls_hal_pdm_dma.o --omf_browse .\objects\ls_hal_pdm_dma.crf --depend .\objects\ls_hal_pdm_dma.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x6025237E)
+I (.\hal_driver\api\ls_hal_pdm.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x63E9E314)
+I (.\hal_driver\api\HAL_def.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\integration\ls_msp_pdm.h)(0x63FF3646)
+I (.\hal_driver\inc\reg_pdm_type.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (.\soc\arm_cm\le501x\integration\reg_base_addr.h)(0x63FF3646)
+I (.\hal_driver\api\ls_hal_dmac.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\integration\dmac_config.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\integration\ls_msp_dmac.h)(0x63FF3646)
+I (.\hal_driver\inc\reg_dmac_type.h)(0x63FF3646)
+I (.\soc\field_manipulate.h)(0x63FF3646)
+F (.\hal_driver\src\ls_hal_pis.c)(0x63FF3646)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\USER -I .\soc\arm_cm\le501x\integration -I .\soc\arm_cm\cmsis -I .\soc\arm_cm\le501x -I .\soc -I .\soc\arm_cm -I .\soc\arm_cm\le501x\compiler -I .\soc\arm_cm\le501x\bin -I .\soc\arm_cm\le501x\compiler\armcc -I .\hal_driver\api -I .\hal_driver\inc -I .\module\debug -I .\module\common -I .\module\tinyfs -I .\module\ble -I .\module\static_buffer -I .\module\crc -I .\module\ble\prf -I .\module\debug\RTT -I .\module\tinycrypt\lib\include -I .\module\settings  --diag_suppress=1,61,68,188,1295-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="536" -DLE501X -DLE501X-o .\objects\ls_hal_pis.o --omf_browse .\objects\ls_hal_pis.crf --depend .\objects\ls_hal_pis.d)
+I (.\hal_driver\api\ls_hal_pis.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x63E9E314)
+I (.\soc\arm_cm\le501x\integration\ls_msp_pis.h)(0x63FF3646)
+I (.\hal_driver\inc\reg_pis_type.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (.\soc\arm_cm\le501x\integration\pis_config.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\integration\reg_base_addr.h)(0x63FF3646)
+I (.\hal_driver\api\HAL_def.h)(0x63FF3646)
+I (.\soc\field_manipulate.h)(0x63FF3646)
+F (.\hal_driver\src\ls_hal_qspi.c)(0x655C1BC1)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\USER -I .\soc\arm_cm\le501x\integration -I .\soc\arm_cm\cmsis -I .\soc\arm_cm\le501x -I .\soc -I .\soc\arm_cm -I .\soc\arm_cm\le501x\compiler -I .\soc\arm_cm\le501x\bin -I .\soc\arm_cm\le501x\compiler\armcc -I .\hal_driver\api -I .\hal_driver\inc -I .\module\debug -I .\module\common -I .\module\tinyfs -I .\module\ble -I .\module\static_buffer -I .\module\crc -I .\module\ble\prf -I .\module\debug\RTT -I .\module\tinycrypt\lib\include -I .\module\settings  --diag_suppress=1,61,68,188,1295-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="536" -DLE501X -DLE501X-o .\objects\ls_hal_qspi.o --omf_browse .\objects\ls_hal_qspi.crf --depend .\objects\ls_hal_qspi.d)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
+I (.\hal_driver\inc\ls_hal_qspi.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x63E9E314)
+I (.\soc\arm_cm\le501x\integration\ls_msp_qspi.h)(0x63FF3646)
+I (.\hal_driver\inc\reg_qspi_type.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (.\soc\arm_cm\le501x\integration\reg_base_addr.h)(0x63FF3646)
+I (.\soc\field_manipulate.h)(0x63FF3646)
+I (.\module\debug\ls_dbg.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x60252376)
+I (.\soc\compile_flag.h)(0x63FF3646)
+I (.\soc\cpu.h)(0x63FF3646)
+F (.\hal_driver\src\ls_hal_rtc.c)(0x63FF3646)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\USER -I .\soc\arm_cm\le501x\integration -I .\soc\arm_cm\cmsis -I .\soc\arm_cm\le501x -I .\soc -I .\soc\arm_cm -I .\soc\arm_cm\le501x\compiler -I .\soc\arm_cm\le501x\bin -I .\soc\arm_cm\le501x\compiler\armcc -I .\hal_driver\api -I .\hal_driver\inc -I .\module\debug -I .\module\common -I .\module\tinyfs -I .\module\ble -I .\module\static_buffer -I .\module\crc -I .\module\ble\prf -I .\module\debug\RTT -I .\module\tinycrypt\lib\include -I .\module\settings  --diag_suppress=1,61,68,188,1295-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="536" -DLE501X -DLE501X-o .\objects\ls_hal_rtc.o --omf_browse .\objects\ls_hal_rtc.crf --depend .\objects\ls_hal_rtc.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\time.h)(0x60252378)
+I (.\soc\arm_cm\le501x\platform.h)(0x64F7E1A4)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x63E9E314)
+I (.\soc\sdk_config.h)(0x65C0740C)
+I (.\soc\arm_cm\le501x\sdk_default_config.h)(0x6563EA00)
+I (.\soc\compile_flag.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\le501x.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\core_cm0.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\cmsis_version.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\cmsis_compiler.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\cmsis_armcc.h)(0x63FF3646)
+I (.\hal_driver\api\ls_hal_rtc.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\integration\ls_msp_rtc.h)(0x63FF3646)
+I (.\hal_driver\inc\reg_rtc_type.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\integration\reg_base_addr.h)(0x63FF3646)
+I (.\hal_driver\api\HAL_def.h)(0x63FF3646)
+I (.\soc\field_manipulate.h)(0x63FF3646)
+I (.\soc\cpu.h)(0x63FF3646)
+I (.\module\debug\ls_dbg.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x60252376)
+I (.\module\common\common.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x6025237E)
+I (.\module\debug\log.h)(0x63FF3646)
+F (.\hal_driver\src\ls_hal_spi_i2s.c)(0x63FF3646)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\USER -I .\soc\arm_cm\le501x\integration -I .\soc\arm_cm\cmsis -I .\soc\arm_cm\le501x -I .\soc -I .\soc\arm_cm -I .\soc\arm_cm\le501x\compiler -I .\soc\arm_cm\le501x\bin -I .\soc\arm_cm\le501x\compiler\armcc -I .\hal_driver\api -I .\hal_driver\inc -I .\module\debug -I .\module\common -I .\module\tinyfs -I .\module\ble -I .\module\static_buffer -I .\module\crc -I .\module\ble\prf -I .\module\debug\RTT -I .\module\tinycrypt\lib\include -I .\module\settings  --diag_suppress=1,61,68,188,1295-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="536" -DLE501X -DLE501X-o .\objects\ls_hal_spi_i2s.o --omf_browse .\objects\ls_hal_spi_i2s.crf --depend .\objects\ls_hal_spi_i2s.d)
+I (.\hal_driver\api\ls_hal_spi_i2s.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x63E9E314)
+I (.\hal_driver\api\ls_ll_spi.h)(0x63FF3646)
+I (.\hal_driver\api\HAL_def.h)(0x63FF3646)
+I (.\soc\sdk_config.h)(0x65C0740C)
+I (.\soc\arm_cm\le501x\sdk_default_config.h)(0x6563EA00)
+I (.\soc\field_manipulate.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (.\soc\arm_cm\le501x\integration\ls_msp_spi_i2s.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\integration\reg_base_addr.h)(0x63FF3646)
+I (.\hal_driver\inc\reg_spi_type.h)(0x63FF3646)
+I (.\module\debug\log.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x60252376)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x6025237E)
+I (.\soc\systick.h)(0x63FF3646)
+I (.\module\debug\ls_dbg.h)(0x63FF3646)
+I (.\module\common\common.h)(0x63FF3646)
+F (.\hal_driver\src\ls_hal_spi_i2s_dma.c)(0x63FF3646)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\USER -I .\soc\arm_cm\le501x\integration -I .\soc\arm_cm\cmsis -I .\soc\arm_cm\le501x -I .\soc -I .\soc\arm_cm -I .\soc\arm_cm\le501x\compiler -I .\soc\arm_cm\le501x\bin -I .\soc\arm_cm\le501x\compiler\armcc -I .\hal_driver\api -I .\hal_driver\inc -I .\module\debug -I .\module\common -I .\module\tinyfs -I .\module\ble -I .\module\static_buffer -I .\module\crc -I .\module\ble\prf -I .\module\debug\RTT -I .\module\tinycrypt\lib\include -I .\module\settings  --diag_suppress=1,61,68,188,1295-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="536" -DLE501X -DLE501X-o .\objects\ls_hal_spi_i2s_dma.o --omf_browse .\objects\ls_hal_spi_i2s_dma.crf --depend .\objects\ls_hal_spi_i2s_dma.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x6025237E)
+I (.\soc\field_manipulate.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (.\hal_driver\api\ls_hal_spi_i2s.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x63E9E314)
+I (.\hal_driver\api\ls_ll_spi.h)(0x63FF3646)
+I (.\hal_driver\api\HAL_def.h)(0x63FF3646)
+I (.\soc\sdk_config.h)(0x65C0740C)
+I (.\soc\arm_cm\le501x\sdk_default_config.h)(0x6563EA00)
+I (.\soc\arm_cm\le501x\integration\ls_msp_spi_i2s.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\integration\reg_base_addr.h)(0x63FF3646)
+I (.\hal_driver\inc\reg_spi_type.h)(0x63FF3646)
+I (.\module\debug\log.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x60252376)
+I (.\soc\systick.h)(0x63FF3646)
+I (.\module\debug\ls_dbg.h)(0x63FF3646)
+I (.\module\common\common.h)(0x63FF3646)
+I (.\hal_driver\api\ls_hal_dmac.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\integration\dmac_config.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\integration\ls_msp_dmac.h)(0x63FF3646)
+I (.\hal_driver\inc\reg_dmac_type.h)(0x63FF3646)
+F (.\hal_driver\src\ls_hal_ssi.c)(0x63FF3646)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\USER -I .\soc\arm_cm\le501x\integration -I .\soc\arm_cm\cmsis -I .\soc\arm_cm\le501x -I .\soc -I .\soc\arm_cm -I .\soc\arm_cm\le501x\compiler -I .\soc\arm_cm\le501x\bin -I .\soc\arm_cm\le501x\compiler\armcc -I .\hal_driver\api -I .\hal_driver\inc -I .\module\debug -I .\module\common -I .\module\tinyfs -I .\module\ble -I .\module\static_buffer -I .\module\crc -I .\module\ble\prf -I .\module\debug\RTT -I .\module\tinycrypt\lib\include -I .\module\settings  --diag_suppress=1,61,68,188,1295-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="536" -DLE501X -DLE501X-o .\objects\ls_hal_ssi.o --omf_browse .\objects\ls_hal_ssi.crf --depend .\objects\ls_hal_ssi.d)
+I (.\soc\arm_cm\le501x\integration\ls_msp_ssi.h)(0x63FF3646)
+I (.\hal_driver\inc\reg_ssi_type.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (.\soc\arm_cm\le501x\integration\reg_base_addr.h)(0x63FF3646)
+I (.\soc\field_manipulate.h)(0x63FF3646)
+I (.\module\debug\log.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x60252376)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x63E9E314)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x6025237E)
+I (.\module\debug\ls_dbg.h)(0x63FF3646)
+I (.\hal_driver\api\ls_hal_ssi.h)(0x63FF3646)
+I (.\hal_driver\api\ls_ll_ssi.h)(0x63FF3646)
+I (.\hal_driver\api\HAL_def.h)(0x63FF3646)
+I (.\hal_driver\inc\ssi_misc.h)(0x63FF3646)
+F (.\hal_driver\src\ls_hal_ssi_dma.c)(0x63FF3646)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\USER -I .\soc\arm_cm\le501x\integration -I .\soc\arm_cm\cmsis -I .\soc\arm_cm\le501x -I .\soc -I .\soc\arm_cm -I .\soc\arm_cm\le501x\compiler -I .\soc\arm_cm\le501x\bin -I .\soc\arm_cm\le501x\compiler\armcc -I .\hal_driver\api -I .\hal_driver\inc -I .\module\debug -I .\module\common -I .\module\tinyfs -I .\module\ble -I .\module\static_buffer -I .\module\crc -I .\module\ble\prf -I .\module\debug\RTT -I .\module\tinycrypt\lib\include -I .\module\settings  --diag_suppress=1,61,68,188,1295-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="536" -DLE501X -DLE501X-o .\objects\ls_hal_ssi_dma.o --omf_browse .\objects\ls_hal_ssi_dma.crf --depend .\objects\ls_hal_ssi_dma.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x6025237E)
+I (.\soc\sdk_config.h)(0x65C0740C)
+I (.\soc\arm_cm\le501x\sdk_default_config.h)(0x6563EA00)
+I (.\soc\arm_cm\le501x\integration\ls_msp_ssi.h)(0x63FF3646)
+I (.\hal_driver\inc\reg_ssi_type.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (.\soc\arm_cm\le501x\integration\reg_base_addr.h)(0x63FF3646)
+I (.\hal_driver\inc\ssi_misc.h)(0x63FF3646)
+I (.\soc\field_manipulate.h)(0x63FF3646)
+I (.\hal_driver\api\ls_hal_ssi.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x63E9E314)
+I (.\hal_driver\api\ls_ll_ssi.h)(0x63FF3646)
+I (.\hal_driver\api\HAL_def.h)(0x63FF3646)
+I (.\hal_driver\api\ls_hal_dmac.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\integration\dmac_config.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\integration\ls_msp_dmac.h)(0x63FF3646)
+I (.\hal_driver\inc\reg_dmac_type.h)(0x63FF3646)
+F (.\hal_driver\src\ls_hal_timer.c)(0x648677AA)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\USER -I .\soc\arm_cm\le501x\integration -I .\soc\arm_cm\cmsis -I .\soc\arm_cm\le501x -I .\soc -I .\soc\arm_cm -I .\soc\arm_cm\le501x\compiler -I .\soc\arm_cm\le501x\bin -I .\soc\arm_cm\le501x\compiler\armcc -I .\hal_driver\api -I .\hal_driver\inc -I .\module\debug -I .\module\common -I .\module\tinyfs -I .\module\ble -I .\module\static_buffer -I .\module\crc -I .\module\ble\prf -I .\module\debug\RTT -I .\module\tinycrypt\lib\include -I .\module\settings  --diag_suppress=1,61,68,188,1295-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="536" -DLE501X -DLE501X-o .\objects\ls_hal_timer.o --omf_browse .\objects\ls_hal_timer.crf --depend .\objects\ls_hal_timer.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x6025237E)
+I (.\hal_driver\api\ls_hal_timer.h)(0x6545FAB3)
+I (.\soc\arm_cm\le501x\integration\ls_msp_timer.h)(0x648677AA)
+I (.\soc\arm_cm\le501x\integration\reg_base_addr.h)(0x63FF3646)
+I (.\hal_driver\inc\reg_timer_type.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (.\soc\sdk_config.h)(0x65C0740C)
+I (.\soc\arm_cm\le501x\sdk_default_config.h)(0x6563EA00)
+I (.\hal_driver\api\HAL_def.h)(0x63FF3646)
+I (.\soc\field_manipulate.h)(0x63FF3646)
+I (.\module\debug\ls_dbg.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x60252376)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x63E9E314)
+F (.\hal_driver\src\ls_hal_trng.c)(0x63FF3646)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\USER -I .\soc\arm_cm\le501x\integration -I .\soc\arm_cm\cmsis -I .\soc\arm_cm\le501x -I .\soc -I .\soc\arm_cm -I .\soc\arm_cm\le501x\compiler -I .\soc\arm_cm\le501x\bin -I .\soc\arm_cm\le501x\compiler\armcc -I .\hal_driver\api -I .\hal_driver\inc -I .\module\debug -I .\module\common -I .\module\tinyfs -I .\module\ble -I .\module\static_buffer -I .\module\crc -I .\module\ble\prf -I .\module\debug\RTT -I .\module\tinycrypt\lib\include -I .\module\settings  --diag_suppress=1,61,68,188,1295-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="536" -DLE501X -DLE501X-o .\objects\ls_hal_trng.o --omf_browse .\objects\ls_hal_trng.crf --depend .\objects\ls_hal_trng.d)
+I (.\hal_driver\api\ls_hal_trng.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (.\hal_driver\api\HAL_def.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\integration\ls_msp_trng.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\integration\reg_base_addr.h)(0x63FF3646)
+I (.\hal_driver\inc\reg_trng_type.h)(0x63FF3646)
+I (.\soc\field_manipulate.h)(0x63FF3646)
+F (.\hal_driver\src\ls_hal_uart.c)(0x63FF3646)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\USER -I .\soc\arm_cm\le501x\integration -I .\soc\arm_cm\cmsis -I .\soc\arm_cm\le501x -I .\soc -I .\soc\arm_cm -I .\soc\arm_cm\le501x\compiler -I .\soc\arm_cm\le501x\bin -I .\soc\arm_cm\le501x\compiler\armcc -I .\hal_driver\api -I .\hal_driver\inc -I .\module\debug -I .\module\common -I .\module\tinyfs -I .\module\ble -I .\module\static_buffer -I .\module\crc -I .\module\ble\prf -I .\module\debug\RTT -I .\module\tinycrypt\lib\include -I .\module\settings  --diag_suppress=1,61,68,188,1295-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="536" -DLE501X -DLE501X-o .\objects\ls_hal_uart.o --omf_browse .\objects\ls_hal_uart.crf --depend .\objects\ls_hal_uart.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
+I (.\hal_driver\api\ls_hal_uart.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x63E9E314)
+I (.\hal_driver\api\HAL_def.h)(0x63FF3646)
+I (.\soc\sdk_config.h)(0x65C0740C)
+I (.\soc\arm_cm\le501x\sdk_default_config.h)(0x6563EA00)
+I (.\hal_driver\api\ls_ll_uart.h)(0x63FF3646)
+I (.\soc\field_manipulate.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (.\soc\arm_cm\le501x\integration\ls_msp_uart.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\integration\reg_base_addr.h)(0x63FF3646)
+I (.\hal_driver\inc\reg_uart_type.h)(0x63FF3646)
+I (.\module\debug\log.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x60252376)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x6025237E)
+I (.\soc\systick.h)(0x63FF3646)
+F (.\hal_driver\src\ls_hal_uart_dma.c)(0x63FF3646)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\USER -I .\soc\arm_cm\le501x\integration -I .\soc\arm_cm\cmsis -I .\soc\arm_cm\le501x -I .\soc -I .\soc\arm_cm -I .\soc\arm_cm\le501x\compiler -I .\soc\arm_cm\le501x\bin -I .\soc\arm_cm\le501x\compiler\armcc -I .\hal_driver\api -I .\hal_driver\inc -I .\module\debug -I .\module\common -I .\module\tinyfs -I .\module\ble -I .\module\static_buffer -I .\module\crc -I .\module\ble\prf -I .\module\debug\RTT -I .\module\tinycrypt\lib\include -I .\module\settings  --diag_suppress=1,61,68,188,1295-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="536" -DLE501X -DLE501X-o .\objects\ls_hal_uart_dma.o --omf_browse .\objects\ls_hal_uart_dma.crf --depend .\objects\ls_hal_uart_dma.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x6025237E)
+I (.\soc\sdk_config.h)(0x65C0740C)
+I (.\soc\arm_cm\le501x\sdk_default_config.h)(0x6563EA00)
+I (.\hal_driver\api\ls_hal_uart.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x63E9E314)
+I (.\hal_driver\api\HAL_def.h)(0x63FF3646)
+I (.\hal_driver\api\ls_ll_uart.h)(0x63FF3646)
+I (.\soc\field_manipulate.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (.\soc\arm_cm\le501x\integration\ls_msp_uart.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\integration\reg_base_addr.h)(0x63FF3646)
+I (.\hal_driver\inc\reg_uart_type.h)(0x63FF3646)
+I (.\hal_driver\api\ls_hal_dmac.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\integration\dmac_config.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\integration\ls_msp_dmac.h)(0x63FF3646)
+I (.\hal_driver\inc\reg_dmac_type.h)(0x63FF3646)
+F (.\hal_driver\src\ls_hal_wwdg.c)(0x63FF3646)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\USER -I .\soc\arm_cm\le501x\integration -I .\soc\arm_cm\cmsis -I .\soc\arm_cm\le501x -I .\soc -I .\soc\arm_cm -I .\soc\arm_cm\le501x\compiler -I .\soc\arm_cm\le501x\bin -I .\soc\arm_cm\le501x\compiler\armcc -I .\hal_driver\api -I .\hal_driver\inc -I .\module\debug -I .\module\common -I .\module\tinyfs -I .\module\ble -I .\module\static_buffer -I .\module\crc -I .\module\ble\prf -I .\module\debug\RTT -I .\module\tinycrypt\lib\include -I .\module\settings  --diag_suppress=1,61,68,188,1295-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="536" -DLE501X -DLE501X-o .\objects\ls_hal_wwdg.o --omf_browse .\objects\ls_hal_wwdg.crf --depend .\objects\ls_hal_wwdg.d)
+I (.\hal_driver\api\ls_hal_wwdg.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x63E9E314)
+I (.\hal_driver\api\HAL_def.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\integration\ls_msp_wwdg.h)(0x63FF3646)
+I (.\hal_driver\inc\reg_wwdg_type.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\integration\reg_base_addr.h)(0x63FF3646)
+I (.\soc\field_manipulate.h)(0x63FF3646)
+F (.\module\ble\ble_common_api.c)(0x63FF3646)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\USER -I .\soc\arm_cm\le501x\integration -I .\soc\arm_cm\cmsis -I .\soc\arm_cm\le501x -I .\soc -I .\soc\arm_cm -I .\soc\arm_cm\le501x\compiler -I .\soc\arm_cm\le501x\bin -I .\soc\arm_cm\le501x\compiler\armcc -I .\hal_driver\api -I .\hal_driver\inc -I .\module\debug -I .\module\common -I .\module\tinyfs -I .\module\ble -I .\module\static_buffer -I .\module\crc -I .\module\ble\prf -I .\module\debug\RTT -I .\module\tinycrypt\lib\include -I .\module\settings  --diag_suppress=1,61,68,188,1295-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="536" -DLE501X -DLE501X-o .\objects\ble_common_api.o --omf_browse .\objects\ble_common_api.crf --depend .\objects\ble_common_api.d)
+I (module\ble\ble_common_api.h)(0x63FF3646)
+I (module\ble\ls_ble.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x63E9E314)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x6025237E)
+F (.\module\common\circular_doubly_linked_list.c)(0x63FF3646)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\USER -I .\soc\arm_cm\le501x\integration -I .\soc\arm_cm\cmsis -I .\soc\arm_cm\le501x -I .\soc -I .\soc\arm_cm -I .\soc\arm_cm\le501x\compiler -I .\soc\arm_cm\le501x\bin -I .\soc\arm_cm\le501x\compiler\armcc -I .\hal_driver\api -I .\hal_driver\inc -I .\module\debug -I .\module\common -I .\module\tinyfs -I .\module\ble -I .\module\static_buffer -I .\module\crc -I .\module\ble\prf -I .\module\debug\RTT -I .\module\tinycrypt\lib\include -I .\module\settings  --diag_suppress=1,61,68,188,1295-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="536" -DLE501X -DLE501X-o .\objects\circular_doubly_linked_list.o --omf_browse .\objects\circular_doubly_linked_list.crf --depend .\objects\circular_doubly_linked_list.d)
+I (module\common\circular_doubly_linked_list.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x63E9E314)
+I (.\soc\compile_flag.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+F (.\module\common\common.c)(0x63FF3646)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\USER -I .\soc\arm_cm\le501x\integration -I .\soc\arm_cm\cmsis -I .\soc\arm_cm\le501x -I .\soc -I .\soc\arm_cm -I .\soc\arm_cm\le501x\compiler -I .\soc\arm_cm\le501x\bin -I .\soc\arm_cm\le501x\compiler\armcc -I .\hal_driver\api -I .\hal_driver\inc -I .\module\debug -I .\module\common -I .\module\tinyfs -I .\module\ble -I .\module\static_buffer -I .\module\crc -I .\module\ble\prf -I .\module\debug\RTT -I .\module\tinycrypt\lib\include -I .\module\settings  --diag_suppress=1,61,68,188,1295-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="536" -DLE501X -DLE501X-o .\objects\common.o --omf_browse .\objects\common.crf --depend .\objects\common.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
+I (module\common\common.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x6025237E)
+I (.\soc\compile_flag.h)(0x63FF3646)
+I (module\common\co_math.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x63E9E314)
+F (.\module\common\sw_timer.c)(0x63FF3646)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\USER -I .\soc\arm_cm\le501x\integration -I .\soc\arm_cm\cmsis -I .\soc\arm_cm\le501x -I .\soc -I .\soc\arm_cm -I .\soc\arm_cm\le501x\compiler -I .\soc\arm_cm\le501x\bin -I .\soc\arm_cm\le501x\compiler\armcc -I .\hal_driver\api -I .\hal_driver\inc -I .\module\debug -I .\module\common -I .\module\tinyfs -I .\module\ble -I .\module\static_buffer -I .\module\crc -I .\module\ble\prf -I .\module\debug\RTT -I .\module\tinycrypt\lib\include -I .\module\settings  --diag_suppress=1,61,68,188,1295-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="536" -DLE501X -DLE501X-o .\objects\sw_timer.o --omf_browse .\objects\sw_timer.crf --depend .\objects\sw_timer.d)
+I (module\common\sw_timer_int.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x63E9E314)
+I (module\common\sw_timer.h)(0x63FF3646)
+I (module\common\circular_doubly_linked_list.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x6025237E)
+I (.\soc\arm_cm\le501x\sw_timer_port.h)(0x63FF3646)
+I (module\common\common.h)(0x63FF3646)
+I (.\soc\cpu.h)(0x63FF3646)
+I (.\soc\compile_flag.h)(0x63FF3646)
+I (.\module\debug\ls_dbg.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x60252376)
+F (.\module\crc\crc16.c)(0x63FF3646)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\USER -I .\soc\arm_cm\le501x\integration -I .\soc\arm_cm\cmsis -I .\soc\arm_cm\le501x -I .\soc -I .\soc\arm_cm -I .\soc\arm_cm\le501x\compiler -I .\soc\arm_cm\le501x\bin -I .\soc\arm_cm\le501x\compiler\armcc -I .\hal_driver\api -I .\hal_driver\inc -I .\module\debug -I .\module\common -I .\module\tinyfs -I .\module\ble -I .\module\static_buffer -I .\module\crc -I .\module\ble\prf -I .\module\debug\RTT -I .\module\tinycrypt\lib\include -I .\module\settings  --diag_suppress=1,61,68,188,1295-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="536" -DLE501X -DLE501X-o .\objects\crc16.o --omf_browse .\objects\crc16.crf --depend .\objects\crc16.d)
+I (module\crc\crc16.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+F (.\module\debug\log.c)(0x63FF3646)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\USER -I .\soc\arm_cm\le501x\integration -I .\soc\arm_cm\cmsis -I .\soc\arm_cm\le501x -I .\soc -I .\soc\arm_cm -I .\soc\arm_cm\le501x\compiler -I .\soc\arm_cm\le501x\bin -I .\soc\arm_cm\le501x\compiler\armcc -I .\hal_driver\api -I .\hal_driver\inc -I .\module\debug -I .\module\common -I .\module\tinyfs -I .\module\ble -I .\module\static_buffer -I .\module\crc -I .\module\ble\prf -I .\module\debug\RTT -I .\module\tinycrypt\lib\include -I .\module\settings  --diag_suppress=1,61,68,188,1295-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="536" -DLE501X -DLE501X-o .\objects\log.o --omf_browse .\objects\log.crf --depend .\objects\log.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
+I (module\debug\log.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x60252376)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x63E9E314)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x6025237E)
+I (.\module\debug\RTT\SEGGER_RTT.h)(0x63FF3646)
+I (.\module\debug\RTT\SEGGER_RTT_Conf.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x60252374)
+I (.\hal_driver\api\ls_hal_uart.h)(0x63FF3646)
+I (.\hal_driver\api\HAL_def.h)(0x63FF3646)
+I (.\soc\sdk_config.h)(0x65C0740C)
+I (.\soc\arm_cm\le501x\sdk_default_config.h)(0x6563EA00)
+I (.\hal_driver\api\ls_ll_uart.h)(0x63FF3646)
+I (.\soc\field_manipulate.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\integration\ls_msp_uart.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\integration\reg_base_addr.h)(0x63FF3646)
+I (.\hal_driver\inc\reg_uart_type.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\integration\ls_soc_gpio.h)(0x64F84C22)
+I (.\soc\arm_cm\le501x\integration\ls_soc_pinmux.h)(0x63FF3646)
+F (.\module\debug\ls_dbg.c)(0x65BC55DC)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\USER -I .\soc\arm_cm\le501x\integration -I .\soc\arm_cm\cmsis -I .\soc\arm_cm\le501x -I .\soc -I .\soc\arm_cm -I .\soc\arm_cm\le501x\compiler -I .\soc\arm_cm\le501x\bin -I .\soc\arm_cm\le501x\compiler\armcc -I .\hal_driver\api -I .\hal_driver\inc -I .\module\debug -I .\module\common -I .\module\tinyfs -I .\module\ble -I .\module\static_buffer -I .\module\crc -I .\module\ble\prf -I .\module\debug\RTT -I .\module\tinycrypt\lib\include -I .\module\settings  --diag_suppress=1,61,68,188,1295-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="536" -DLE501X -DLE501X-o .\objects\ls_dbg.o --omf_browse .\objects\ls_dbg.crf --depend .\objects\ls_dbg.d)
+I (.\soc\cpu.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x63E9E314)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x60252376)
+I (module\debug\log.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x6025237E)
+I (.\soc\compile_flag.h)(0x63FF3646)
+F (.\module\settings\ota_settings.c)(0x652A3610)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\USER -I .\soc\arm_cm\le501x\integration -I .\soc\arm_cm\cmsis -I .\soc\arm_cm\le501x -I .\soc -I .\soc\arm_cm -I .\soc\arm_cm\le501x\compiler -I .\soc\arm_cm\le501x\bin -I .\soc\arm_cm\le501x\compiler\armcc -I .\hal_driver\api -I .\hal_driver\inc -I .\module\debug -I .\module\common -I .\module\tinyfs -I .\module\ble -I .\module\static_buffer -I .\module\crc -I .\module\ble\prf -I .\module\debug\RTT -I .\module\tinycrypt\lib\include -I .\module\settings  --diag_suppress=1,61,68,188,1295-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="536" -DLE501X -DLE501X-o .\objects\ota_settings.o --omf_browse .\objects\ota_settings.crf --depend .\objects\ota_settings.d)
+I (module\settings\ota_settings.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x63E9E314)
+I (.\module\ble\prf\prf_fotas.h)(0x63FF3646)
+I (module\settings\inflash_settings.h)(0x63FF3646)
+I (.\hal_driver\api\ls_hal_flash.h)(0x655AD648)
+F (.\module\settings\inflash_settings.c)(0x63FF3646)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\USER -I .\soc\arm_cm\le501x\integration -I .\soc\arm_cm\cmsis -I .\soc\arm_cm\le501x -I .\soc -I .\soc\arm_cm -I .\soc\arm_cm\le501x\compiler -I .\soc\arm_cm\le501x\bin -I .\soc\arm_cm\le501x\compiler\armcc -I .\hal_driver\api -I .\hal_driver\inc -I .\module\debug -I .\module\common -I .\module\tinyfs -I .\module\ble -I .\module\static_buffer -I .\module\crc -I .\module\ble\prf -I .\module\debug\RTT -I .\module\tinycrypt\lib\include -I .\module\settings  --diag_suppress=1,61,68,188,1295-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="536" -DLE501X -DLE501X-o .\objects\inflash_settings.o --omf_browse .\objects\inflash_settings.crf --depend .\objects\inflash_settings.d)
+I (module\settings\inflash_settings.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x63E9E314)
+I (.\hal_driver\api\ls_hal_flash.h)(0x655AD648)
+I (.\module\common\common.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x6025237E)
+I (.\module\debug\ls_dbg.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x60252376)
+F (.\module\static_buffer\fifo.c)(0x63FF3646)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\USER -I .\soc\arm_cm\le501x\integration -I .\soc\arm_cm\cmsis -I .\soc\arm_cm\le501x -I .\soc -I .\soc\arm_cm -I .\soc\arm_cm\le501x\compiler -I .\soc\arm_cm\le501x\bin -I .\soc\arm_cm\le501x\compiler\armcc -I .\hal_driver\api -I .\hal_driver\inc -I .\module\debug -I .\module\common -I .\module\tinyfs -I .\module\ble -I .\module\static_buffer -I .\module\crc -I .\module\ble\prf -I .\module\debug\RTT -I .\module\tinycrypt\lib\include -I .\module\settings  --diag_suppress=1,61,68,188,1295-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="536" -DLE501X -DLE501X-o .\objects\fifo.o --omf_browse .\objects\fifo.crf --depend .\objects\fifo.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
+I (module\static_buffer\fifo.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x63E9E314)
+I (.\module\common\common.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x6025237E)
+I (.\soc\compile_flag.h)(0x63FF3646)
+F (.\module\static_buffer\linked_buffer.c)(0x63FF3646)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\USER -I .\soc\arm_cm\le501x\integration -I .\soc\arm_cm\cmsis -I .\soc\arm_cm\le501x -I .\soc -I .\soc\arm_cm -I .\soc\arm_cm\le501x\compiler -I .\soc\arm_cm\le501x\bin -I .\soc\arm_cm\le501x\compiler\armcc -I .\hal_driver\api -I .\hal_driver\inc -I .\module\debug -I .\module\common -I .\module\tinyfs -I .\module\ble -I .\module\static_buffer -I .\module\crc -I .\module\ble\prf -I .\module\debug\RTT -I .\module\tinycrypt\lib\include -I .\module\settings  --diag_suppress=1,61,68,188,1295-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="536" -DLE501X -DLE501X-o .\objects\linked_buffer.o --omf_browse .\objects\linked_buffer.crf --depend .\objects\linked_buffer.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x60252376)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
+I (module\static_buffer\linked_buffer.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x6025237E)
+I (.\module\common\co_list.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x63E9E314)
+I (.\module\common\common.h)(0x63FF3646)
+I (.\module\debug\ls_dbg.h)(0x63FF3646)
+I (.\soc\compile_flag.h)(0x63FF3646)
+F (.\module\tinycrypt\lib\source\sha256.c)(0x63FF3646)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\USER -I .\soc\arm_cm\le501x\integration -I .\soc\arm_cm\cmsis -I .\soc\arm_cm\le501x -I .\soc -I .\soc\arm_cm -I .\soc\arm_cm\le501x\compiler -I .\soc\arm_cm\le501x\bin -I .\soc\arm_cm\le501x\compiler\armcc -I .\hal_driver\api -I .\hal_driver\inc -I .\module\debug -I .\module\common -I .\module\tinyfs -I .\module\ble -I .\module\static_buffer -I .\module\crc -I .\module\ble\prf -I .\module\debug\RTT -I .\module\tinycrypt\lib\include -I .\module\settings  --diag_suppress=1,61,68,188,1295-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="536" -DLE501X -DLE501X-o .\objects\sha256.o --omf_browse .\objects\sha256.crf --depend .\objects\sha256.d)
+I (.\module\tinycrypt\lib\include\tinycrypt/sha256.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (.\module\tinycrypt\lib\include\tinycrypt/constants.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x63E9E314)
+I (.\module\tinycrypt\lib\include\tinycrypt/utils.h)(0x64F6CAA7)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
+F (.\module\tinycrypt\lib\source\utils.c)(0x63FF3646)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\USER -I .\soc\arm_cm\le501x\integration -I .\soc\arm_cm\cmsis -I .\soc\arm_cm\le501x -I .\soc -I .\soc\arm_cm -I .\soc\arm_cm\le501x\compiler -I .\soc\arm_cm\le501x\bin -I .\soc\arm_cm\le501x\compiler\armcc -I .\hal_driver\api -I .\hal_driver\inc -I .\module\debug -I .\module\common -I .\module\tinyfs -I .\module\ble -I .\module\static_buffer -I .\module\crc -I .\module\ble\prf -I .\module\debug\RTT -I .\module\tinycrypt\lib\include -I .\module\settings  --diag_suppress=1,61,68,188,1295-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="536" -DLE501X -DLE501X-o .\objects\utils.o --omf_browse .\objects\utils.crf --depend .\objects\utils.d)
+I (.\module\tinycrypt\lib\include\tinycrypt/utils.h)(0x64F6CAA7)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
+I (.\module\tinycrypt\lib\include\tinycrypt/constants.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x63E9E314)
+F (.\module\tinyfs\tinyfs.c)(0x63FF3646)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\USER -I .\soc\arm_cm\le501x\integration -I .\soc\arm_cm\cmsis -I .\soc\arm_cm\le501x -I .\soc -I .\soc\arm_cm -I .\soc\arm_cm\le501x\compiler -I .\soc\arm_cm\le501x\bin -I .\soc\arm_cm\le501x\compiler\armcc -I .\hal_driver\api -I .\hal_driver\inc -I .\module\debug -I .\module\common -I .\module\tinyfs -I .\module\ble -I .\module\static_buffer -I .\module\crc -I .\module\ble\prf -I .\module\debug\RTT -I .\module\tinycrypt\lib\include -I .\module\settings  --diag_suppress=1,61,68,188,1295-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="536" -DLE501X -DLE501X-o .\objects\tinyfs.o --omf_browse .\objects\tinyfs.crf --depend .\objects\tinyfs.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
+I (.\soc\compile_flag.h)(0x63FF3646)
+I (module\tinyfs\tinyfs_config.h)(0x63FF3646)
+I (.\soc\sdk_config.h)(0x65C0740C)
+I (.\soc\arm_cm\le501x\sdk_default_config.h)(0x6563EA00)
+I (module\tinyfs\tinyfs_write_cache.h)(0x63FF3646)
+I (module\tinyfs\tinyfs.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x63E9E314)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x60252376)
+I (module\tinyfs\tinyfs_nvm.h)(0x63FF3646)
+I (.\module\static_buffer\linked_buffer.h)(0x63FF3646)
+I (.\module\common\co_list.h)(0x63FF3646)
+I (.\module\common\common.h)(0x63FF3646)
+I (.\module\debug\log.h)(0x63FF3646)
+I (.\module\debug\ls_dbg.h)(0x63FF3646)
+I (.\module\crc\crc16.h)(0x63FF3646)
+I (.\module\common\co_math.h)(0x63FF3646)
+F (.\module\tinyfs\tinyfs_nvm.c)(0x63FF3646)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\USER -I .\soc\arm_cm\le501x\integration -I .\soc\arm_cm\cmsis -I .\soc\arm_cm\le501x -I .\soc -I .\soc\arm_cm -I .\soc\arm_cm\le501x\compiler -I .\soc\arm_cm\le501x\bin -I .\soc\arm_cm\le501x\compiler\armcc -I .\hal_driver\api -I .\hal_driver\inc -I .\module\debug -I .\module\common -I .\module\tinyfs -I .\module\ble -I .\module\static_buffer -I .\module\crc -I .\module\ble\prf -I .\module\debug\RTT -I .\module\tinycrypt\lib\include -I .\module\settings  --diag_suppress=1,61,68,188,1295-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="536" -DLE501X -DLE501X-o .\objects\tinyfs_nvm.o --omf_browse .\objects\tinyfs_nvm.crf --depend .\objects\tinyfs_nvm.d)
+I (module\tinyfs\tinyfs_nvm.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (.\hal_driver\api\ls_hal_flash.h)(0x655AD648)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x63E9E314)
+F (.\module\tinyfs\tinyfs_write_cache.c)(0x63FF3646)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\USER -I .\soc\arm_cm\le501x\integration -I .\soc\arm_cm\cmsis -I .\soc\arm_cm\le501x -I .\soc -I .\soc\arm_cm -I .\soc\arm_cm\le501x\compiler -I .\soc\arm_cm\le501x\bin -I .\soc\arm_cm\le501x\compiler\armcc -I .\hal_driver\api -I .\hal_driver\inc -I .\module\debug -I .\module\common -I .\module\tinyfs -I .\module\ble -I .\module\static_buffer -I .\module\crc -I .\module\ble\prf -I .\module\debug\RTT -I .\module\tinycrypt\lib\include -I .\module\settings  --diag_suppress=1,61,68,188,1295-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="536" -DLE501X -DLE501X-o .\objects\tinyfs_write_cache.o --omf_browse .\objects\tinyfs_write_cache.crf --depend .\objects\tinyfs_write_cache.d)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
+I (module\tinyfs\tinyfs_write_cache.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (module\tinyfs\tinyfs_nvm.h)(0x63FF3646)
+F (.\soc\arm_cm\le501x\integration\calc_acc.c)(0x63FF3646)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\USER -I .\soc\arm_cm\le501x\integration -I .\soc\arm_cm\cmsis -I .\soc\arm_cm\le501x -I .\soc -I .\soc\arm_cm -I .\soc\arm_cm\le501x\compiler -I .\soc\arm_cm\le501x\bin -I .\soc\arm_cm\le501x\compiler\armcc -I .\hal_driver\api -I .\hal_driver\inc -I .\module\debug -I .\module\common -I .\module\tinyfs -I .\module\ble -I .\module\static_buffer -I .\module\crc -I .\module\ble\prf -I .\module\debug\RTT -I .\module\tinycrypt\lib\include -I .\module\settings  --diag_suppress=1,61,68,188,1295-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="536" -DLE501X -DLE501X-o .\objects\calc_acc.o --omf_browse .\objects\calc_acc.crf --depend .\objects\calc_acc.d)
+I (.\soc\field_manipulate.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (soc\arm_cm\le501x\integration\reg_rcc.h)(0x63FF3646)
+I (soc\arm_cm\le501x\integration\reg_rcc_type.h)(0x63FF3646)
+F (.\soc\arm_cm\le501x\integration\ls_msp_adc.c)(0x63FF3646)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\USER -I .\soc\arm_cm\le501x\integration -I .\soc\arm_cm\cmsis -I .\soc\arm_cm\le501x -I .\soc -I .\soc\arm_cm -I .\soc\arm_cm\le501x\compiler -I .\soc\arm_cm\le501x\bin -I .\soc\arm_cm\le501x\compiler\armcc -I .\hal_driver\api -I .\hal_driver\inc -I .\module\debug -I .\module\common -I .\module\tinyfs -I .\module\ble -I .\module\static_buffer -I .\module\crc -I .\module\ble\prf -I .\module\debug\RTT -I .\module\tinycrypt\lib\include -I .\module\settings  --diag_suppress=1,61,68,188,1295-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="536" -DLE501X -DLE501X-o .\objects\ls_msp_adc.o --omf_browse .\objects\ls_msp_adc.crf --depend .\objects\ls_msp_adc.d)
+I (soc\arm_cm\le501x\integration\ls_msp_adc.h)(0x63FF3646)
+I (soc\arm_cm\le501x\integration\reg_base_addr.h)(0x63FF3646)
+I (.\hal_driver\inc\reg_adc_type.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (soc\arm_cm\le501x\integration\reg_rcc.h)(0x63FF3646)
+I (soc\arm_cm\le501x\integration\reg_rcc_type.h)(0x63FF3646)
+I (.\soc\field_manipulate.h)(0x63FF3646)
+I (.\hal_driver\api\ls_hal_adc.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x63E9E314)
+I (.\hal_driver\api\HAL_def.h)(0x63FF3646)
+I (.\module\debug\ls_dbg.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x60252376)
+I (.\soc\sdk_config.h)(0x65C0740C)
+I (.\soc\arm_cm\le501x\sdk_default_config.h)(0x6563EA00)
+I (.\soc\arm_cm\le501x\le501x.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\core_cm0.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\cmsis_version.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\cmsis_compiler.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\cmsis_armcc.h)(0x63FF3646)
+I (soc\arm_cm\le501x\integration\modem_rf_le501x.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\sys_stat.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\platform.h)(0x64F7E1A4)
+I (.\soc\compile_flag.h)(0x63FF3646)
+I (soc\arm_cm\le501x\integration\dmac_config.h)(0x63FF3646)
+I (soc\arm_cm\le501x\integration\ls_msp_dmac.h)(0x63FF3646)
+I (.\hal_driver\inc\reg_dmac_type.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x6025237E)
+I (soc\arm_cm\le501x\integration\reg_syscfg.h)(0x63FF3646)
+I (soc\arm_cm\le501x\integration\reg_syscfg_type.h)(0x63FF3646)
+F (.\soc\arm_cm\le501x\integration\ls_msp_cache.c)(0x63FF3646)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\USER -I .\soc\arm_cm\le501x\integration -I .\soc\arm_cm\cmsis -I .\soc\arm_cm\le501x -I .\soc -I .\soc\arm_cm -I .\soc\arm_cm\le501x\compiler -I .\soc\arm_cm\le501x\bin -I .\soc\arm_cm\le501x\compiler\armcc -I .\hal_driver\api -I .\hal_driver\inc -I .\module\debug -I .\module\common -I .\module\tinyfs -I .\module\ble -I .\module\static_buffer -I .\module\crc -I .\module\ble\prf -I .\module\debug\RTT -I .\module\tinycrypt\lib\include -I .\module\settings  --diag_suppress=1,61,68,188,1295-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="536" -DLE501X -DLE501X-o .\objects\ls_msp_cache.o --omf_browse .\objects\ls_msp_cache.crf --depend .\objects\ls_msp_cache.d)
+I (soc\arm_cm\le501x\integration\reg_rcc.h)(0x63FF3646)
+I (soc\arm_cm\le501x\integration\reg_rcc_type.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (.\soc\field_manipulate.h)(0x63FF3646)
+I (.\soc\compile_flag.h)(0x63FF3646)
+F (.\soc\arm_cm\le501x\integration\ls_msp_crypt.c)(0x63FF3646)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\USER -I .\soc\arm_cm\le501x\integration -I .\soc\arm_cm\cmsis -I .\soc\arm_cm\le501x -I .\soc -I .\soc\arm_cm -I .\soc\arm_cm\le501x\compiler -I .\soc\arm_cm\le501x\bin -I .\soc\arm_cm\le501x\compiler\armcc -I .\hal_driver\api -I .\hal_driver\inc -I .\module\debug -I .\module\common -I .\module\tinyfs -I .\module\ble -I .\module\static_buffer -I .\module\crc -I .\module\ble\prf -I .\module\debug\RTT -I .\module\tinycrypt\lib\include -I .\module\settings  --diag_suppress=1,61,68,188,1295-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="536" -DLE501X -DLE501X-o .\objects\ls_msp_crypt.o --omf_browse .\objects\ls_msp_crypt.crf --depend .\objects\ls_msp_crypt.d)
+I (soc\arm_cm\le501x\integration\ls_msp_crypt.h)(0x63FF3646)
+I (soc\arm_cm\le501x\integration\reg_base_addr.h)(0x63FF3646)
+I (.\hal_driver\inc\reg_crypt_type.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (.\soc\arm_cm\le501x\sys_stat.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x63E9E314)
+I (soc\arm_cm\le501x\integration\reg_rcc.h)(0x63FF3646)
+I (soc\arm_cm\le501x\integration\reg_rcc_type.h)(0x63FF3646)
+I (.\soc\field_manipulate.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\platform.h)(0x64F7E1A4)
+I (.\soc\sdk_config.h)(0x65C0740C)
+I (.\soc\arm_cm\le501x\sdk_default_config.h)(0x6563EA00)
+I (.\soc\compile_flag.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\le501x.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\core_cm0.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\cmsis_version.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\cmsis_compiler.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\cmsis_armcc.h)(0x63FF3646)
+I (.\hal_driver\api\ls_hal_crypt.h)(0x63FF3646)
+I (.\hal_driver\api\HAL_def.h)(0x63FF3646)
+F (.\soc\arm_cm\le501x\integration\ls_msp_dmac.c)(0x63FF3646)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\USER -I .\soc\arm_cm\le501x\integration -I .\soc\arm_cm\cmsis -I .\soc\arm_cm\le501x -I .\soc -I .\soc\arm_cm -I .\soc\arm_cm\le501x\compiler -I .\soc\arm_cm\le501x\bin -I .\soc\arm_cm\le501x\compiler\armcc -I .\hal_driver\api -I .\hal_driver\inc -I .\module\debug -I .\module\common -I .\module\tinyfs -I .\module\ble -I .\module\static_buffer -I .\module\crc -I .\module\ble\prf -I .\module\debug\RTT -I .\module\tinycrypt\lib\include -I .\module\settings  --diag_suppress=1,61,68,188,1295-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="536" -DLE501X -DLE501X-o .\objects\ls_msp_dmac.o --omf_browse .\objects\ls_msp_dmac.crf --depend .\objects\ls_msp_dmac.d)
+I (soc\arm_cm\le501x\integration\ls_msp_dmac.h)(0x63FF3646)
+I (.\hal_driver\inc\reg_dmac_type.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (soc\arm_cm\le501x\integration\reg_base_addr.h)(0x63FF3646)
+I (soc\arm_cm\le501x\integration\reg_rcc.h)(0x63FF3646)
+I (soc\arm_cm\le501x\integration\reg_rcc_type.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\le501x.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\core_cm0.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\cmsis_version.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\cmsis_compiler.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\cmsis_armcc.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\platform.h)(0x64F7E1A4)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x63E9E314)
+I (.\soc\sdk_config.h)(0x65C0740C)
+I (.\soc\arm_cm\le501x\sdk_default_config.h)(0x6563EA00)
+I (.\soc\compile_flag.h)(0x63FF3646)
+I (.\soc\field_manipulate.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\sys_stat.h)(0x63FF3646)
+I (soc\arm_cm\le501x\integration\dmac_config.h)(0x63FF3646)
+I (.\hal_driver\api\ls_hal_dmac.h)(0x63FF3646)
+F (.\soc\arm_cm\le501x\integration\ls_msp_ecc.c)(0x63FF3646)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\USER -I .\soc\arm_cm\le501x\integration -I .\soc\arm_cm\cmsis -I .\soc\arm_cm\le501x -I .\soc -I .\soc\arm_cm -I .\soc\arm_cm\le501x\compiler -I .\soc\arm_cm\le501x\bin -I .\soc\arm_cm\le501x\compiler\armcc -I .\hal_driver\api -I .\hal_driver\inc -I .\module\debug -I .\module\common -I .\module\tinyfs -I .\module\ble -I .\module\static_buffer -I .\module\crc -I .\module\ble\prf -I .\module\debug\RTT -I .\module\tinycrypt\lib\include -I .\module\settings  --diag_suppress=1,61,68,188,1295-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="536" -DLE501X -DLE501X-o .\objects\ls_msp_ecc.o --omf_browse .\objects\ls_msp_ecc.crf --depend .\objects\ls_msp_ecc.d)
+I (soc\arm_cm\le501x\integration\reg_rcc.h)(0x63FF3646)
+I (soc\arm_cm\le501x\integration\reg_rcc_type.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (.\soc\arm_cm\le501x\sys_stat.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x63E9E314)
+I (.\soc\field_manipulate.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\le501x.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\core_cm0.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\cmsis_version.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\cmsis_compiler.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\cmsis_armcc.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\platform.h)(0x64F7E1A4)
+I (.\soc\sdk_config.h)(0x65C0740C)
+I (.\soc\arm_cm\le501x\sdk_default_config.h)(0x6563EA00)
+I (.\soc\compile_flag.h)(0x63FF3646)
+I (.\hal_driver\api\ls_hal_ecc.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\integration\ls_msp_ecc.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\integration\reg_base_addr.h)(0x63FF3646)
+I (.\hal_driver\inc\reg_ecc_type.h)(0x63FF3646)
+F (.\soc\arm_cm\le501x\integration\ls_msp_i2c.c)(0x63FF3646)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\USER -I .\soc\arm_cm\le501x\integration -I .\soc\arm_cm\cmsis -I .\soc\arm_cm\le501x -I .\soc -I .\soc\arm_cm -I .\soc\arm_cm\le501x\compiler -I .\soc\arm_cm\le501x\bin -I .\soc\arm_cm\le501x\compiler\armcc -I .\hal_driver\api -I .\hal_driver\inc -I .\module\debug -I .\module\common -I .\module\tinyfs -I .\module\ble -I .\module\static_buffer -I .\module\crc -I .\module\ble\prf -I .\module\debug\RTT -I .\module\tinycrypt\lib\include -I .\module\settings  --diag_suppress=1,61,68,188,1295-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="536" -DLE501X -DLE501X-o .\objects\ls_msp_i2c.o --omf_browse .\objects\ls_msp_i2c.crf --depend .\objects\ls_msp_i2c.d)
+I (soc\arm_cm\le501x\integration\ls_msp_i2c.h)(0x63FF3646)
+I (soc\arm_cm\le501x\integration\reg_base_addr.h)(0x63FF3646)
+I (.\hal_driver\inc\reg_i2c_type.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (soc\arm_cm\le501x\integration\reg_rcc.h)(0x63FF3646)
+I (soc\arm_cm\le501x\integration\reg_rcc_type.h)(0x63FF3646)
+I (.\soc\field_manipulate.h)(0x63FF3646)
+I (.\hal_driver\api\ls_hal_i2c.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x63E9E314)
+I (.\hal_driver\api\HAL_def.h)(0x63FF3646)
+I (.\module\debug\ls_dbg.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x60252376)
+I (.\hal_driver\api\ls_ll_i2c.h)(0x63FF3646)
+I (.\soc\sdk_config.h)(0x65C0740C)
+I (.\soc\arm_cm\le501x\sdk_default_config.h)(0x6563EA00)
+I (.\hal_driver\inc\i2c_misc.h)(0x63FF3646)
+I (.\module\debug\log.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x6025237E)
+I (.\soc\arm_cm\le501x\le501x.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\core_cm0.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\cmsis_version.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\cmsis_compiler.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\cmsis_armcc.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\sys_stat.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\platform.h)(0x64F7E1A4)
+I (.\soc\compile_flag.h)(0x63FF3646)
+I (soc\arm_cm\le501x\integration\dmac_config.h)(0x63FF3646)
+I (soc\arm_cm\le501x\integration\ls_msp_dmac.h)(0x63FF3646)
+I (.\hal_driver\inc\reg_dmac_type.h)(0x63FF3646)
+F (.\soc\arm_cm\le501x\integration\ls_msp_iwdg.c)(0x63FF3646)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\USER -I .\soc\arm_cm\le501x\integration -I .\soc\arm_cm\cmsis -I .\soc\arm_cm\le501x -I .\soc -I .\soc\arm_cm -I .\soc\arm_cm\le501x\compiler -I .\soc\arm_cm\le501x\bin -I .\soc\arm_cm\le501x\compiler\armcc -I .\hal_driver\api -I .\hal_driver\inc -I .\module\debug -I .\module\common -I .\module\tinyfs -I .\module\ble -I .\module\static_buffer -I .\module\crc -I .\module\ble\prf -I .\module\debug\RTT -I .\module\tinycrypt\lib\include -I .\module\settings  --diag_suppress=1,61,68,188,1295-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="536" -DLE501X -DLE501X-o .\objects\ls_msp_iwdg.o --omf_browse .\objects\ls_msp_iwdg.crf --depend .\objects\ls_msp_iwdg.d)
+I (soc\arm_cm\le501x\integration\ls_msp_iwdg.h)(0x63FF3646)
+I (.\hal_driver\inc\reg_iwdg_type.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (soc\arm_cm\le501x\integration\reg_base_addr.h)(0x63FF3646)
+I (.\soc\field_manipulate.h)(0x63FF3646)
+I (soc\arm_cm\le501x\integration\reg_rcc.h)(0x63FF3646)
+I (soc\arm_cm\le501x\integration\reg_rcc_type.h)(0x63FF3646)
+F (.\soc\arm_cm\le501x\integration\ls_msp_pdm.c)(0x63FF3646)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\USER -I .\soc\arm_cm\le501x\integration -I .\soc\arm_cm\cmsis -I .\soc\arm_cm\le501x -I .\soc -I .\soc\arm_cm -I .\soc\arm_cm\le501x\compiler -I .\soc\arm_cm\le501x\bin -I .\soc\arm_cm\le501x\compiler\armcc -I .\hal_driver\api -I .\hal_driver\inc -I .\module\debug -I .\module\common -I .\module\tinyfs -I .\module\ble -I .\module\static_buffer -I .\module\crc -I .\module\ble\prf -I .\module\debug\RTT -I .\module\tinycrypt\lib\include -I .\module\settings  --diag_suppress=1,61,68,188,1295-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="536" -DLE501X -DLE501X-o .\objects\ls_msp_pdm.o --omf_browse .\objects\ls_msp_pdm.crf --depend .\objects\ls_msp_pdm.d)
+I (soc\arm_cm\le501x\integration\ls_msp_pdm.h)(0x63FF3646)
+I (.\hal_driver\inc\reg_pdm_type.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (soc\arm_cm\le501x\integration\reg_base_addr.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\platform.h)(0x64F7E1A4)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x63E9E314)
+I (.\soc\sdk_config.h)(0x65C0740C)
+I (.\soc\arm_cm\le501x\sdk_default_config.h)(0x6563EA00)
+I (.\soc\compile_flag.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\le501x.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\core_cm0.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\cmsis_version.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\cmsis_compiler.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\cmsis_armcc.h)(0x63FF3646)
+I (.\soc\field_manipulate.h)(0x63FF3646)
+I (soc\arm_cm\le501x\integration\reg_rcc.h)(0x63FF3646)
+I (soc\arm_cm\le501x\integration\reg_rcc_type.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\sys_stat.h)(0x63FF3646)
+I (soc\arm_cm\le501x\integration\dmac_config.h)(0x63FF3646)
+I (.\hal_driver\api\ls_hal_pdm.h)(0x63FF3646)
+I (.\hal_driver\api\HAL_def.h)(0x63FF3646)
+F (.\soc\arm_cm\le501x\integration\ls_msp_pis.c)(0x63FF3646)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\USER -I .\soc\arm_cm\le501x\integration -I .\soc\arm_cm\cmsis -I .\soc\arm_cm\le501x -I .\soc -I .\soc\arm_cm -I .\soc\arm_cm\le501x\compiler -I .\soc\arm_cm\le501x\bin -I .\soc\arm_cm\le501x\compiler\armcc -I .\hal_driver\api -I .\hal_driver\inc -I .\module\debug -I .\module\common -I .\module\tinyfs -I .\module\ble -I .\module\static_buffer -I .\module\crc -I .\module\ble\prf -I .\module\debug\RTT -I .\module\tinycrypt\lib\include -I .\module\settings  --diag_suppress=1,61,68,188,1295-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="536" -DLE501X -DLE501X-o .\objects\ls_msp_pis.o --omf_browse .\objects\ls_msp_pis.crf --depend .\objects\ls_msp_pis.d)
+I (soc\arm_cm\le501x\integration\ls_msp_pis.h)(0x63FF3646)
+I (.\hal_driver\inc\reg_pis_type.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (.\soc\arm_cm\le501x\integration\pis_config.h)(0x63FF3646)
+I (soc\arm_cm\le501x\integration\reg_base_addr.h)(0x63FF3646)
+I (soc\arm_cm\le501x\integration\reg_rcc.h)(0x63FF3646)
+I (soc\arm_cm\le501x\integration\reg_rcc_type.h)(0x63FF3646)
+I (.\soc\field_manipulate.h)(0x63FF3646)
+F (.\soc\arm_cm\le501x\integration\ls_msp_qspi.c)(0x63FF3646)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\USER -I .\soc\arm_cm\le501x\integration -I .\soc\arm_cm\cmsis -I .\soc\arm_cm\le501x -I .\soc -I .\soc\arm_cm -I .\soc\arm_cm\le501x\compiler -I .\soc\arm_cm\le501x\bin -I .\soc\arm_cm\le501x\compiler\armcc -I .\hal_driver\api -I .\hal_driver\inc -I .\module\debug -I .\module\common -I .\module\tinyfs -I .\module\ble -I .\module\static_buffer -I .\module\crc -I .\module\ble\prf -I .\module\debug\RTT -I .\module\tinycrypt\lib\include -I .\module\settings  --diag_suppress=1,61,68,188,1295-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="536" -DLE501X -DLE501X-o .\objects\ls_msp_qspi.o --omf_browse .\objects\ls_msp_qspi.crf --depend .\objects\ls_msp_qspi.d)
+I (soc\arm_cm\le501x\integration\ls_msp_qspi.h)(0x63FF3646)
+I (.\hal_driver\inc\reg_qspi_type.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (soc\arm_cm\le501x\integration\reg_base_addr.h)(0x63FF3646)
+I (soc\arm_cm\le501x\integration\reg_rcc.h)(0x63FF3646)
+I (soc\arm_cm\le501x\integration\reg_rcc_type.h)(0x63FF3646)
+I (.\soc\field_manipulate.h)(0x63FF3646)
+I (.\soc\compile_flag.h)(0x63FF3646)
+F (.\soc\arm_cm\le501x\integration\ls_msp_rtc.c)(0x63FF3646)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\USER -I .\soc\arm_cm\le501x\integration -I .\soc\arm_cm\cmsis -I .\soc\arm_cm\le501x -I .\soc -I .\soc\arm_cm -I .\soc\arm_cm\le501x\compiler -I .\soc\arm_cm\le501x\bin -I .\soc\arm_cm\le501x\compiler\armcc -I .\hal_driver\api -I .\hal_driver\inc -I .\module\debug -I .\module\common -I .\module\tinyfs -I .\module\ble -I .\module\static_buffer -I .\module\crc -I .\module\ble\prf -I .\module\debug\RTT -I .\module\tinycrypt\lib\include -I .\module\settings  --diag_suppress=1,61,68,188,1295-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="536" -DLE501X -DLE501X-o .\objects\ls_msp_rtc.o --omf_browse .\objects\ls_msp_rtc.crf --depend .\objects\ls_msp_rtc.d)
+I (soc\arm_cm\le501x\integration\ls_msp_rtc.h)(0x63FF3646)
+I (.\hal_driver\inc\reg_rtc_type.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (soc\arm_cm\le501x\integration\reg_base_addr.h)(0x63FF3646)
+I (soc\arm_cm\le501x\integration\reg_syscfg.h)(0x63FF3646)
+I (soc\arm_cm\le501x\integration\reg_syscfg_type.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\platform.h)(0x64F7E1A4)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x63E9E314)
+I (.\soc\sdk_config.h)(0x65C0740C)
+I (.\soc\arm_cm\le501x\sdk_default_config.h)(0x6563EA00)
+I (.\soc\compile_flag.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\le501x.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\core_cm0.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\cmsis_version.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\cmsis_compiler.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\cmsis_armcc.h)(0x63FF3646)
+I (.\soc\field_manipulate.h)(0x63FF3646)
+I (soc\arm_cm\le501x\integration\reg_rcc.h)(0x63FF3646)
+I (soc\arm_cm\le501x\integration\reg_rcc_type.h)(0x63FF3646)
+I (.\hal_driver\api\ls_hal_rtc.h)(0x63FF3646)
+I (.\hal_driver\api\HAL_def.h)(0x63FF3646)
+F (.\soc\arm_cm\le501x\integration\ls_msp_spi_i2s.c)(0x63FF3646)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\USER -I .\soc\arm_cm\le501x\integration -I .\soc\arm_cm\cmsis -I .\soc\arm_cm\le501x -I .\soc -I .\soc\arm_cm -I .\soc\arm_cm\le501x\compiler -I .\soc\arm_cm\le501x\bin -I .\soc\arm_cm\le501x\compiler\armcc -I .\hal_driver\api -I .\hal_driver\inc -I .\module\debug -I .\module\common -I .\module\tinyfs -I .\module\ble -I .\module\static_buffer -I .\module\crc -I .\module\ble\prf -I .\module\debug\RTT -I .\module\tinycrypt\lib\include -I .\module\settings  --diag_suppress=1,61,68,188,1295-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="536" -DLE501X -DLE501X-o .\objects\ls_msp_spi_i2s.o --omf_browse .\objects\ls_msp_spi_i2s.crf --depend .\objects\ls_msp_spi_i2s.d)
+I (soc\arm_cm\le501x\integration\ls_msp_spi_i2s.h)(0x63FF3646)
+I (soc\arm_cm\le501x\integration\reg_base_addr.h)(0x63FF3646)
+I (.\hal_driver\inc\reg_spi_type.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (soc\arm_cm\le501x\integration\reg_rcc.h)(0x63FF3646)
+I (soc\arm_cm\le501x\integration\reg_rcc_type.h)(0x63FF3646)
+I (.\soc\field_manipulate.h)(0x63FF3646)
+I (.\hal_driver\api\ls_hal_spi_i2s.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x63E9E314)
+I (.\hal_driver\api\ls_ll_spi.h)(0x63FF3646)
+I (.\hal_driver\api\HAL_def.h)(0x63FF3646)
+I (.\soc\sdk_config.h)(0x65C0740C)
+I (.\soc\arm_cm\le501x\sdk_default_config.h)(0x6563EA00)
+I (.\module\debug\log.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x60252376)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x6025237E)
+I (.\soc\systick.h)(0x63FF3646)
+I (.\module\debug\ls_dbg.h)(0x63FF3646)
+I (.\module\common\common.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\le501x.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\core_cm0.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\cmsis_version.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\cmsis_compiler.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\cmsis_armcc.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\sys_stat.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\platform.h)(0x64F7E1A4)
+I (.\soc\compile_flag.h)(0x63FF3646)
+I (soc\arm_cm\le501x\integration\dmac_config.h)(0x63FF3646)
+I (soc\arm_cm\le501x\integration\ls_msp_dmac.h)(0x63FF3646)
+I (.\hal_driver\inc\reg_dmac_type.h)(0x63FF3646)
+F (.\soc\arm_cm\le501x\integration\ls_msp_ssi.c)(0x63FF3646)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\USER -I .\soc\arm_cm\le501x\integration -I .\soc\arm_cm\cmsis -I .\soc\arm_cm\le501x -I .\soc -I .\soc\arm_cm -I .\soc\arm_cm\le501x\compiler -I .\soc\arm_cm\le501x\bin -I .\soc\arm_cm\le501x\compiler\armcc -I .\hal_driver\api -I .\hal_driver\inc -I .\module\debug -I .\module\common -I .\module\tinyfs -I .\module\ble -I .\module\static_buffer -I .\module\crc -I .\module\ble\prf -I .\module\debug\RTT -I .\module\tinycrypt\lib\include -I .\module\settings  --diag_suppress=1,61,68,188,1295-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="536" -DLE501X -DLE501X-o .\objects\ls_msp_ssi.o --omf_browse .\objects\ls_msp_ssi.crf --depend .\objects\ls_msp_ssi.d)
+I (soc\arm_cm\le501x\integration\ls_msp_ssi.h)(0x63FF3646)
+I (.\hal_driver\inc\reg_ssi_type.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (soc\arm_cm\le501x\integration\reg_base_addr.h)(0x63FF3646)
+I (soc\arm_cm\le501x\integration\reg_rcc.h)(0x63FF3646)
+I (soc\arm_cm\le501x\integration\reg_rcc_type.h)(0x63FF3646)
+I (.\soc\field_manipulate.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\platform.h)(0x64F7E1A4)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x63E9E314)
+I (.\soc\sdk_config.h)(0x65C0740C)
+I (.\soc\arm_cm\le501x\sdk_default_config.h)(0x6563EA00)
+I (.\soc\compile_flag.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\le501x.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\core_cm0.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\cmsis_version.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\cmsis_compiler.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\cmsis_armcc.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\sys_stat.h)(0x63FF3646)
+I (soc\arm_cm\le501x\integration\dmac_config.h)(0x63FF3646)
+I (.\hal_driver\api\ls_hal_ssi.h)(0x63FF3646)
+I (.\hal_driver\api\ls_ll_ssi.h)(0x63FF3646)
+I (.\hal_driver\api\HAL_def.h)(0x63FF3646)
+I (.\hal_driver\inc\ssi_misc.h)(0x63FF3646)
+F (.\soc\arm_cm\le501x\integration\ls_msp_timer.c)(0x648677AA)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\USER -I .\soc\arm_cm\le501x\integration -I .\soc\arm_cm\cmsis -I .\soc\arm_cm\le501x -I .\soc -I .\soc\arm_cm -I .\soc\arm_cm\le501x\compiler -I .\soc\arm_cm\le501x\bin -I .\soc\arm_cm\le501x\compiler\armcc -I .\hal_driver\api -I .\hal_driver\inc -I .\module\debug -I .\module\common -I .\module\tinyfs -I .\module\ble -I .\module\static_buffer -I .\module\crc -I .\module\ble\prf -I .\module\debug\RTT -I .\module\tinycrypt\lib\include -I .\module\settings  --diag_suppress=1,61,68,188,1295-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="536" -DLE501X -DLE501X-o .\objects\ls_msp_timer.o --omf_browse .\objects\ls_msp_timer.crf --depend .\objects\ls_msp_timer.d)
+I (soc\arm_cm\le501x\integration\ls_msp_timer.h)(0x648677AA)
+I (soc\arm_cm\le501x\integration\reg_base_addr.h)(0x63FF3646)
+I (.\hal_driver\inc\reg_timer_type.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (.\hal_driver\api\ls_hal_timer.h)(0x6545FAB3)
+I (.\soc\sdk_config.h)(0x65C0740C)
+I (.\soc\arm_cm\le501x\sdk_default_config.h)(0x6563EA00)
+I (.\hal_driver\api\HAL_def.h)(0x63FF3646)
+I (soc\arm_cm\le501x\integration\reg_rcc.h)(0x63FF3646)
+I (soc\arm_cm\le501x\integration\reg_rcc_type.h)(0x63FF3646)
+I (.\soc\field_manipulate.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\le501x.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\core_cm0.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\cmsis_version.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\cmsis_compiler.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\cmsis_armcc.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\sys_stat.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x63E9E314)
+I (.\soc\arm_cm\le501x\platform.h)(0x64F7E1A4)
+I (.\soc\compile_flag.h)(0x63FF3646)
+F (.\soc\arm_cm\le501x\integration\ls_msp_trng.c)(0x63FF3646)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\USER -I .\soc\arm_cm\le501x\integration -I .\soc\arm_cm\cmsis -I .\soc\arm_cm\le501x -I .\soc -I .\soc\arm_cm -I .\soc\arm_cm\le501x\compiler -I .\soc\arm_cm\le501x\bin -I .\soc\arm_cm\le501x\compiler\armcc -I .\hal_driver\api -I .\hal_driver\inc -I .\module\debug -I .\module\common -I .\module\tinyfs -I .\module\ble -I .\module\static_buffer -I .\module\crc -I .\module\ble\prf -I .\module\debug\RTT -I .\module\tinycrypt\lib\include -I .\module\settings  --diag_suppress=1,61,68,188,1295-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="536" -DLE501X -DLE501X-o .\objects\ls_msp_trng.o --omf_browse .\objects\ls_msp_trng.crf --depend .\objects\ls_msp_trng.d)
+I (soc\arm_cm\le501x\integration\ls_msp_trng.h)(0x63FF3646)
+I (soc\arm_cm\le501x\integration\reg_base_addr.h)(0x63FF3646)
+I (.\hal_driver\inc\reg_trng_type.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (soc\arm_cm\le501x\integration\reg_rcc.h)(0x63FF3646)
+I (soc\arm_cm\le501x\integration\reg_rcc_type.h)(0x63FF3646)
+I (.\soc\field_manipulate.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\sys_stat.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x63E9E314)
+I (.\soc\arm_cm\le501x\platform.h)(0x64F7E1A4)
+I (.\soc\sdk_config.h)(0x65C0740C)
+I (.\soc\arm_cm\le501x\sdk_default_config.h)(0x6563EA00)
+I (.\soc\compile_flag.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\le501x.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\core_cm0.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\cmsis_version.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\cmsis_compiler.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\cmsis_armcc.h)(0x63FF3646)
+I (.\hal_driver\api\ls_hal_trng.h)(0x63FF3646)
+I (.\hal_driver\api\HAL_def.h)(0x63FF3646)
+F (.\soc\arm_cm\le501x\integration\ls_msp_uart.c)(0x63FF3646)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\USER -I .\soc\arm_cm\le501x\integration -I .\soc\arm_cm\cmsis -I .\soc\arm_cm\le501x -I .\soc -I .\soc\arm_cm -I .\soc\arm_cm\le501x\compiler -I .\soc\arm_cm\le501x\bin -I .\soc\arm_cm\le501x\compiler\armcc -I .\hal_driver\api -I .\hal_driver\inc -I .\module\debug -I .\module\common -I .\module\tinyfs -I .\module\ble -I .\module\static_buffer -I .\module\crc -I .\module\ble\prf -I .\module\debug\RTT -I .\module\tinycrypt\lib\include -I .\module\settings  --diag_suppress=1,61,68,188,1295-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="536" -DLE501X -DLE501X-o .\objects\ls_msp_uart.o --omf_browse .\objects\ls_msp_uart.crf --depend .\objects\ls_msp_uart.d)
+I (soc\arm_cm\le501x\integration\ls_msp_uart.h)(0x63FF3646)
+I (soc\arm_cm\le501x\integration\reg_base_addr.h)(0x63FF3646)
+I (.\hal_driver\inc\reg_uart_type.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (soc\arm_cm\le501x\integration\reg_rcc.h)(0x63FF3646)
+I (soc\arm_cm\le501x\integration\reg_rcc_type.h)(0x63FF3646)
+I (.\soc\field_manipulate.h)(0x63FF3646)
+I (.\hal_driver\api\ls_hal_uart.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x63E9E314)
+I (.\hal_driver\api\HAL_def.h)(0x63FF3646)
+I (.\soc\sdk_config.h)(0x65C0740C)
+I (.\soc\arm_cm\le501x\sdk_default_config.h)(0x6563EA00)
+I (.\hal_driver\api\ls_ll_uart.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\le501x.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\core_cm0.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\cmsis_version.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\cmsis_compiler.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\cmsis_armcc.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\sys_stat.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\platform.h)(0x64F7E1A4)
+I (.\soc\compile_flag.h)(0x63FF3646)
+I (soc\arm_cm\le501x\integration\dmac_config.h)(0x63FF3646)
+I (soc\arm_cm\le501x\integration\ls_msp_dmac.h)(0x63FF3646)
+I (.\hal_driver\inc\reg_dmac_type.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x6025237E)
+F (.\soc\arm_cm\le501x\integration\ls_msp_wwdg.c)(0x63FF3646)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\USER -I .\soc\arm_cm\le501x\integration -I .\soc\arm_cm\cmsis -I .\soc\arm_cm\le501x -I .\soc -I .\soc\arm_cm -I .\soc\arm_cm\le501x\compiler -I .\soc\arm_cm\le501x\bin -I .\soc\arm_cm\le501x\compiler\armcc -I .\hal_driver\api -I .\hal_driver\inc -I .\module\debug -I .\module\common -I .\module\tinyfs -I .\module\ble -I .\module\static_buffer -I .\module\crc -I .\module\ble\prf -I .\module\debug\RTT -I .\module\tinycrypt\lib\include -I .\module\settings  --diag_suppress=1,61,68,188,1295-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="536" -DLE501X -DLE501X-o .\objects\ls_msp_wwdg.o --omf_browse .\objects\ls_msp_wwdg.crf --depend .\objects\ls_msp_wwdg.d)
+I (soc\arm_cm\le501x\integration\ls_msp_wwdg.h)(0x63FF3646)
+I (.\hal_driver\inc\reg_wwdg_type.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (soc\arm_cm\le501x\integration\reg_base_addr.h)(0x63FF3646)
+I (.\soc\field_manipulate.h)(0x63FF3646)
+I (soc\arm_cm\le501x\integration\reg_rcc.h)(0x63FF3646)
+I (soc\arm_cm\le501x\integration\reg_rcc_type.h)(0x63FF3646)
+F (.\soc\arm_cm\le501x\integration\ls_soc_gpio.c)(0x64F84536)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\USER -I .\soc\arm_cm\le501x\integration -I .\soc\arm_cm\cmsis -I .\soc\arm_cm\le501x -I .\soc -I .\soc\arm_cm -I .\soc\arm_cm\le501x\compiler -I .\soc\arm_cm\le501x\bin -I .\soc\arm_cm\le501x\compiler\armcc -I .\hal_driver\api -I .\hal_driver\inc -I .\module\debug -I .\module\common -I .\module\tinyfs -I .\module\ble -I .\module\static_buffer -I .\module\crc -I .\module\ble\prf -I .\module\debug\RTT -I .\module\tinycrypt\lib\include -I .\module\settings  --diag_suppress=1,61,68,188,1295-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="536" -DLE501X -DLE501X-o .\objects\ls_soc_gpio.o --omf_browse .\objects\ls_soc_gpio.crf --depend .\objects\ls_soc_gpio.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x6025237E)
+I (soc\arm_cm\le501x\integration\gpio_mode.h)(0x63FF3646)
+I (soc\arm_cm\le501x\integration\reg_rcc.h)(0x63FF3646)
+I (soc\arm_cm\le501x\integration\reg_rcc_type.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (soc\arm_cm\le501x\integration\reg_gpio.h)(0x63FF3646)
+I (soc\arm_cm\le501x\integration\reg_gpio_type.h)(0x63FF3646)
+I (soc\arm_cm\le501x\integration\reg_exti_type.h)(0x63FF3646)
+I (soc\arm_cm\le501x\integration\ls_soc_gpio.h)(0x64F84C22)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x63E9E314)
+I (soc\arm_cm\le501x\integration\ls_soc_pinmux.h)(0x63FF3646)
+I (soc\arm_cm\le501x\integration\reg_syscfg.h)(0x63FF3646)
+I (soc\arm_cm\le501x\integration\reg_syscfg_type.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\sleep.h)(0x63FF3646)
+I (.\module\debug\ls_dbg.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x60252376)
+I (.\soc\arm_cm\le501x\platform.h)(0x64F7E1A4)
+I (.\soc\sdk_config.h)(0x65C0740C)
+I (.\soc\arm_cm\le501x\sdk_default_config.h)(0x6563EA00)
+I (.\soc\compile_flag.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\le501x.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\core_cm0.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\cmsis_version.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\cmsis_compiler.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\cmsis_armcc.h)(0x63FF3646)
+I (.\soc\field_manipulate.h)(0x63FF3646)
+F (.\soc\arm_cm\le501x\integration\modem_rf_le501x.c)(0x63FF3646)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\USER -I .\soc\arm_cm\le501x\integration -I .\soc\arm_cm\cmsis -I .\soc\arm_cm\le501x -I .\soc -I .\soc\arm_cm -I .\soc\arm_cm\le501x\compiler -I .\soc\arm_cm\le501x\bin -I .\soc\arm_cm\le501x\compiler\armcc -I .\hal_driver\api -I .\hal_driver\inc -I .\module\debug -I .\module\common -I .\module\tinyfs -I .\module\ble -I .\module\static_buffer -I .\module\crc -I .\module\ble\prf -I .\module\debug\RTT -I .\module\tinycrypt\lib\include -I .\module\settings  --diag_suppress=1,61,68,188,1295-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="536" -DLE501X -DLE501X-o .\objects\modem_rf_le501x.o --omf_browse .\objects\modem_rf_le501x.crf --depend .\objects\modem_rf_le501x.d)
+I (soc\arm_cm\le501x\integration\modem_rf_le501x.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x63E9E314)
+I (soc\arm_cm\le501x\integration\reg_rcc.h)(0x63FF3646)
+I (soc\arm_cm\le501x\integration\reg_rcc_type.h)(0x63FF3646)
+I (.\soc\field_manipulate.h)(0x63FF3646)
+I (soc\arm_cm\le501x\integration\reg_rf.h)(0x63FF3646)
+I (soc\arm_cm\le501x\integration\reg_rf_type.h)(0x63FF3646)
+I (soc\arm_cm\le501x\integration\reg_mdm2.h)(0x63FF3646)
+I (soc\arm_cm\le501x\integration\reg_mdm2_type.h)(0x63FF3646)
+I (soc\arm_cm\le501x\integration\reg_syscfg.h)(0x63FF3646)
+I (soc\arm_cm\le501x\integration\reg_syscfg_type.h)(0x63FF3646)
+I (.\hal_driver\api\ls_hal_flash.h)(0x655AD648)
+I (.\module\debug\ls_dbg.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x60252376)
+I (.\soc\sdk_config.h)(0x65C0740C)
+I (.\soc\arm_cm\le501x\sdk_default_config.h)(0x6563EA00)
+F (.\soc\arm_cm\le501x\integration\modem_rf_le501x_24g.c)(0x63FF3646)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\USER -I .\soc\arm_cm\le501x\integration -I .\soc\arm_cm\cmsis -I .\soc\arm_cm\le501x -I .\soc -I .\soc\arm_cm -I .\soc\arm_cm\le501x\compiler -I .\soc\arm_cm\le501x\bin -I .\soc\arm_cm\le501x\compiler\armcc -I .\hal_driver\api -I .\hal_driver\inc -I .\module\debug -I .\module\common -I .\module\tinyfs -I .\module\ble -I .\module\static_buffer -I .\module\crc -I .\module\ble\prf -I .\module\debug\RTT -I .\module\tinycrypt\lib\include -I .\module\settings  --diag_suppress=1,61,68,188,1295-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="536" -DLE501X -DLE501X-o .\objects\modem_rf_le501x_24g.o --omf_browse .\objects\modem_rf_le501x_24g.crf --depend .\objects\modem_rf_le501x_24g.d)
+I (soc\arm_cm\le501x\integration\modem_rf_le501x_24g.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x63E9E314)
+I (soc\arm_cm\le501x\integration\reg_rcc.h)(0x63FF3646)
+I (soc\arm_cm\le501x\integration\reg_rcc_type.h)(0x63FF3646)
+I (.\soc\field_manipulate.h)(0x63FF3646)
+I (soc\arm_cm\le501x\integration\reg_rf.h)(0x63FF3646)
+I (soc\arm_cm\le501x\integration\reg_rf_type.h)(0x63FF3646)
+I (soc\arm_cm\le501x\integration\reg_mdm2.h)(0x63FF3646)
+I (soc\arm_cm\le501x\integration\reg_mdm2_type.h)(0x63FF3646)
+I (soc\arm_cm\le501x\integration\reg_syscfg.h)(0x63FF3646)
+I (soc\arm_cm\le501x\integration\reg_syscfg_type.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\platform.h)(0x64F7E1A4)
+I (.\soc\sdk_config.h)(0x65C0740C)
+I (.\soc\arm_cm\le501x\sdk_default_config.h)(0x6563EA00)
+I (.\soc\compile_flag.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\le501x.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\core_cm0.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\cmsis_version.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\cmsis_compiler.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\cmsis_armcc.h)(0x63FF3646)
+I (.\module\debug\ls_dbg.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x60252376)
+I (.\module\ble\ls_24g.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x6025237E)
+I (.\module\debug\log.h)(0x63FF3646)
+F (.\soc\arm_cm\le501x\cpu.c)(0x63FF3646)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\USER -I .\soc\arm_cm\le501x\integration -I .\soc\arm_cm\cmsis -I .\soc\arm_cm\le501x -I .\soc -I .\soc\arm_cm -I .\soc\arm_cm\le501x\compiler -I .\soc\arm_cm\le501x\bin -I .\soc\arm_cm\le501x\compiler\armcc -I .\hal_driver\api -I .\hal_driver\inc -I .\module\debug -I .\module\common -I .\module\tinyfs -I .\module\ble -I .\module\static_buffer -I .\module\crc -I .\module\ble\prf -I .\module\debug\RTT -I .\module\tinycrypt\lib\include -I .\module\settings  --diag_suppress=1,61,68,188,1295-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="536" -DLE501X -DLE501X-o .\objects\cpu.o --omf_browse .\objects\cpu.crf --depend .\objects\cpu.d)
+I (soc\arm_cm\le501x\le501x.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\core_cm0.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (.\soc\arm_cm\cmsis\cmsis_version.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\cmsis_compiler.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\cmsis_armcc.h)(0x63FF3646)
+I (.\soc\cpu.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x63E9E314)
+I (.\soc\compile_flag.h)(0x63FF3646)
+F (.\soc\arm_cm\le501x\platform.c)(0x65C07367)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\USER -I .\soc\arm_cm\le501x\integration -I .\soc\arm_cm\cmsis -I .\soc\arm_cm\le501x -I .\soc -I .\soc\arm_cm -I .\soc\arm_cm\le501x\compiler -I .\soc\arm_cm\le501x\bin -I .\soc\arm_cm\le501x\compiler\armcc -I .\hal_driver\api -I .\hal_driver\inc -I .\module\debug -I .\module\common -I .\module\tinyfs -I .\module\ble -I .\module\static_buffer -I .\module\crc -I .\module\ble\prf -I .\module\debug\RTT -I .\module\tinycrypt\lib\include -I .\module\settings  --diag_suppress=1,61,68,188,1295-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="536" -DLE501X -DLE501X-o .\objects\platform.o --omf_browse .\objects\platform.crf --depend .\objects\platform.d)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x60252374)
+I (soc\arm_cm\le501x\platform.h)(0x64F7E1A4)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x63E9E314)
+I (.\soc\sdk_config.h)(0x65C0740C)
+I (.\soc\arm_cm\le501x\sdk_default_config.h)(0x6563EA00)
+I (.\soc\compile_flag.h)(0x63FF3646)
+I (soc\arm_cm\le501x\le501x.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\core_cm0.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\cmsis_version.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\cmsis_compiler.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\cmsis_armcc.h)(0x63FF3646)
+I (.\hal_driver\api\calc_div.h)(0x63FF3646)
+I (.\soc\cpu.h)(0x63FF3646)
+I (.\module\tinyfs\tinyfs_config.h)(0x63FF3646)
+I (.\module\tinyfs\tinyfs.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x60252376)
+I (soc\arm_cm\le501x\sleep.h)(0x63FF3646)
+I (.\module\debug\log.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x6025237E)
+I (.\soc\arm_cm\le501x\integration\ls_msp_qspi.h)(0x63FF3646)
+I (.\hal_driver\inc\reg_qspi_type.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\integration\reg_base_addr.h)(0x63FF3646)
+I (.\hal_driver\api\ls_hal_flash.h)(0x655AD648)
+I (.\hal_driver\api\ls_hal_cache.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\integration\ls_msp_cache.h)(0x63FF3646)
+I (.\hal_driver\inc\reg_cache_type.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\integration\reg_rcc.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\integration\reg_rcc_type.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\integration\modem_rf_le501x.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\integration\modem_rf_le501x_24g.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\integration\calc_acc.h)(0x63FF3646)
+I (.\module\ble\builtin_timer.h)(0x63FF3646)
+I (.\module\static_buffer\linked_buffer.h)(0x63FF3646)
+I (.\module\common\co_list.h)(0x63FF3646)
+I (.\module\common\common.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\integration\reg_syscfg.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\integration\reg_syscfg_type.h)(0x63FF3646)
+I (.\hal_driver\api\ls_hal_ecc.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\integration\ls_msp_ecc.h)(0x63FF3646)
+I (.\hal_driver\inc\reg_ecc_type.h)(0x63FF3646)
+I (.\hal_driver\api\ls_hal_trng.h)(0x63FF3646)
+I (.\hal_driver\api\HAL_def.h)(0x63FF3646)
+I (.\soc\field_manipulate.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\integration\ls_soc_gpio.h)(0x64F84C22)
+I (.\soc\arm_cm\le501x\integration\ls_soc_pinmux.h)(0x63FF3646)
+I (.\module\debug\ls_dbg.h)(0x63FF3646)
+I (.\soc\systick.h)(0x63FF3646)
+I (.\hal_driver\api\ls_hal_pis.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\integration\ls_msp_pis.h)(0x63FF3646)
+I (.\hal_driver\inc\reg_pis_type.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\integration\pis_config.h)(0x63FF3646)
+I (.\hal_driver\api\ls_hal_timer.h)(0x6545FAB3)
+I (.\soc\arm_cm\le501x\integration\ls_msp_timer.h)(0x648677AA)
+I (.\hal_driver\inc\reg_timer_type.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\integration\reg_lptim.h)(0x63FF3646)
+I (.\module\common\sw_timer.h)(0x63FF3646)
+I (.\module\common\circular_doubly_linked_list.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\sw_timer_port.h)(0x63FF3646)
+I (.\module\ble\ls_sys.h)(0x63FF3646)
+I (soc\arm_cm\le501x\sys_stat.h)(0x63FF3646)
+F (.\soc\arm_cm\le501x\sleep.c)(0x658BD706)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\USER -I .\soc\arm_cm\le501x\integration -I .\soc\arm_cm\cmsis -I .\soc\arm_cm\le501x -I .\soc -I .\soc\arm_cm -I .\soc\arm_cm\le501x\compiler -I .\soc\arm_cm\le501x\bin -I .\soc\arm_cm\le501x\compiler\armcc -I .\hal_driver\api -I .\hal_driver\inc -I .\module\debug -I .\module\common -I .\module\tinyfs -I .\module\ble -I .\module\static_buffer -I .\module\crc -I .\module\ble\prf -I .\module\debug\RTT -I .\module\tinycrypt\lib\include -I .\module\settings  --diag_suppress=1,61,68,188,1295-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="536" -DLE501X -DLE501X-o .\objects\sleep.o --omf_browse .\objects\sleep.crf --depend .\objects\sleep.d)
+I (.\soc\sdk_config.h)(0x65C0740C)
+I (.\soc\arm_cm\le501x\sdk_default_config.h)(0x6563EA00)
+I (soc\arm_cm\le501x\le501x.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\core_cm0.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (.\soc\arm_cm\cmsis\cmsis_version.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\cmsis_compiler.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\cmsis_armcc.h)(0x63FF3646)
+I (.\hal_driver\api\ls_hal_flash.h)(0x655AD648)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x63E9E314)
+I (.\soc\compile_flag.h)(0x63FF3646)
+I (.\hal_driver\api\ls_hal_cache.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\integration\ls_msp_cache.h)(0x63FF3646)
+I (.\hal_driver\inc\reg_cache_type.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\integration\reg_base_addr.h)(0x63FF3646)
+I (soc\arm_cm\le501x\platform.h)(0x64F7E1A4)
+I (.\soc\arm_cm\le501x\integration\modem_rf_le501x.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\integration\reg_syscfg.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\integration\reg_syscfg_type.h)(0x63FF3646)
+I (.\soc\field_manipulate.h)(0x63FF3646)
+I (soc\arm_cm\le501x\sleep.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\integration\reg_rcc.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\integration\reg_rcc_type.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\integration\reg_gpio.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\integration\reg_gpio_type.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\integration\reg_exti_type.h)(0x63FF3646)
+I (.\module\debug\ls_dbg.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x60252376)
+I (.\soc\cpu.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\integration\ls_soc_gpio.h)(0x64F84C22)
+I (.\soc\arm_cm\le501x\integration\ls_soc_pinmux.h)(0x63FF3646)
+I (.\hal_driver\api\ls_hal_rtc.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\integration\ls_msp_rtc.h)(0x63FF3646)
+I (.\hal_driver\inc\reg_rtc_type.h)(0x63FF3646)
+I (.\hal_driver\api\HAL_def.h)(0x63FF3646)
+I (.\soc\systick.h)(0x63FF3646)
+I (soc\arm_cm\le501x\sys_stat.h)(0x63FF3646)
+I (.\hal_driver\api\ls_hal_iwdg.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
+I (.\soc\arm_cm\le501x\integration\ls_msp_iwdg.h)(0x63FF3646)
+I (.\hal_driver\inc\reg_iwdg_type.h)(0x63FF3646)
+F (.\soc\arm_cm\le501x\stack_var.c)(0x63FF3646)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\USER -I .\soc\arm_cm\le501x\integration -I .\soc\arm_cm\cmsis -I .\soc\arm_cm\le501x -I .\soc -I .\soc\arm_cm -I .\soc\arm_cm\le501x\compiler -I .\soc\arm_cm\le501x\bin -I .\soc\arm_cm\le501x\compiler\armcc -I .\hal_driver\api -I .\hal_driver\inc -I .\module\debug -I .\module\common -I .\module\tinyfs -I .\module\ble -I .\module\static_buffer -I .\module\crc -I .\module\ble\prf -I .\module\debug\RTT -I .\module\tinycrypt\lib\include -I .\module\settings  --diag_suppress=1,61,68,188,1295-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="536" -DLE501X -DLE501X-o .\objects\stack_var.o --omf_browse .\objects\stack_var.crf --depend .\objects\stack_var.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x60252374)
+I (.\soc\sdk_config.h)(0x65C0740C)
+I (.\soc\arm_cm\le501x\sdk_default_config.h)(0x6563EA00)
+I (soc\arm_cm\le501x\platform.h)(0x64F7E1A4)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x63E9E314)
+I (.\soc\compile_flag.h)(0x63FF3646)
+I (soc\arm_cm\le501x\le501x.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\core_cm0.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\cmsis_version.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\cmsis_compiler.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\cmsis_armcc.h)(0x63FF3646)
+I (.\soc\cpu.h)(0x63FF3646)
+I (.\module\debug\log.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x60252376)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x6025237E)
+I (.\soc\arm_cm\le501x\integration\modem_rf_le501x.h)(0x63FF3646)
+F (.\soc\arm_cm\le501x\sw_timer_port.c)(0x63FF3646)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\USER -I .\soc\arm_cm\le501x\integration -I .\soc\arm_cm\cmsis -I .\soc\arm_cm\le501x -I .\soc -I .\soc\arm_cm -I .\soc\arm_cm\le501x\compiler -I .\soc\arm_cm\le501x\bin -I .\soc\arm_cm\le501x\compiler\armcc -I .\hal_driver\api -I .\hal_driver\inc -I .\module\debug -I .\module\common -I .\module\tinyfs -I .\module\ble -I .\module\static_buffer -I .\module\crc -I .\module\ble\prf -I .\module\debug\RTT -I .\module\tinycrypt\lib\include -I .\module\settings  --diag_suppress=1,61,68,188,1295-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="536" -DLE501X -DLE501X-o .\objects\sw_timer_port.o --omf_browse .\objects\sw_timer_port.crf --depend .\objects\sw_timer_port.d)
+I (.\module\common\sw_timer_int.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x63E9E314)
+I (.\module\common\sw_timer.h)(0x63FF3646)
+I (.\module\common\circular_doubly_linked_list.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x6025237E)
+I (.\soc\arm_cm\le501x\sw_timer_port.h)(0x63FF3646)
+I (soc\arm_cm\le501x\platform.h)(0x64F7E1A4)
+I (.\soc\sdk_config.h)(0x65C0740C)
+I (.\soc\arm_cm\le501x\sdk_default_config.h)(0x6563EA00)
+I (.\soc\compile_flag.h)(0x63FF3646)
+I (soc\arm_cm\le501x\le501x.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\core_cm0.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\cmsis_version.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\cmsis_compiler.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\cmsis_armcc.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\integration\reg_rcc.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\integration\reg_rcc_type.h)(0x63FF3646)
+I (soc\arm_cm\le501x\sleep.h)(0x63FF3646)
+F (.\soc\arm_cm\le501x\sys_stat.c)(0x63FF3646)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\USER -I .\soc\arm_cm\le501x\integration -I .\soc\arm_cm\cmsis -I .\soc\arm_cm\le501x -I .\soc -I .\soc\arm_cm -I .\soc\arm_cm\le501x\compiler -I .\soc\arm_cm\le501x\bin -I .\soc\arm_cm\le501x\compiler\armcc -I .\hal_driver\api -I .\hal_driver\inc -I .\module\debug -I .\module\common -I .\module\tinyfs -I .\module\ble -I .\module\static_buffer -I .\module\crc -I .\module\ble\prf -I .\module\debug\RTT -I .\module\tinycrypt\lib\include -I .\module\settings  --diag_suppress=1,61,68,188,1295-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="536" -DLE501X -DLE501X-o .\objects\sys_stat.o --omf_browse .\objects\sys_stat.crf --depend .\objects\sys_stat.d)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
+I (soc\arm_cm\le501x\sys_stat.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x63E9E314)
+F (.\soc\arm_cm\le501x\compiler\armcc\delay_asm.S)(0x63FF3646)(--cpu Cortex-M0 --li -g --apcs=interwork --pd "__MICROLIB SETA 1" --cpreproc --cpreproc_opts=-DLE501X --diag_suppress=1-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 536" --pd "LE501X SETA 1"--list .\listings\delay_asm.lst --xref -o .\objects\delay_asm.o --depend .\objects\delay_asm.d)
+F (.\soc\arm_cm\le501x\compiler\armcc\sleep_asm.S)(0x63FF3646)(--cpu Cortex-M0 --li -g --apcs=interwork --pd "__MICROLIB SETA 1" --cpreproc --cpreproc_opts=-DLE501X --diag_suppress=1-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 536" --pd "LE501X SETA 1"--list .\listings\sleep_asm.lst --xref -o .\objects\sleep_asm.o --depend .\objects\sleep_asm.d)
+F (.\soc\arm_cm\le501x\compiler\armcc\stack_asm.S)(0x63FF3646)(--cpu Cortex-M0 --li -g --apcs=interwork --pd "__MICROLIB SETA 1" --cpreproc --cpreproc_opts=-DLE501X --diag_suppress=1-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 536" --pd "LE501X SETA 1"--list .\listings\stack_asm.lst --xref -o .\objects\stack_asm.o --depend .\objects\stack_asm.d)
+F (.\soc\arm_cm\le501x\compiler\armcc\startup.S)(0x6549FF61)(--cpu Cortex-M0 --li -g --apcs=interwork --pd "__MICROLIB SETA 1" --cpreproc --cpreproc_opts=-DLE501X --diag_suppress=1-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 536" --pd "LE501X SETA 1"--list .\listings\startup.lst --xref -o .\objects\startup.o --depend .\objects\startup.d)
+F (.\soc\arm_cm\le501x\compiler\armcc\svcall_asm.S)(0x63FF3646)(--cpu Cortex-M0 --li -g --apcs=interwork --pd "__MICROLIB SETA 1" --cpreproc --cpreproc_opts=-DLE501X --diag_suppress=1-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 536" --pd "LE501X SETA 1"--list .\listings\svcall_asm.lst --xref -o .\objects\svcall_asm.o --depend .\objects\svcall_asm.d)
+F (.\soc\arm_cm\svcall.c)(0x63FF3646)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\USER -I .\soc\arm_cm\le501x\integration -I .\soc\arm_cm\cmsis -I .\soc\arm_cm\le501x -I .\soc -I .\soc\arm_cm -I .\soc\arm_cm\le501x\compiler -I .\soc\arm_cm\le501x\bin -I .\soc\arm_cm\le501x\compiler\armcc -I .\hal_driver\api -I .\hal_driver\inc -I .\module\debug -I .\module\common -I .\module\tinyfs -I .\module\ble -I .\module\static_buffer -I .\module\crc -I .\module\ble\prf -I .\module\debug\RTT -I .\module\tinycrypt\lib\include -I .\module\settings  --diag_suppress=1,61,68,188,1295-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="536" -DLE501X -DLE501X-o .\objects\svcall.o --omf_browse .\objects\svcall.crf --depend .\objects\svcall.d)
+I (.\hal_driver\inc\hal_flash_int.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x63E9E314)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x6025237E)
+I (.\soc\sdk_config.h)(0x65C0740C)
+I (.\soc\arm_cm\le501x\sdk_default_config.h)(0x6563EA00)
+I (.\hal_driver\api\ls_hal_flash.h)(0x655AD648)
+I (.\hal_driver\inc\hal_flash_svcall.h)(0x63FF3646)
+I (.\soc\cpu.h)(0x63FF3646)
+I (.\soc\compile_flag.h)(0x63FF3646)
+I (.\module\debug\ls_dbg.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x60252376)
+I (.\soc\arm_cm\le501x\platform.h)(0x64F7E1A4)
+I (.\soc\arm_cm\le501x\le501x.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\core_cm0.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\cmsis_version.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\cmsis_compiler.h)(0x63FF3646)
+I (.\soc\arm_cm\cmsis\cmsis_armcc.h)(0x63FF3646)
+I (.\soc\arm_cm\le501x\flash_svcall_int.h)(0x63FF3646)
+I (.\soc\arm_cm\svcall.h)(0x63FF3646)
+F (.\soc\arm_cm\swint_handler.c)(0x63FF3646)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\USER -I .\soc\arm_cm\le501x\integration -I .\soc\arm_cm\cmsis -I .\soc\arm_cm\le501x -I .\soc -I .\soc\arm_cm -I .\soc\arm_cm\le501x\compiler -I .\soc\arm_cm\le501x\bin -I .\soc\arm_cm\le501x\compiler\armcc -I .\hal_driver\api -I .\hal_driver\inc -I .\module\debug -I .\module\common -I .\module\tinyfs -I .\module\ble -I .\module\static_buffer -I .\module\crc -I .\module\ble\prf -I .\module\debug\RTT -I .\module\tinycrypt\lib\include -I .\module\settings  --diag_suppress=1,61,68,188,1295-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="536" -DLE501X -DLE501X-o .\objects\swint_handler.o --omf_browse .\objects\swint_handler.crf --depend .\objects\swint_handler.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+F (.\soc\arm_cm\systick.c)(0x63FF3646)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\USER -I .\soc\arm_cm\le501x\integration -I .\soc\arm_cm\cmsis -I .\soc\arm_cm\le501x -I .\soc -I .\soc\arm_cm -I .\soc\arm_cm\le501x\compiler -I .\soc\arm_cm\le501x\bin -I .\soc\arm_cm\le501x\compiler\armcc -I .\hal_driver\api -I .\hal_driver\inc -I .\module\debug -I .\module\common -I .\module\tinyfs -I .\module\ble -I .\module\static_buffer -I .\module\crc -I .\module\ble\prf -I .\module\debug\RTT -I .\module\tinycrypt\lib\include -I .\module\settings  --diag_suppress=1,61,68,188,1295-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="536" -DLE501X -DLE501X-o .\objects\systick.o --omf_browse .\objects\systick.crf --depend .\objects\systick.d)
+I (.\soc\systick.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x63E9E314)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x60252376)
+I (.\soc\sdk_config.h)(0x65C0740C)
+I (.\soc\arm_cm\le501x\sdk_default_config.h)(0x6563EA00)
+I (.\soc\compile_flag.h)(0x63FF3646)
+I (.\module\common\common.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x6025237E)
+F (.\module\debug\RTT\SEGGER_RTT.c)(0x63FF3646)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\USER -I .\soc\arm_cm\le501x\integration -I .\soc\arm_cm\cmsis -I .\soc\arm_cm\le501x -I .\soc -I .\soc\arm_cm -I .\soc\arm_cm\le501x\compiler -I .\soc\arm_cm\le501x\bin -I .\soc\arm_cm\le501x\compiler\armcc -I .\hal_driver\api -I .\hal_driver\inc -I .\module\debug -I .\module\common -I .\module\tinyfs -I .\module\ble -I .\module\static_buffer -I .\module\crc -I .\module\ble\prf -I .\module\debug\RTT -I .\module\tinycrypt\lib\include -I .\module\settings  --diag_suppress=1,61,68,188,1295-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="536" -DLE501X -DLE501X-o .\objects\segger_rtt.o --omf_browse .\objects\segger_rtt.crf --depend .\objects\segger_rtt.d)
+I (module\debug\RTT\SEGGER_RTT.h)(0x63FF3646)
+I (module\debug\RTT\SEGGER_RTT_Conf.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x60252376)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
+F (.\module\debug\RTT\SEGGER_RTT_Conf.h)(0x63FF3646)()
+F (.\module\debug\RTT\SEGGER_RTT_printf.c)(0x63FF3646)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\USER -I .\soc\arm_cm\le501x\integration -I .\soc\arm_cm\cmsis -I .\soc\arm_cm\le501x -I .\soc -I .\soc\arm_cm -I .\soc\arm_cm\le501x\compiler -I .\soc\arm_cm\le501x\bin -I .\soc\arm_cm\le501x\compiler\armcc -I .\hal_driver\api -I .\hal_driver\inc -I .\module\debug -I .\module\common -I .\module\tinyfs -I .\module\ble -I .\module\static_buffer -I .\module\crc -I .\module\ble\prf -I .\module\debug\RTT -I .\module\tinycrypt\lib\include -I .\module\settings  --diag_suppress=1,61,68,188,1295-IC:\Users\44478\AppData\Local\Arm\Packs\Linkedsemi\DFP\1.0.0\Device\ARM\ARMCM0\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="536" -DLE501X -DLE501X-o .\objects\segger_rtt_printf.o --omf_browse .\objects\segger_rtt_printf.crf --depend .\objects\segger_rtt_printf.d)
+I (module\debug\RTT\SEGGER_RTT.h)(0x63FF3646)
+I (module\debug\RTT\SEGGER_RTT_Conf.h)(0x63FF3646)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x60252374)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x60252376)
+F (.\soc\arm_cm\le501x\bin\libfw.o)(0x63FF3646)()
+F (.\soc\arm_cm\le501x\bin\rssi_smth_algo.o)(0x63FF3646)()
