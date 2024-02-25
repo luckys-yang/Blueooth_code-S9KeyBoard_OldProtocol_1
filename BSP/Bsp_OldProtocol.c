@@ -2,15 +2,15 @@
  * File: Bsp_OldProtocol.c
  * Author: Yang
  * Date: 2024-02-18 21:07:14
- * description: 
+ * description:
  -----------------------------------
 旧协议解析
     旧协议(OldProtoocol)：
-    【格式】: 
+    【格式】:
             帧头--1Byte 固定值：0x55
             目的地址--1Byte	按键板是0x04
             源地址--1Byte
-            功能码--1Byte	
+            功能码--1Byte
             用户数据长度1--1Byte
             用户数据长度2--1Byte 数据长度1和2都是一样的，所以程序里我们直接判断数据长度2即可
             用户数据(UD)--NByte	用户数据可以为空
@@ -37,12 +37,12 @@ static void Bsp_OldProtocol_CmdProtocolSwich_Handler(void);
 /* Public function prototypes=========================================================*/
 
 static uint8_t Bsp_OldProtocol_RxDataParse_Handler(Uart_QueueParse_st *deal_param, uint16_t value_index, uint16_t Rec_len);
-static void Bsp_OldProtocol_SendPackage(uint8_t des,uint8_t cmd,uint8_t datalen,uint8_t *data);
+static void Bsp_OldProtocol_SendPackage(uint8_t des, uint8_t cmd, uint8_t datalen, uint8_t *data);
 /* Public variables==========================================================*/
 // 旧协议包解析信息结构体变量
 OldProtocol_Package_Info_st OldProtocol_Package_Info = {0};
 
-Bsp_OldProtocol_st Bsp_OldProtocol = 
+Bsp_OldProtocol_st Bsp_OldProtocol =
 {
     .Bsp_OldProtocol_RxDataParse_Handler = &Bsp_OldProtocol_RxDataParse_Handler,
     .Bsp_OldProtocol_SendPackage = &Bsp_OldProtocol_SendPackage
@@ -605,13 +605,13 @@ static void Bsp_OldProtocol_CmdVersionCheck_Handler(void)
 
     /*发送版本信息*/
     uint8_t data[70];
-    
+
     Public.Public_BufferInit(data, 70, 0x00);   // 初始化为0x00
 
     data[0] = (uint8_t)(Current_BootInfo->Soft_Version);
     data[1] = (uint8_t)(Current_BootInfo->Soft_Version >> 8);
 
-    data[2] = (uint8_t)(Current_BootInfo->Hard_Version);    
+    data[2] = (uint8_t)(Current_BootInfo->Hard_Version);
     data[3] = (uint8_t)(Current_BootInfo->Hard_Version >> 8);
 
 
@@ -629,7 +629,7 @@ static void Bsp_OldProtocol_CmdVersionCheck_Handler(void)
 **/
 static void Bsp_OldProtocol_CmdProtocolSwich_Handler(void)
 {
-	
+
     /*发送【确认】信号*/
     uint8_t data[2];
     data[0] = Old_Protocol_CMD_ProtocolSwich;

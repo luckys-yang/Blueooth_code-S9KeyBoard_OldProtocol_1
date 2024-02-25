@@ -309,7 +309,7 @@ static void Bsp_KeyTimer_CallBack(void *arg)
         }
     }
     // 正交编码器控制
-	Bsp_Encoder.Bsp_Encoder_Control();
+    Bsp_Encoder.Bsp_Encoder_Control();
 
     builtin_timer_start(key_timer_inst, KEY_DETECTION_TIME, NULL);
 }
@@ -322,10 +322,10 @@ static void Bsp_KeyTimer_CallBack(void *arg)
  **/
 static void vMotorCalibrationMode_Press_PhotoKey(void)
 {
-   Bsp_Led.Bsp_Led_BlinkConrol_Handler(LED_3, no_blink, NULL); // 停止闪烁
-   Bsp_Led.Bsp_Led_BlinkConrol_Handler(LED_3, blink, MOTOR_CALIBRATION_UNDERWAY_BLINK_TIME);    // 快速闪烁
-   System_Status.start_motorcal_signal = FLAG_true;         // 电机校准开始信号使能
-   Bsp_OldProtocol.Bsp_OldProtocol_SendPackage(OLD_ADDR_PITCH, Old_Protocol_CMD_MotorAdjust, 0, 0);  // 电机校准功能码发送
+    Bsp_Led.Bsp_Led_BlinkConrol_Handler(LED_3, no_blink, NULL); // 停止闪烁
+    Bsp_Led.Bsp_Led_BlinkConrol_Handler(LED_3, blink, MOTOR_CALIBRATION_UNDERWAY_BLINK_TIME);    // 快速闪烁
+    System_Status.start_motorcal_signal = FLAG_true;         // 电机校准开始信号使能
+    Bsp_OldProtocol.Bsp_OldProtocol_SendPackage(OLD_ADDR_PITCH, Old_Protocol_CMD_MotorAdjust, 0, 0);  // 电机校准功能码发送
 }
 
 /**
@@ -369,7 +369,8 @@ static void vRestore_Handle_LongPress_HomeKey(void)
         Bsp_OldProtocol.Bsp_OldProtocol_SendPackage(OLD_ADDR_PITCH, Old_Protocol_CMD_ModeData, 6, data);
         break;
     }
-    default: break;
+    default:
+        break;
     }
     Bsp_Led.Bsp_Led_Console_Mode_Display(); // 云台模式下LED刷新显示
 }
@@ -411,7 +412,7 @@ static void vUpSlide_Handle_StirKey(void)
     uint8_t data[2];
     data[0] = 0x01;
     data[1] = 0xFD;
-    Bsp_OldProtocol.Bsp_OldProtocol_SendPackage(OLD_ADDR_APP, Old_Protocol_CMD_FocusSet, 2, data);    
+    Bsp_OldProtocol.Bsp_OldProtocol_SendPackage(OLD_ADDR_APP, Old_Protocol_CMD_FocusSet, 2, data);
 }
 
 /**
@@ -458,7 +459,7 @@ static void vPress_Handle_PhotoKey(KeyInfo_st *keyInfo)
         {
             if (FLAG_false == System_Status.key_test_mode)// 进入按键测试模式
             {
-                System_Status.key_test_mode = FLAG_true; 
+                System_Status.key_test_mode = FLAG_true;
                 Bsp_Led.Bsp_Led_All_Close();
             }
             else // 退出按键测试模式
@@ -571,9 +572,10 @@ static void vPress_Handle_HomeKey(KeyInfo_st *keyInfo)
                 System_Status.console_mode = MODE_F;
                 break;
             }
-            default: break;
+            default:
+                break;
             }
-			Bsp_Led.Bsp_Led_Console_Mode_Display(); // 云台模式下LED刷新显示
+            Bsp_Led.Bsp_Led_Console_Mode_Display(); // 云台模式下LED刷新显示
         }
     }
     else if (2 == keyInfo->total_press_count)   // 双击
@@ -588,10 +590,10 @@ static void vPress_Handle_HomeKey(KeyInfo_st *keyInfo)
             System_Status.dm_mode = FLAG_false; // DM模式退出
             System_Status.key_dm_mode = FLAG_false;
         }
-		Bsp_Led.Bsp_Led_Console_Mode_Display(); // 云台模式下LED刷新显示
+        Bsp_Led.Bsp_Led_Console_Mode_Display(); // 云台模式下LED刷新显示
     }
-    else if ((3 == keyInfo->total_press_count) && (System_Status.console_mode != MODE_POV) 
-            && (System_Status.dm_mode != FLAG_true)) // 三击且不在POV模式
+    else if ((3 == keyInfo->total_press_count) && (System_Status.console_mode != MODE_POV)
+             && (System_Status.dm_mode != FLAG_true)) // 三击且不在POV模式
     {
         Bsp_SysTimerCount.check_low_power_count = 0;
         /*DM1启动*/
@@ -602,7 +604,7 @@ static void vPress_Handle_HomeKey(KeyInfo_st *keyInfo)
         Bsp_OldProtocol.Bsp_OldProtocol_SendPackage(OLD_ADDR_PITCH, Old_Protocol_CMD_ProcessExerciseContorl, 3, data);
         System_Status.key_dm_mode = FLAG_true;
         System_Status.dm_mode = FLAG_true;
-		Bsp_Led.Bsp_Led_Console_Mode_Display(); // 云台模式下LED刷新显示
+        Bsp_Led.Bsp_Led_Console_Mode_Display(); // 云台模式下LED刷新显示
     }
     else if ((keyInfo->long_press_time >= HOME_LONGPRESS_TIME) && (System_Status.console_mode != MODE_GO)) // 长按且不能在GO模式
     {
@@ -613,7 +615,7 @@ static void vPress_Handle_HomeKey(KeyInfo_st *keyInfo)
         Bsp_OldProtocol.Bsp_OldProtocol_SendPackage(OLD_ADDR_PITCH, Old_Protocol_CMD_ModeSet, 2, data);
         System_Status.console_old_mode = System_Status.console_mode; // 记录旧模式，以便在退出GO模式时恢复
         System_Status.console_mode = MODE_GO;
-		Bsp_Led.Bsp_Led_Console_Mode_Display(); // 云台模式下LED刷新显示
+        Bsp_Led.Bsp_Led_Console_Mode_Display(); // 云台模式下LED刷新显示
     }
 
     keyInfo->press_count = 0;

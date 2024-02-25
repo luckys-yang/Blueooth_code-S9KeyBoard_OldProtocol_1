@@ -2,7 +2,7 @@
  * File: Bsp_Dog.c
  * Author: Yang
  * Date: 2024-02-17 14:23:05
- * description: 
+ * description:
  -----------------------------------
 独立看门狗：
 
@@ -16,7 +16,7 @@ static void Bsp_Dog_Init(void);
 static void Bsp_Dog_FeedDog(void);
 
 /* Public variables==========================================================*/
-Bsp_Dog_st Bsp_Dog = 
+Bsp_Dog_st Bsp_Dog =
 {
     .Bsp_Dog_Init = &Bsp_Dog_Init,
     .Bsp_Dog_FeedDog = &Bsp_Dog_FeedDog

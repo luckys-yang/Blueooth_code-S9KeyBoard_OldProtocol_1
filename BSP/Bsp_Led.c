@@ -28,7 +28,7 @@ static void Bsp_Led_EnterMotorCalibration_StatusUpdate_Handler(void);
 /* Public variables==========================================================*/
 Bsp_Led_st Bsp_Led =
 {
-    .LedInfo = 
+    .LedInfo =
     {
         {
             .led_status = no_blink,
@@ -45,7 +45,7 @@ Bsp_Led_st Bsp_Led =
         {
             .led_status = no_blink,
             .led_flip_timeout = 0
-        }    
+        }
     },
     .Bsp_Led_Init = &Bsp_Led_Init,
     .Bsp_Led_BlinkConrol_Handler = &Bsp_Led_BlinkConrol_Handler,

@@ -2,7 +2,7 @@
  * File: Public.c
  * Author: Yang
  * Date: 2024-02-04 14:56:32
- * description: 
+ * description:
  -----------------------------------
 None
  -----------------------------------
@@ -15,7 +15,7 @@ static void Public_Delay_Ms(uint16_t nms);
 static void Public_BufferInit(uint8_t *data, uint16_t len, uint8_t assign_value);
 
 /* Public variables==========================================================*/
-Public_st Public = 
+Public_st Public =
 {
     .Public_Delay_Ms = &Public_Delay_Ms,
     .Public_BufferInit = &Public_BufferInit
@@ -30,7 +30,7 @@ Public_st Public =
 static void Public_Delay_Ms(uint16_t nms)
 {
     // 调用us库函数
-	DELAY_US(nms * 1000);
+    DELAY_US(nms * 1000);
 }
 
 /**

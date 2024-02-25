@@ -40,16 +40,16 @@ typedef struct
 {
     uint8_t *flash_page_manage_ptr; // Flash页面管理数组指针
 
-    uint8_t (*Bsp_Boot_Cmd_R_start_update_Handler)(uint8_t*);  // 【开始固件升级】命令 处理函数
-    void (*Bsp_Boot_InfoGet)(volatile BootInfo_st**);    // 固件升级开始
-    uint8_t (*Bsp_Boot_Cmd_R_update_file_Handler)(uint8_t*); // 【发送升级手柄的128字节】命令 处理函数
-    uint8_t (*Bsp_Boot_Cmd_R_all_file_finish_Handler)(uint8_t*);    // 【发送升级手柄文件结束】命令 处理函数 
+    uint8_t (*Bsp_Boot_Cmd_R_start_update_Handler)(uint8_t *); // 【开始固件升级】命令 处理函数
+    void (*Bsp_Boot_InfoGet)(volatile BootInfo_st **);   // 固件升级开始
+    uint8_t (*Bsp_Boot_Cmd_R_update_file_Handler)(uint8_t *); // 【发送升级手柄的128字节】命令 处理函数
+    uint8_t (*Bsp_Boot_Cmd_R_all_file_finish_Handler)(uint8_t *);   // 【发送升级手柄文件结束】命令 处理函数
     uint8_t (*Bsp_Boot_Cmd_R_change_firmware_Handler)(uint8_t *); // 【软件复位/变换协议】命令 处理函数
-    uint8_t (*Bsp_Boot_Cmd_R_check_keyboard_version_Handler)(uint8_t*);  // 【查询按键版固件版本】命令 处理函数
-    uint8_t (*Bsp_Boot_Cmd_R_check_image_base_Handler)(uint8_t*);  // 【查询固件镜像地址】命令 处理函数
+    uint8_t (*Bsp_Boot_Cmd_R_check_keyboard_version_Handler)(uint8_t *); // 【查询按键版固件版本】命令 处理函数
+    uint8_t (*Bsp_Boot_Cmd_R_check_image_base_Handler)(uint8_t *); // 【查询固件镜像地址】命令 处理函数
     void (*Bsp_Boot_JumpAppRun)(uint32_t);  // 程序跳转函数，跳到指定地址运行
-    void (*Bsp_Boot_SysInfoGet)(volatile SysInfo_st**); // 系统信息结构体获取函数
-} Bsp_Boot_st;  
+    void (*Bsp_Boot_SysInfoGet)(volatile SysInfo_st **); // 系统信息结构体获取函数
+} Bsp_Boot_st;
 
 extern Bsp_Boot_st Bsp_Boot;
 extern volatile BootInfo_st *Current_BootInfo;

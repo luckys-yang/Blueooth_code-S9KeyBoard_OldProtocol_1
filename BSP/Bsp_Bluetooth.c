@@ -2,7 +2,7 @@
  * File: Bsp_Bluetooth.c
  * Author: Yang
  * Date: 2024-02-04 15:16:58
- * description: 
+ * description:
  -----------------------------------
 蓝牙名字：
     默认是格式是: "xxxx"
@@ -47,13 +47,13 @@ static const uint8_t ble_svc_uuid_128[] =
     0x00, 0x10, 0x00, 0x00, 0xe0, 0xff, 0x00, 0x00
 };
 // 蓝牙串口接收服务 UUID标识
-static const uint8_t ble_rx_char_uuid_128[] = 
+static const uint8_t ble_rx_char_uuid_128[] =
 {
     0xfb, 0x34, 0x9b, 0x5f, 0x80, 0x00, 0x00, 0x80,
     0x00, 0x10, 0x00, 0x00, 0xe1, 0xff, 0x00, 0x00
 };
 // 蓝牙串口发送服务 UUID标识
-static const uint8_t ble_tx_char_uuid_128[] = 
+static const uint8_t ble_tx_char_uuid_128[] =
 {
     0xfb, 0x34, 0x9b, 0x5f, 0x80, 0x00, 0x00, 0x80,
     0x00, 0x10, 0x00, 0x00, 0xe2, 0xff, 0x00, 0x00
@@ -64,7 +64,7 @@ static const uint8_t att_desc_client_char_cfg_array[] = {0x02, 0x29};   // 定�
 static const uint8_t dis_char_pnpid_uuid[] = {0x50, 0x2A};  // 特征和对象类型UUID --- PnP ID(设备信息服务PNP)
 static const uint8_t dis_svc_uuid[] = {0x0A, 0x18}; // 服务UUID --- 设备信息
 /* HID设备描述符 */
-const uint8_t hid_report_map[] = 
+const uint8_t hid_report_map[] =
 {
     0x05, 0x0c, /* USAGE_PAGE (Consumer Devices) */
     0x09, 0x01, /* USAGE (Consumer Control) */
@@ -156,7 +156,7 @@ static const struct svc_decl ls_ble_server_svc =
 // DIS服务属性声明
 static const struct att_decl dis_server_att_decl[DIS_SVC_ATT_NUM] =
 {
-    [DIS_SVC_IDX_PNP_ID_CHAR] = 
+    [DIS_SVC_IDX_PNP_ID_CHAR] =
     {
         .uuid = att_decl_char_array,
         .s.max_len = 0,
@@ -164,7 +164,7 @@ static const struct att_decl dis_server_att_decl[DIS_SVC_ATT_NUM] =
         .s.read_indication = 1, // 触发读取指示  1:表示读取请求将被转发到应用程序
         .char_prop.rd_en = 1,   // // 读请求启用
     },
-    [DIS_SVC_IDX_PNP_ID_VAL] = 
+    [DIS_SVC_IDX_PNP_ID_VAL] =
     {
         .uuid = dis_char_pnpid_uuid,
         .s.max_len = DIS_SVC_PNPID_LEN,
@@ -215,7 +215,7 @@ uint8_t ble_adv_data[28] = {0};    // 广播数据数组
 
 
 /* Public variables==========================================================*/
-BLE_AdvInfo_st BLE_AdvInfo = 
+BLE_AdvInfo_st BLE_AdvInfo =
 {
     .ble_name_count = 0,
     .ble_adv_name_ptr = ble_adv_name,
@@ -224,13 +224,13 @@ BLE_AdvInfo_st BLE_AdvInfo =
     .ble_adv_data_ptr = ble_adv_data
 };
 
-BLE_UartInfo_st BLE_UartInfo = 
+BLE_UartInfo_st BLE_UartInfo =
 {
     .reply_data = 0,
     .ble_server_mtu = BLE_SERVER_MTU_DFT
 };
 
-Bsp_BlueTooth_st Bsp_BlueTooth = 
+Bsp_BlueTooth_st Bsp_BlueTooth =
 {
     .ble_adv_info_Instance = &BLE_AdvInfo,
     .ble_uart_info_Instance = &BLE_UartInfo,
@@ -312,38 +312,38 @@ static void Bsp_BlueTooth_dev_manager_CallBack(enum dev_evt_type type, union dev
 
         switch (svc_added_service_cnt)
         {
-            case 0:
-            {
-                /*在GATT管理器中注册服务*/
-                // 参数1: 服务的启动句柄 参数2: 服务属性数量 参数3：要注册的服务指针
-                gatt_manager_svc_register(evt->service_added.start_hdl, BLE_SVC_ATT_NUM, &ls_ble_server_svc_env);
-                
-                /*添加服务*/
-                dev_manager_add_service((struct svc_decl *)&dis_server_svc);
+        case 0:
+        {
+            /*在GATT管理器中注册服务*/
+            // 参数1: 服务的启动句柄 参数2: 服务属性数量 参数3：要注册的服务指针
+            gatt_manager_svc_register(evt->service_added.start_hdl, BLE_SVC_ATT_NUM, &ls_ble_server_svc_env);
 
-                svc_added_service_cnt++;                
-                break;
-            }
-            case 1:
+            /*添加服务*/
+            dev_manager_add_service((struct svc_decl *)&dis_server_svc);
+
+            svc_added_service_cnt++;
+            break;
+        }
+        case 1:
+        {
+            /*在GATT管理器中注册服务*/
+            gatt_manager_svc_register(evt->service_added.start_hdl, DIS_SVC_ATT_NUM, &dis_server_svc_env);
+
+            /*添加【配置文件服务*/
+            struct bas_db_cfg db_cfg =
             {
-                /*在GATT管理器中注册服务*/
-                gatt_manager_svc_register(evt->service_added.start_hdl, DIS_SVC_ATT_NUM, &dis_server_svc_env);
-                
-                /*添加【配置文件服务*/  
-                struct bas_db_cfg db_cfg =
-                {
-                    .ins_num = 1,
-                    .ntf_enable[0] = 1,
-                };
-                dev_manager_prf_bass_server_add(NO_SEC, &db_cfg, sizeof(db_cfg));   // 添加电池配置文件服务      
-                svc_added_service_cnt++;     
-                break;
-            }
-            default: 
-            {
-                svc_added_service_cnt = 0;
-                break;
-            }
+                .ins_num = 1,
+                .ntf_enable[0] = 1,
+            };
+            dev_manager_prf_bass_server_add(NO_SEC, &db_cfg, sizeof(db_cfg));   // 添加电池配置文件服务
+            svc_added_service_cnt++;
+            break;
+        }
+        default:
+        {
+            svc_added_service_cnt = 0;
+            break;
+        }
         }
         break;
     }
@@ -395,11 +395,11 @@ static void Bsp_BlueTooth_gap_manager_CallBack(enum gap_evt_type type, union gap
     case CONNECTED: // 【连接事件】
     {
         // 开机 && 非按键测试模式 && 非检测电量下
-        if((FLAG_true == System_Status.sys_power_switch) && (System_Status.key_test_mode != FLAG_true) 
-            && System_Status.check_electric != FLAG_true)
-            {
-                _Led4_Conrol(PIN_SET);
-            }
+        if((FLAG_true == System_Status.sys_power_switch) && (System_Status.key_test_mode != FLAG_true)
+                && System_Status.check_electric != FLAG_true)
+        {
+            _Led4_Conrol(PIN_SET);
+        }
         System_Status.bluetooth = FLAG_true;    // 蓝牙连接信号置1
         Bsp_BlueTooth.ble_connect_id = con_idx; // 存储连接ID
         LOG_I_Bsp_BlueTooth(".......connected!.......");    // 【调试】
@@ -417,16 +417,16 @@ static void Bsp_BlueTooth_gap_manager_CallBack(enum gap_evt_type type, union gap
     case DISCONNECTED: // 【断开连接事件】
     {
         // 开机 && 非按键测试模式 && 非检测电量下
-        if((FLAG_true == System_Status.sys_power_switch) && (System_Status.key_test_mode != FLAG_true) 
-            && System_Status.check_electric != FLAG_true)
-            {
-                _Led4_Conrol(PIN_RESET);
-            }
-        System_Status.bluetooth = FLAG_false;    // 蓝牙连接信号置1  
+        if((FLAG_true == System_Status.sys_power_switch) && (System_Status.key_test_mode != FLAG_true)
+                && System_Status.check_electric != FLAG_true)
+        {
+            _Led4_Conrol(PIN_RESET);
+        }
+        System_Status.bluetooth = FLAG_false;    // 蓝牙连接信号置1
         Bsp_BlueTooth.ble_connect_id = BLE_DISCONNECTED_ID;    // 未连接状态
 
-        LOG_I_Bsp_BlueTooth(".......disconnected!.......");    // 【调试】 
-        // 如果开机则重新打开广播  
+        LOG_I_Bsp_BlueTooth(".......disconnected!.......");    // 【调试】
+        // 如果开机则重新打开广播
         if(FLAG_true == System_Status.sys_power_switch)
         {
             Bsp_BlueTooth.Bsp_BlueTooth_Start_adv();
@@ -448,7 +448,7 @@ static void Bsp_BlueTooth_gap_manager_CallBack(enum gap_evt_type type, union gap
         就会触发主设备发起配对加密这个流程，这个时候从机就会上一个 MASTER_PAIR_REQ 事件，这个时候我们就将发送自己的配对参数以及
         配对的密钥，这样只要主机输入的密钥正确就可以连接上这个设备
         */
-       // 参数1：连接设备ID 参数2：是否保存主配对信息 参数3：配对参数设置
+        // 参数1：连接设备ID 参数2：是否保存主配对信息 参数3：配对参数设置
         gap_manager_slave_pair_response_send(Bsp_BlueTooth.ble_connect_id, FLAG_true, &feat_param);
 #if PAIR_Host_Initiative_PASSW
         gap_manager_passkey_input(con_idx, &passkey);
@@ -492,7 +492,8 @@ static void Bsp_BlueTooth_gap_manager_CallBack(enum gap_evt_type type, union gap
         Bsp_BlueTooth_Gap_GetDeviceName((struct gap_dev_info_dev_name *)evt, con_idx);
         break;
     }
-    default: break;
+    default:
+        break;
     }
 }
 
@@ -557,7 +558,7 @@ static void Bsp_BlueTooth_prf_hid_server_CallBack(enum hid_evt_type type, union 
 {
     uint16_t ntf_cfg;  // 用于存储通知配置的变量
     uint8_t ret;  // 用于存储函数返回值的变量
-    
+
     switch (type)
     {
     case HID_REPORT_READ: // 【读取HID报告值配置(描述符)】
@@ -582,7 +583,7 @@ static void Bsp_BlueTooth_prf_hid_server_CallBack(enum hid_evt_type type, union 
             LOG_I_Bsp_BlueTooth("hid tinyfs write:%d", ret);  // 【调试】如果写入出错，则记录写入错误
         }
         tinyfs_write_through(); // 立即写入文件系统
-        break;        
+        break;
     }
     case HID_NTF_DONE: // 【HID通知完成】
     {
@@ -592,9 +593,9 @@ static void Bsp_BlueTooth_prf_hid_server_CallBack(enum hid_evt_type type, union 
     case HID_REPORT_WRITE: // 【APP数据写入】
     {
         LOG_I_Bsp_BlueTooth("HID REPORT WRITE"); // 记录APP数据写入
-        break;    
+        break;
     }
-    default: 
+    default:
     {
         LOG_I_Bsp_BlueTooth("HID NONE"); // 【调试】
         break;
@@ -657,7 +658,7 @@ static void Bsp_BlueTooth_prf_Added_Handler(struct profile_added_evt *evt)
         {
             LOG_I_Bsp_BlueTooth("hid tinyfs mkdir:%d", ret);
         }
-        
+
         Bsp_BlueTooth_Create_adv_Obj();   // 创建广播对象
         break;
     }
@@ -669,17 +670,18 @@ static void Bsp_BlueTooth_prf_Added_Handler(struct profile_added_evt *evt)
         db_cfg.cfg[0].report_nb = 1;    // HID信息特征的值
         db_cfg.cfg[0].report_id[0] = 0; // report id
         db_cfg.cfg[0].report_cfg[0] = HID_REPORT_IN;    // HID 服务中每个报告特征支持的功能 --- 该报告是输入报告
-        db_cfg.cfg[0].info.bcdHID = 0X0111; // HID 类规范版本号（二进制编码的十进制） 
+        db_cfg.cfg[0].info.bcdHID = 0X0111; // HID 类规范版本号（二进制编码的十进制）
         db_cfg.cfg[0].info.bCountryCode = 0;    // 硬件目标国家/地区
         db_cfg.cfg[0].info.flags = HID_WKUP_FOR_REMOTE | HID_NORM_CONN; // 标志位 --- 通知 HID 设备是否能够向 HID 主机提供唤醒信号 | 通知 HID 设备是否可以正常连接
 
         /*HID配置文件服务添加*/
         // 参数1：安全级别 参数2：配置HID服务信息的结构变量 参数3：hid_db_cfg 的长度
-        dev_manager_prf_hid_server_add(NO_SEC, &db_cfg, sizeof(db_cfg));    
+        dev_manager_prf_hid_server_add(NO_SEC, &db_cfg, sizeof(db_cfg));
         prf_bass_server_callback_init(Bsp_BlueTooth_prf_batt_server_CallBack);  // 初始化 电池服务的回调函数
         break;
     }
-    default: break;
+    default:
+        break;
     }
 }
 
@@ -760,18 +762,18 @@ static void Bsp_BlueTooth_Start_adv(void)
 
     /* 发送广播数据 */
     uint8_t adv_data_length = ADV_DATA_PACK(
-        Bsp_BlueTooth.ble_adv_info_Instance->ble_adv_data_ptr,         // 广播数据存储的数组
-        3,                                                             // 广播数据项的数量
-        GAP_ADV_TYPE_SHORTENED_NAME,                                   // 广播类型---缩短的蓝牙名称
-        Bsp_BlueTooth.ble_adv_info_Instance->ble_adv_name_ptr,         // 广播数据---蓝牙名称存储数组
-        sizeof(ble_adv_name),                                          // 广播数据的长度(此处不能用指针)
-        GAP_ADV_TYPE_COMPLETE_LIST_16_BIT_UUID,                        // 广播类型---16位UUID完整列表
-        &uuid_value,                                                   // 广播数据---HID人机接口设备UUID
-        sizeof(uuid_value),                                            // 广播数据的长度
-        GAP_ADV_TYPE_APPEARANCE,                                       // // 广播类型：外观
-        &ble_appearance,                                               // 广播数据---外观UUID
-        sizeof(ble_appearance)                                         // 广播数据的长度
-    );
+                                  Bsp_BlueTooth.ble_adv_info_Instance->ble_adv_data_ptr,         // 广播数据存储的数组
+                                  3,                                                             // 广播数据项的数量
+                                  GAP_ADV_TYPE_SHORTENED_NAME,                                   // 广播类型---缩短的蓝牙名称
+                                  Bsp_BlueTooth.ble_adv_info_Instance->ble_adv_name_ptr,         // 广播数据---蓝牙名称存储数组
+                                  sizeof(ble_adv_name),                                          // 广播数据的长度(此处不能用指针)
+                                  GAP_ADV_TYPE_COMPLETE_LIST_16_BIT_UUID,                        // 广播类型---16位UUID完整列表
+                                  &uuid_value,                                                   // 广播数据---HID人机接口设备UUID
+                                  sizeof(uuid_value),                                            // 广播数据的长度
+                                  GAP_ADV_TYPE_APPEARANCE,                                       // // 广播类型：外观
+                                  &ble_appearance,                                               // 广播数据---外观UUID
+                                  sizeof(ble_appearance)                                         // 广播数据的长度
+                              );
     // 开始广播  参数1：广播句柄 参数2：广播数据 参数3：广播数据长度 参数4：响应数据包 参数5：响应数据包长度(如果没有advertising_data或scan_response_data，对应的length需要填0。不可以填如与实际内容不匹配的length)
     dev_manager_start_adv(Bsp_BlueTooth.ble_adv_info_Instance->ble_adv_handle, Bsp_BlueTooth.ble_adv_info_Instance->ble_adv_data_ptr, adv_data_length, ble_scan_rsp_data, 0);
     LOG_I_Bsp_BlueTooth("adv start");
@@ -812,7 +814,7 @@ static void Bsp_BlueTooth_Create_adv_Obj(void)
         },
     };
     // 创建广播对象
-    dev_manager_create_legacy_adv_object(&adv_param);    
+    dev_manager_create_legacy_adv_object(&adv_param);
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ★蓝牙服务--串口部分★ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
@@ -868,7 +870,7 @@ static void Bsp_BlueTooth_Gatt_ServerWriteQequest_Handler(uint8_t att_idx, uint8
                 memcpy(&Bsp_Uart.UartInnfo[UART_BLE].uart_rx_buffer_ptr[Bsp_Uart.UartInnfo[UART_BLE].uart_rx_index], (uint8_t *)value, BLE_SVC_BUFFER_SIZE - Bsp_Uart.UartInnfo[UART_BLE].uart_rx_index);
                 // 覆盖顶部
                 memcpy(&Bsp_Uart.UartInnfo[UART_BLE].uart_rx_buffer_ptr[0], (uint8_t *)(value + BLE_SVC_BUFFER_SIZE - Bsp_Uart.UartInnfo[UART_BLE].uart_rx_index), length - (BLE_SVC_BUFFER_SIZE - Bsp_Uart.UartInnfo[UART_BLE].uart_rx_index));
-                
+
                 // 开机 或者 电机校准模式下
                 if ((FLAG_true == System_Status.sys_power_switch) || (FLAG_true == System_Status.motorcal_mode))
                 {

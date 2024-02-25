@@ -2,7 +2,7 @@
  * File: Bsp_SysTimer.c
  * Author: Yang
  * Date: 2024-02-04 20:44:21
- * description: 
+ * description:
  -----------------------------------
 None
  -----------------------------------
@@ -28,7 +28,7 @@ static void vSysTimerEvent_SoftwareReset_Handler(void);
 /* Public variables==========================================================*/
 struct builtin_timer *sys_timer_inst = NULL;    // 系统软件定时器句柄
 // 模块超时时间结构体
-Bsp_SysTimerCount_st Bsp_SysTimerCount = 
+Bsp_SysTimerCount_st Bsp_SysTimerCount =
 {
     .check_adc_count = 0,
     .check_electric_count = 0,
@@ -45,7 +45,7 @@ Bsp_SysTimerCount_st Bsp_SysTimerCount =
     .shut_down_count = 0
 };
 
-Bsp_SysTimer_st Bsp_SysTimer = 
+Bsp_SysTimer_st Bsp_SysTimer =
 {
     .Bsp_SysTimer_Init = &Bsp_SysTimer_Init
 };
@@ -131,7 +131,7 @@ static void vSysTimerEvent_ShutdownStep_Handler(void)
                 {
                     _ResetPin_ADC_POWER_EN(); // ADC采集失能
                 }
-				
+
                 Public.Public_Delay_Ms(100); 									  // 等待芯片掉电
                 _clear_bit_value(System_Status.sys_timer_signal, EVENT_Shutdown); // 清除关机事件位
                 break;

@@ -49,8 +49,8 @@ typedef struct
     uint8_t *uart_tx_buffer_ptr; // 串口发送缓存数组指针
     uint16_t uart_rx_index;      // uart接收缓存索引
     uint16_t uart_tx_index;      // uart发送索引
-    bool uart_tx_busy_Flag;      // 串口发送忙标志位(FLAG_true--空闲 FLAG_false--忙)    
-    bool uart_rx_busy_Flag;      // 串口接收忙标志位(FLAG_true--空闲 FLAG_false--忙)     
+    bool uart_tx_busy_Flag;      // 串口发送忙标志位(FLAG_true--空闲 FLAG_false--忙)
+    bool uart_rx_busy_Flag;      // 串口接收忙标志位(FLAG_true--空闲 FLAG_false--忙)
 } UartInfo_st;
 
 typedef struct

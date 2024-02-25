@@ -267,9 +267,9 @@ static void Bsp_Power_BatteryUpdate_Handler(void)
             Bsp_Adc.adc_sampling_count = 0; // 采样次数计数清0
 
             // 若充电开启(有USB插入, 关机状态, 检查电量信号为关闭, 等待芯片掉电完成则EVENT_Shutdown为0)
-            if ((PIN_SET == _ReadPin_USB_POWER_INPUT()) && (FLAG_false == System_Status.sys_power_switch) 
-                && (FLAG_false == System_Status.check_electric) 
-                && (_get_bit_value(System_Status.sys_timer_signal, EVENT_Shutdown) != 1))
+            if ((PIN_SET == _ReadPin_USB_POWER_INPUT()) && (FLAG_false == System_Status.sys_power_switch)
+                    && (FLAG_false == System_Status.check_electric)
+                    && (_get_bit_value(System_Status.sys_timer_signal, EVENT_Shutdown) != 1))
             {
                 switch (System_Status.battery)
                 {

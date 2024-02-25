@@ -3,7 +3,7 @@
 
 /* Public define==========================================================*/
 // 信息打印 LOG_I(__VA_ARGS__)
-#define LOG_I_Bsp_Adc(...) 
+#define LOG_I_Bsp_Adc(...)
 
 #define _SetPin_ADC_POWER_EN() io_set_pin(GPIO_PIN_ADC_POWER_EN);   // ADC采样IO使能
 #define _ResetPin_ADC_POWER_EN() io_clr_pin(GPIO_PIN_ADC_POWER_EN); // ADC采样IO失能

@@ -2,15 +2,15 @@
  * File: Bsp_NewProtocol.c
  * Author: Yang
  * Date: 2024-02-18 21:08:44
- * description: 
+ * description:
  -----------------------------------
 新协议解析
     新协议(NewProtoocol)：
-    【格式】: 
+    【格式】:
             帧头--2Byte 高字节：0xA5 低字节：0x5A
             源地址--1Byte	按键板是0x04
             目标地址--1Byte
-            指令识别码--2Byte CMD_H + CMD_L	
+            指令识别码--2Byte CMD_H + CMD_L
             用户数据长度--2Byte LEN_H + LEN_L
             用户数据(UD)--NByte	用户数据没有则为空
             校验--2Byte CRC_H + CRC_L 和校验：暂时为数据内容部分
@@ -37,7 +37,7 @@ static void Bsp_NewProtocol_SendPackage(uint8_t des, uint16_t cmd, uint16_t data
 // 旧协议包解析信息结构体变量
 NewProtocol_Package_Info_st NewProtocol_Package_Info = {0};
 
-Bsp_NewProtocol_st Bsp_NewProtocol = 
+Bsp_NewProtocol_st Bsp_NewProtocol =
 {
     .Bsp_NewProtocol_RxDataParse_Handler = &Bsp_NewProtocol_RxDataParse_Handler,
     .Bsp_NewProtocol_SendPackage = &Bsp_NewProtocol_SendPackage
@@ -80,7 +80,8 @@ static uint8_t Bsp_NewProtocol_RxDataParse_Handler(Uart_QueueParse_st *deal_para
             {
                 deal_param->deal_queue[i].data_len += deal_param->Rec_Buffer_ptr[value_index];
             }
-            default: break;
+            default:
+                break;
             }
 
             if (deal_param->deal_queue[i].deal_sign == (deal_param->deal_queue[i].data_len + NewProtocol_Exclude_Data_PackageLen))
@@ -105,7 +106,7 @@ static uint8_t Bsp_NewProtocol_RxDataParse_Handler(Uart_QueueParse_st *deal_para
         if (value_index == Rec_Buffer_size)
         {
             value_index = 0;
-        }        
+        }
         Rec_len--;
     }
     return 0x00;
@@ -174,7 +175,8 @@ static void Bsp_NewProtocol_SendPackage(uint8_t des, uint16_t cmd, uint16_t data
         Bsp_Uart.Bsp_Uart_SerialPort3_SendData(Rep_Buffer, RepBuffer_Index);
         break;
     }
-    default: break;
+    default:
+        break;
     }
 }
 
@@ -203,7 +205,7 @@ static void Bsp_NewProtocol_ClearParsedPackage(Uart_QueueParse_st *deal_param, u
         deal_param->deal_queue[clear_offset].data_len = 0;
         deal_param->deal_queue[clear_offset].deal_sign = 0;
     }
-    deal_param->deal_queue_index--; // 索引减1    
+    deal_param->deal_queue_index--; // 索引减1
 }
 
 /**
@@ -251,7 +253,7 @@ static uint8_t Bsp_NewProtocol_GetPackageInfo(uint8_t *Rec_Buffer, uint16_t *Rec
 
     /*记录第一个数据所处位置*/
     Bsp_Uart.Bsp_Uart_RecData_AddPosition(RecBuffer_count, 1);
-    NewProtocol_Package_Info.first_data_position = (*RecBuffer_count);  
+    NewProtocol_Package_Info.first_data_position = (*RecBuffer_count);
 
     /*获取CRC高字节位--偏移数据长度个字节*/
     Bsp_Uart.Bsp_Uart_RecData_AddPosition(RecBuffer_count, NewProtocol_Package_Info.data_len);
@@ -278,7 +280,7 @@ static uint8_t Bsp_NewProtocol_GetPackageInfo(uint8_t *Rec_Buffer, uint16_t *Rec
         NewProtocol_Package_Info.package_state = FLAG_false;
         return 0x02;
     }
-     /* 偏移一个字节习惯(可加可不加反正退出函数后会进行清0) */
+    /* 偏移一个字节习惯(可加可不加反正退出函数后会进行清0) */
     Bsp_Uart.Bsp_Uart_RecData_AddPosition(RecBuffer_count, 1);
     return 0x00;
 }
@@ -405,7 +407,7 @@ static void Bsp_NewProtocol_SyntheticData_Handler(uint8_t *Rec_Buffer)
             // 若不连续，先发缓冲数组底部数据
             Bsp_Uart.Bsp_Uart_Ble_SendData(&Rec_Buffer[OldProtocol_Package_Info.head_position], RX_BUFFER_SIZE - OldProtocol_Package_Info.head_position);
             // 再发缓冲数组顶部数据
-            Bsp_Uart.Bsp_Uart_Ble_SendData(&Rec_Buffer[0], total_len - (RX_BUFFER_SIZE - OldProtocol_Package_Info.head_position));            
+            Bsp_Uart.Bsp_Uart_Ble_SendData(&Rec_Buffer[0], total_len - (RX_BUFFER_SIZE - OldProtocol_Package_Info.head_position));
         }
         else
         {
@@ -414,6 +416,7 @@ static void Bsp_NewProtocol_SyntheticData_Handler(uint8_t *Rec_Buffer)
         }
         break;
     }
-    default: break;
+    default:
+        break;
     }
 }

@@ -2,7 +2,7 @@
  * File: System_Init.c
  * Author: Yang
  * Date: 2024-02-04 14:56:54
- * description: 
+ * description:
  -----------------------------------
 None
  -----------------------------------
@@ -22,39 +22,39 @@ static void System_Info_Init(void);
 static void Hardware_Init(void);
 
 /* Public variables==========================================================*/
-System_Status_st System_Status = 
+System_Status_st System_Status =
 {
-    .update_mode = FLAG_false,										
-	.motorcal_mode = FLAG_false,									
-	.key_test_mode = FLAG_false,										
-	.console_mode = FLAG_false,									
-	.console_old_mode = FLAG_false,							
-	.wireless_charing = FLAG_false,							
-	.bluetooth = FLAG_false,									
-	.battery = FLAG_false,										
-	.sys_power_switch = FLAG_false,										
-	.ble_loop_switch = FLAG_false,					
-	.start_motorcal_signal = FLAG_false,				
-	.horizontal_vertical_signal = FLAG_false,			
-	.sys_timer_signal = FLAG_false,						
-	.console_mode_data = FLAG_false,						
-	.check_electric = FLAG_false,									
-	.low_power_mode = FLAG_false,									
-	.shutdown_signal = FLAG_false,								
-	.key_dm_mode = FLAG_false,										
-	.dm_mode = FLAG_false,												
-	.lowpower_shutdown = FLAG_false,							
-	.PTZ_update_mode = FLAG_false,
-	.remote_key_type = FLAG_false,
-	.remote_press_type = FLAG_false
+    .update_mode = FLAG_false,
+    .motorcal_mode = FLAG_false,
+    .key_test_mode = FLAG_false,
+    .console_mode = FLAG_false,
+    .console_old_mode = FLAG_false,
+    .wireless_charing = FLAG_false,
+    .bluetooth = FLAG_false,
+    .battery = FLAG_false,
+    .sys_power_switch = FLAG_false,
+    .ble_loop_switch = FLAG_false,
+    .start_motorcal_signal = FLAG_false,
+    .horizontal_vertical_signal = FLAG_false,
+    .sys_timer_signal = FLAG_false,
+    .console_mode_data = FLAG_false,
+    .check_electric = FLAG_false,
+    .low_power_mode = FLAG_false,
+    .shutdown_signal = FLAG_false,
+    .key_dm_mode = FLAG_false,
+    .dm_mode = FLAG_false,
+    .lowpower_shutdown = FLAG_false,
+    .PTZ_update_mode = FLAG_false,
+    .remote_key_type = FLAG_false,
+    .remote_press_type = FLAG_false
 };
 
-System_KeyBoardInfo_st System_KeyBoardInfo = 
+System_KeyBoardInfo_st System_KeyBoardInfo =
 {
     .device_compile_time_ptr = device_compile_time
 };
 
-System_Init_st System_Init = 
+System_Init_st System_Init =
 {
     .Hardware_Init = &Hardware_Init
 };
@@ -76,10 +76,10 @@ static void Hardware_Init(void)
     Bsp_Encoder.Bsp_Encoder_Init(); // 正交编码器初始化
     Bsp_Uart.Bsp_Uart_Init();       // 串口初始化
     System_Info_Init();             // 系统信息初始化
-	
+
     Bsp_BlueTooth.Bsp_BlueTooth_Init();       // 蓝牙相关初始化
     Bsp_Power.Bsp_Power_StartingUp_Handler(); // 开机处理函数(用于没插着USB线时响应开机屏蔽则不会响应)
-	Bsp_Dog.Bsp_Dog_Init();                  // 看门狗初始化
+    Bsp_Dog.Bsp_Dog_Init();                  // 看门狗初始化
 
     System_Status.ble_loop_switch = FLAG_true; // 标志位置1
 }

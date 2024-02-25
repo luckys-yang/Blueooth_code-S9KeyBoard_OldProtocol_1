@@ -2,15 +2,15 @@
  * File: main.c
  * Author: Yang
  * Date: 2024-02-07 10:14:46
- * description: 
+ * description:
  -----------------------------------
 工程采用面向对象思想 模块化编程【Love HCX】
  -----------------------------------
 ****************************************************************************/
-#include "AllHead.h" 
+#include "AllHead.h"
 
 int main(void)
 {
-	System_Init.Hardware_Init();	// 硬件初始化
-	ble_loop();	// 主循环调度
+    System_Init.Hardware_Init();	// 硬件初始化
+    ble_loop();	// 主循环调度
 }

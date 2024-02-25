@@ -2,7 +2,7 @@
  * File: Bsp_Hid.c
  * Author: Yang
  * Date: 2024-02-18 15:53:31
- * description: 
+ * description:
  -----------------------------------
 HID人机接口设备
  -----------------------------------
@@ -14,7 +14,7 @@ static void Bsp_Hid_DeviceSendData(uint8_t report_idx, uint8_t *report_data, uin
 static void Bsp_Hid_VolumeBtn_Control_Photo(void);
 
 /* Public variables==========================================================*/
-Bsp_Hid_st Bsp_Hid = 
+Bsp_Hid_st Bsp_Hid =
 {
     .hid_reported_data = {0},
     .photo_volume_status = FLAG_true,

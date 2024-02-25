@@ -19,18 +19,18 @@ static void vRocker_CenterSlide_Handler(void);
 /* Public function prototypes=========================================================*/
 
 static void Bsp_Adc_Init(void);
-static void Bsp_Adc_Capture_Handler(ADC_HandleTypeDef* hadc);
+static void Bsp_Adc_Capture_Handler(ADC_HandleTypeDef *hadc);
 static uint8_t Startup_Shutdown_Rocker_Check_Handler(void);
 static void Shutdown_Rocker_Check_Handler(void);
 /* Public variables==========================================================*/
 // ADC句柄
 ADC_HandleTypeDef hadc;
 
-Bsp_Adc_st Bsp_Adc = 
+Bsp_Adc_st Bsp_Adc =
 {
     .adc_sampling_count = BATTERY_UPDATE_TIME / ADC_TIME,
     .rocker_voltage = 0,
-    .power_voltage = 0,				
+    .power_voltage = 0,
     .old_power_voltage = 0,
     .rocker_status = rocker_adc_close,
     .Startup_Shutdown_rocker_adc_signal = rocker_adc_start,
@@ -90,11 +90,11 @@ static void Bsp_Adc_Init(void)
     sConfigInjected.InjectedRank = ADC_INJECTED_RANK_2;	// 注入组顺序器2(缓冲寄存器2)
     sConfigInjected.InjectedSamplingTime = ADC_SAMPLETIME_15CYCLES;	// 设置的所选通道的采样时间值 - 采样周期15个CLK
     HAL_ADCEx_InjectedConfigChannel(&hadc, &sConfigInjected);   // 配置ADC的注入组和所选通道
-	
-	if(PIN_SET == _ReadPin_USB_POWER_INPUT()) // 如果有USB插入则使能ADC采集
-	{
-		_SetPin_ADC_POWER_EN();
-	}
+
+    if(PIN_SET == _ReadPin_USB_POWER_INPUT()) // 如果有USB插入则使能ADC采集
+    {
+        _SetPin_ADC_POWER_EN();
+    }
 }
 
 /**
@@ -102,7 +102,7 @@ static void Bsp_Adc_Init(void)
 * @retval   None
 * @brief    ADC采集处理 1. 主要对采样的电池电压值和摇杆电压值进行转换 2. 并且对电池更新事件和摇杆按下事件进行判断
 **/
-static void Bsp_Adc_Capture_Handler(ADC_HandleTypeDef* hadc)
+static void Bsp_Adc_Capture_Handler(ADC_HandleTypeDef *hadc)
 {
     uint16_t adc_value = 0; // ADC值
 
@@ -292,23 +292,23 @@ static void vRocker_CenterSlide_Handler(void)
 **/
 static uint8_t Startup_Shutdown_Rocker_Check_Handler(void)
 {
-	if(PIN_RESET == _ReadPin_USB_POWER_INPUT())  // 没有USB插入才能执行下面
-	{
-		HAL_ADCEx_InjectedStart_IT(&hadc);  // 启动ADC采集
-		while(rocker_adc_start == Bsp_Adc.Startup_Shutdown_rocker_adc_signal);  // 等待上推操作完成
+    if(PIN_RESET == _ReadPin_USB_POWER_INPUT())  // 没有USB插入才能执行下面
+    {
+        HAL_ADCEx_InjectedStart_IT(&hadc);  // 启动ADC采集
+        while(rocker_adc_start == Bsp_Adc.Startup_Shutdown_rocker_adc_signal);  // 等待上推操作完成
 
-		if(rocker_up == Bsp_Adc.Startup_Shutdown_rocker_adc_signal) // 上推
-		{
-			Bsp_Adc.Startup_Shutdown_rocker_adc_signal = rocker_adc_close;
-			System_Status.motorcal_mode = FLAG_true;    // 电机校准模式置位
-			return 0x00;
-		}
-		else
-		{
-			Bsp_Adc.Startup_Shutdown_rocker_adc_signal = rocker_adc_start;
-		}
-	}
-	return 0x01;    
+        if(rocker_up == Bsp_Adc.Startup_Shutdown_rocker_adc_signal) // 上推
+        {
+            Bsp_Adc.Startup_Shutdown_rocker_adc_signal = rocker_adc_close;
+            System_Status.motorcal_mode = FLAG_true;    // 电机校准模式置位
+            return 0x00;
+        }
+        else
+        {
+            Bsp_Adc.Startup_Shutdown_rocker_adc_signal = rocker_adc_start;
+        }
+    }
+    return 0x01;
 }
 
 /**

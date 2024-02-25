@@ -2,7 +2,7 @@
  * File: Bsp_Boot.c
  * Author: Yang
  * Date: 2024-02-04 15:16:58
- * description: 
+ * description:
  -----------------------------------
 固件升级（操作Flash,使用新协议）
     注意：
@@ -62,7 +62,7 @@ A5 5A 05 04 40 29 00 82 00 00 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F 10 11 12 13
 
 /* Private function prototypes===============================================*/
 
-static void Bsp_Boot_StartUpdate(uint8_t *Rec_Buffer,uint32_t Src);
+static void Bsp_Boot_StartUpdate(uint8_t *Rec_Buffer, uint32_t Src);
 static void Bsp_boot_UpdateSuccess_Handler(void);
 static uint8_t Bsp_Boot_UpdateData_WriteFlash(uint8_t *Rec_Buffer);
 
@@ -85,7 +85,7 @@ volatile BootInfo_st *Current_BootInfo = {0};  // 存储当前程序里的固件
 volatile BootInfo_st New_BootInfo = {0};  // 存储最新的固件升级信息结构体变量
 volatile SysInfo_st *SysInfo = {0}; // 存储系统信息 结构体指针变量
 
-Bsp_Boot_st Bsp_Boot = 
+Bsp_Boot_st Bsp_Boot =
 {
     .flash_page_manage_ptr = flash_page_manage,
 
@@ -234,7 +234,7 @@ static uint8_t Bsp_Boot_Cmd_R_check_image_base_Handler(uint8_t *Rec_Buffer)
 * @retval   None
 * @brief    固件升级开始
 **/
-static void Bsp_Boot_StartUpdate(uint8_t *Rec_Buffer,uint32_t Src)
+static void Bsp_Boot_StartUpdate(uint8_t *Rec_Buffer, uint32_t Src)
 {
     Bsp_Boot_InfoGet(&Current_BootInfo);    // 获取当前程序的固件信息
 
@@ -279,7 +279,7 @@ static uint8_t Bsp_Boot_UpdateData_WriteFlash(uint8_t *Rec_Buffer)
     uint32_t addrstart; // 写入的FLASH偏移(指向每一页的首地址)
 
     page_offset = NewProtocol_Package_Info.package_number / (Own_Flash_Page_Size / Ota_PackageData_Size);
-    page_location = NewProtocol_Package_Info.package_number % (Own_Flash_Page_Size / Ota_PackageData_Size);   
+    page_location = NewProtocol_Package_Info.package_number % (Own_Flash_Page_Size / Ota_PackageData_Size);
     addrstart = New_BootInfo.NewFirmware_AddrStart + page_offset * Own_Flash_Page_Size;
 
     if (FLAG_false == Bsp_Boot.flash_page_manage_ptr[page_offset])  // 若该页未被擦除
@@ -305,10 +305,10 @@ static uint8_t Bsp_Boot_UpdateData_WriteFlash(uint8_t *Rec_Buffer)
     /* 对写入数据进行一次crc校验 */
     for (i = 0; i < NewProtocol_Package_Info.data_len; i++)
     {
-        crc += *(uint8_t *)(addrstart + page_location * Ota_PackageData_Size + i); 
+        crc += *(uint8_t *)(addrstart + page_location * Ota_PackageData_Size + i);
     }
     /* 把包编号也加到CRC里 */
-    crc += (uint8_t)(NewProtocol_Package_Info.package_number >> 8); 
+    crc += (uint8_t)(NewProtocol_Package_Info.package_number >> 8);
     crc += (uint8_t)(NewProtocol_Package_Info.package_number);
 
     if (NewProtocol_Package_Info.crc != crc)    // 若CRC不成功
@@ -345,7 +345,7 @@ static void Bsp_boot_UpdateSuccess_Handler(void)
 static void Bsp_Boot_InfoGet(volatile BootInfo_st **boot_info)
 {
     // 获取映像信息地址(也就是把这个地址强制转换为指向这个结构体类型的指针然后赋给这个二级指针)
-    *boot_info = (volatile BootInfo_st *)(OTA_SETTING_INFO_ADDR); 
+    *boot_info = (volatile BootInfo_st *)(OTA_SETTING_INFO_ADDR);
 }
 
 /**
@@ -370,5 +370,5 @@ static void Bsp_Boot_JumpAppRun(uint32_t base)
 static void Bsp_Boot_SysInfoGet(volatile SysInfo_st **info)
 {
     // 获取映像信息地址(也就是把这个地址强制转换为指向这个结构体类型的指针然后赋给这个二级指针)
-    *info = (volatile SysInfo_st *)(SYS_INFO_ADDR); 
+    *info = (volatile SysInfo_st *)(SYS_INFO_ADDR);
 }

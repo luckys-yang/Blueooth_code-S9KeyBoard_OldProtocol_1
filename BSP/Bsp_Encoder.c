@@ -2,7 +2,7 @@
  * File: Bsp_Encoder.c
  * Author: Yang
  * Date: 2024-02-04 15:16:58
- * description: 
+ * description:
  -----------------------------------
 编码器：
     两个编码器IO口都是 TIM_ENCODERMODE_TI1 模式
@@ -24,7 +24,7 @@ static void Bsp_Encoder_Control(void);
 /* Public variables==========================================================*/
 TIM_HandleTypeDef TIM_EncoderHandle;    // 定时器句柄
 
-Bsp_Encoder_st Bsp_Encoder = 
+Bsp_Encoder_st Bsp_Encoder =
 {
     .encoder_count = 0,
 

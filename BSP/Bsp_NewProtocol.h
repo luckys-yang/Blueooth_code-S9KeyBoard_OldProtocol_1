@@ -71,7 +71,7 @@ typedef struct
 
 typedef struct
 {
-    uint8_t (*Bsp_NewProtocol_RxDataParse_Handler)(Uart_QueueParse_st*, uint16_t, uint16_t); // 新协议接收数据解析处理
+    uint8_t (*Bsp_NewProtocol_RxDataParse_Handler)(Uart_QueueParse_st *, uint16_t, uint16_t); // 新协议接收数据解析处理
     void (*Bsp_NewProtocol_SendPackage)(uint8_t, uint16_t, uint16_t, uint8_t *);    // 新协议发送包函数
 } Bsp_NewProtocol_st;
 

@@ -15,7 +15,7 @@ typedef struct
     uint8_t hid_reported_data[1];   // HID上报值
     uint8_t photo_volume_status;    // 拍照时音量状态
 
-    void (*Bsp_Hid_DeviceSendData)(uint8_t, uint8_t*, uint8_t, uint8_t);    // HID设备发送数据
+    void (*Bsp_Hid_DeviceSendData)(uint8_t, uint8_t *, uint8_t, uint8_t);   // HID设备发送数据
     void (*Bsp_Hid_VolumeBtn_Control_Photo)(void); // 音量键控制拍照
 } Bsp_Hid_st;
 
