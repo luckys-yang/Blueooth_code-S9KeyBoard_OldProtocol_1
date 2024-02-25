@@ -141,9 +141,10 @@ static uint8_t Bsp_Power_StartingUp_Handler(void)
     data[5] = 0x00;
     Bsp_OldProtocol.Bsp_OldProtocol_SendPackage(OLD_ADDR_PITCH, Old_Protocol_CMD_ModeData, 6, data);
 
-    if (FLAG_false == System_Status.bluetooth) // 蓝牙状态断开
+    if (FLAG_false == System_Status.bluetooth) // 蓝牙状态断开(不加则有电情况下开机无法连接蓝牙)
     {
-        // 待加
+        // 广播
+        Bsp_BlueTooth.Bsp_BlueTooth_Start_adv();
     }
     return 0x00;
 }

@@ -15,7 +15,7 @@ typedef enum
     LED_2,
     LED_3,
     LED_4,
-    LED_MAX = LED_4 + 1 // 最大led数(用作后面定义数组大小)
+    LED_MAX // 最大led数(用作后面定义数组大小)
 } Bsp_LedNum_st;
 
 /*LED状态枚举*/

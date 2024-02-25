@@ -12,8 +12,10 @@
             目标地址--1Byte
             指令识别码--2Byte CMD_H + CMD_L	
             用户数据长度--2Byte LEN_H + LEN_L
-            用户数据(UD)--NByte	用户数据可以为空
-            校验--2Byte CRC_H + CRC_L 和校验：数据内容部分
+            用户数据(UD)--NByte	用户数据没有则为空
+            校验--2Byte CRC_H + CRC_L 和校验：暂时为数据内容部分
+    【传输】：
+        协议的双字节都是高位在前低位在后，发送的数据内容都是先发高再发低
  -----------------------------------
 ****************************************************************************/
 #include "AllHead.h"
@@ -29,6 +31,7 @@ static void Bsp_NewProtocol_SyntheticData_Handler(uint8_t *Rec_Buffer);
 /* Public function prototypes=========================================================*/
 
 static uint8_t Bsp_NewProtocol_RxDataParse_Handler(Uart_QueueParse_st *deal_param, uint16_t value_index, uint16_t Rec_len);
+static void Bsp_NewProtocol_SendPackage(uint8_t des, uint16_t cmd, uint16_t datalen, uint8_t *data);
 
 /* Public variables==========================================================*/
 // 旧协议包解析信息结构体变量
@@ -36,7 +39,8 @@ NewProtocol_Package_Info_st NewProtocol_Package_Info = {0};
 
 Bsp_NewProtocol_st Bsp_NewProtocol = 
 {
-    .Bsp_NewProtocol_RxDataParse_Handler = &Bsp_NewProtocol_RxDataParse_Handler
+    .Bsp_NewProtocol_RxDataParse_Handler = &Bsp_NewProtocol_RxDataParse_Handler,
+    .Bsp_NewProtocol_SendPackage = &Bsp_NewProtocol_SendPackage
 };
 
 
@@ -107,6 +111,72 @@ static uint8_t Bsp_NewProtocol_RxDataParse_Handler(Uart_QueueParse_st *deal_para
     return 0x00;
 }
 
+/**
+* @param    des -> 【发送目标地址】
+* @param    cmd -> 【发送功能码】
+* @param    datalen -> 发送数据长度
+* @param    *data -> 发送数据地址
+* @retval   None
+* @brief    新协议发送包函数
+**/
+static void Bsp_NewProtocol_SendPackage(uint8_t des, uint16_t cmd, uint16_t datalen, uint8_t *data)
+{
+    uint8_t i;
+    uint16_t crc;   // 存储CRC校验和
+    uint16_t first_data_position_temp;    // 数据内容中第一个数据在包中的位置临时变量
+    uint8_t Rep_Buffer[Send_Buffer_size];    // 发送数据临时缓冲数组
+    uint16_t RepBuffer_Index = 0;   // 发送数据临时缓冲数组索引
+
+    Rep_Buffer[RepBuffer_Index] = NewProtocol_Package_Head_H; // 【高字节包头】
+    RepBuffer_Index++;
+    Rep_Buffer[RepBuffer_Index] = NewProtocol_Package_Head_L; // 【低字节包头】
+    RepBuffer_Index++;
+    Rep_Buffer[RepBuffer_Index] = NEW_OWN_ADDR; // 【源地址】
+    RepBuffer_Index++;
+    Rep_Buffer[RepBuffer_Index] = des; // 【目标地址】
+    RepBuffer_Index++;
+    Rep_Buffer[RepBuffer_Index] = (uint8_t)(cmd >> 8); // 功能码高字节
+    RepBuffer_Index++;
+    Rep_Buffer[RepBuffer_Index] = (uint8_t)(cmd); // 功能码低字节
+    RepBuffer_Index++;
+    Rep_Buffer[RepBuffer_Index] = (uint8_t)(datalen >> 8);  // 【数据长度高字节】
+    RepBuffer_Index++;
+    Rep_Buffer[RepBuffer_Index] = (uint8_t)(datalen);  // 【数据长度低字节】
+    RepBuffer_Index++;
+    first_data_position_temp = RepBuffer_Index;
+
+    // 填充数据
+    for (i = 0; i < datalen; i++)
+    {
+        Rep_Buffer[RepBuffer_Index] = *(data + i);
+        RepBuffer_Index++;
+    }
+    crc = Bsp_NewProtocol_CRC_Calculate(&Rep_Buffer[first_data_position_temp], datalen);    // CRC计算
+    Rep_Buffer[RepBuffer_Index] = (uint8_t)(crc >> 8);  // 【crc高字节】
+    RepBuffer_Index++;
+    Rep_Buffer[RepBuffer_Index] = (uint8_t)crc;  // 【crc高字节】
+    RepBuffer_Index++;
+
+    switch (des)    // 根据目的地发送
+    {
+    case NEW_ADDR_APP:
+    {
+        Bsp_Uart.Bsp_Uart_Ble_SendData(Rep_Buffer, RepBuffer_Index);
+        break;
+    }
+    case NEW_ADDR_PTZ:
+    {
+        Bsp_Uart.Bsp_Uart_SerialPort1_SendData(Rep_Buffer, RepBuffer_Index);
+        break;
+    }
+    case NEW_ADDR_PC:
+    {
+        Bsp_Uart.Bsp_Uart_SerialPort3_SendData(Rep_Buffer, RepBuffer_Index);
+        break;
+    }
+    default: break;
+    }
+}
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ★新协议中间层部分★ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
@@ -208,7 +278,7 @@ static uint8_t Bsp_NewProtocol_GetPackageInfo(uint8_t *Rec_Buffer, uint16_t *Rec
         NewProtocol_Package_Info.package_state = FLAG_false;
         return 0x02;
     }
-     /* 偏移一个字节方便下一个包头存储 */
+     /* 偏移一个字节习惯(可加可不加反正退出函数后会进行清0) */
     Bsp_Uart.Bsp_Uart_RecData_AddPosition(RecBuffer_count, 1);
     return 0x00;
 }
@@ -261,26 +331,33 @@ static void Bsp_NewProtocol_SyntheticData_Handler(uint8_t *Rec_Buffer)
         {
         case R_start_update: // 【请求开始升级】-- 请求
         {
+            Bsp_Boot.Bsp_Boot_Cmd_R_start_update_Handler(Rec_Buffer);
             break;
         }
         case R_update_file: // 【发送升级手柄的128字节】-- 请求
         {
+            Bsp_Boot.Bsp_Boot_Cmd_R_update_file_Handler(Rec_Buffer);
             break;
         }
         case R_all_file_finish: // 【发送升级手柄文件结束】-- 请求
         {
+            // 到这步就无法回头！！！升级失败就变砖！！
+            Bsp_Boot.Bsp_Boot_Cmd_R_all_file_finish_Handler(Rec_Buffer);
             break;
         }
         case R_change_firmware: // 【软件复位/变换协议】-- 请求
         {
+            Bsp_Boot.Bsp_Boot_Cmd_R_change_firmware_Handler(Rec_Buffer);
             break;
         }
         case R_check_keyboard_version: // 【查询按键版固件版本】-- 请求
         {
+            Bsp_Boot.Bsp_Boot_Cmd_R_check_keyboard_version_Handler(Rec_Buffer);
             break;
         }
         case R_check_image_base: // 【查询固件镜像地址】-- 请求
         {
+            Bsp_Boot.Bsp_Boot_Cmd_R_check_image_base_Handler(Rec_Buffer);
             break;
         }
         default:
@@ -325,11 +402,15 @@ static void Bsp_NewProtocol_SyntheticData_Handler(uint8_t *Rec_Buffer)
     {
         if (OldProtocol_Package_Info.head_position + total_len > RX_BUFFER_SIZE)
         {
-            // 蓝牙发送
+            // 若不连续，先发缓冲数组底部数据
+            Bsp_Uart.Bsp_Uart_Ble_SendData(&Rec_Buffer[OldProtocol_Package_Info.head_position], RX_BUFFER_SIZE - OldProtocol_Package_Info.head_position);
+            // 再发缓冲数组顶部数据
+            Bsp_Uart.Bsp_Uart_Ble_SendData(&Rec_Buffer[0], total_len - (RX_BUFFER_SIZE - OldProtocol_Package_Info.head_position));            
         }
         else
         {
-
+            // 若连续，直接发
+            Bsp_Uart.Bsp_Uart_Ble_SendData(&Rec_Buffer[OldProtocol_Package_Info.head_position], OldProtocol_Package_Info.data_len + NewProtocol_Exclude_Data_PackageLen);
         }
         break;
     }

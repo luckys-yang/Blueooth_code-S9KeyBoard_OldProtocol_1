@@ -423,6 +423,7 @@ static void vPress_Handle_PhotoKey(KeyInfo_st *keyInfo)
 {
     if (1 == keyInfo->total_press_count) // 单击
     {
+        /*告诉APP有按钮按下*/
         uint8_t data[2];
         data[0] = 0x04; // 按钮事件->按钮ID-下按钮
         data[1] = 0x01; // 按钮事件->事件类型-1:单击 2:双击
@@ -445,6 +446,7 @@ static void vPress_Handle_PhotoKey(KeyInfo_st *keyInfo)
     }
     else if (3 == keyInfo->total_press_count)   // 三击
     {
+        /*前后摄像头切换*/
         uint8_t data[2];
         data[0] = 0x04;
         data[1] = 0x03;

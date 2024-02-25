@@ -4,7 +4,7 @@
 /*系统软件定时器特殊事件枚举*/
 typedef enum
 {
-    EVENT_Reset = 0,     // 复位事件
+    EVENT_SoftwareReset = 0,     // 软件复位事件
     EVENT_Shutdown,      // 关机事件
     EVENT_CheckElectric, // 检测电量事件
     EVENT_DM_Done,       // DM模式完成事件(盗梦空间1模式)

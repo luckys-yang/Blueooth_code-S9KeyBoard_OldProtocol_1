@@ -22,7 +22,7 @@ typedef enum
 typedef enum
 {
     R_start_update = 0x4027,    // 【请求开始升级】-- 请求
-    S_start_update = 0x04028,   // 【请求开始升级】-- 应答
+    S_start_update = 0x4028,   // 【请求开始升级】-- 应答
 
     R_update_file = 0x4029, // 【发送升级手柄的128字节】-- 请求
     S_update_file = 0x402A, // 【发送升级手柄的128字节】-- 应答
@@ -72,9 +72,11 @@ typedef struct
 typedef struct
 {
     uint8_t (*Bsp_NewProtocol_RxDataParse_Handler)(Uart_QueueParse_st*, uint16_t, uint16_t); // 新协议接收数据解析处理
+    void (*Bsp_NewProtocol_SendPackage)(uint8_t, uint16_t, uint16_t, uint8_t *);    // 新协议发送包函数
 } Bsp_NewProtocol_st;
 
 
 extern Bsp_NewProtocol_st Bsp_NewProtocol;
+extern NewProtocol_Package_Info_st NewProtocol_Package_Info;
 
 #endif

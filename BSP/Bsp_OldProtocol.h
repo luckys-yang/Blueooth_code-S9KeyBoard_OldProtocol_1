@@ -1,6 +1,9 @@
 #ifndef __BSP_OLDPROTOCOL_H
 #define __BSP_OLDPROTOCOL_H
 
+// 信息打印
+#define LOG_I_Bsp_OldProtocol(...) LOG_I(__VA_ARGS__)
+
 /*旧协议相关*/
 #define OldProtocol_DataLen_Offset 5          // 旧协议数据长度所在协议的偏移地址(即表示数据长度Byte在协议的位置)(单位Byte)
 #define OldProtocol_Exclude_Data_PackageLen 7 // 旧协议除数据外包的字节大小(单位Byte)
@@ -20,7 +23,7 @@ typedef enum
 } OldProtocol_Addr_et;
 
 #define OLD_OWN_ADDR (OldProtocol_Addr_et) OLD_ADDR_KEY_BOARD // 当前地址
-#define update_pc_addr 0x00                           //
+#define OLD_UPDATE_PC_ADDR 0x00                           // 旧协议上位机更新电机板时地址会变为0x00
 
 /*旧协议功能码类型(请按照命令大小升序排序)*/
 typedef enum

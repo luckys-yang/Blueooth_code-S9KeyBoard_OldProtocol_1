@@ -16,6 +16,7 @@
             用户数据(UD)--NByte	用户数据可以为空
             校验--1Byte 和校验：从目的地址开始的字节和
             举例数据帧：【确认】55 04 02 00 02 02 53 00 5D
+    【传输是先低再高】
  -----------------------------------
 ****************************************************************************/
 #include "AllHead.h"
@@ -29,6 +30,8 @@ static void Bsp_OldProtocol_ParsedSuccess_Handler(uint8_t *Rec_Buffer);
 static void Bsp_OldProtocol_ChangeModeData_Handler(uint8_t *Rec_Buffer);
 static void Bsp_OldProtocol_AiGestureData_Handler(uint8_t *Rec_Buffer);
 static void Bsp_OldProtocol_SyntheticData_Handler(uint8_t *Rec_Buffer);
+static void Bsp_OldProtocol_CmdVersionCheck_Handler(void);
+static void Bsp_OldProtocol_CmdProtocolSwich_Handler(void);
 
 
 /* Public function prototypes=========================================================*/
@@ -145,6 +148,7 @@ static void Bsp_OldProtocol_SendPackage(uint8_t des, uint8_t cmd, uint8_t datale
     }
     case OLD_ADDR_APP: // 【APP地址】
     {
+        Bsp_Uart.Bsp_Uart_Ble_SendData(Rep_Buffer, RepBuffer_Index);
         break;
     }
     case OLD_ADDR_PITCH: // 【俯仰(云台)地址】
@@ -235,8 +239,8 @@ static uint8_t Bsp_OldProtocol_GetPackageInfo(uint8_t *Rec_Buffer, uint16_t *Rec
         OldProtocol_Package_Info.package_state = FLAG_false; // 解析失败
         return 0x02;
     }
-
-    Bsp_Uart.Bsp_Uart_RecData_AddPosition(RecBuffer_count, 1); // 偏移一个字节方便下一个包头存储
+    /* 偏移一个字节习惯(可加可不加反正退出函数后会进行清0) */
+    Bsp_Uart.Bsp_Uart_RecData_AddPosition(RecBuffer_count, 1);
     return 0x00;
 }
 
@@ -424,7 +428,7 @@ static void Bsp_OldProtocol_SyntheticData_Handler(uint8_t *Rec_Buffer)
         {
         case Old_Protocol_CMD_PtzStatusCheck: // 【云台系统状态查询】
         {
-            // 按键开启DM模式 + DM模式
+            // 按键开启DM模式 + DM模式(把&&改成||)
             if ((FLAG_true == System_Status.key_dm_mode) && (FLAG_true == System_Status.dm_mode))
             {
                 // 判断系统状态里扩展状态中的 应用模式是否为DM模式
@@ -474,10 +478,12 @@ static void Bsp_OldProtocol_SyntheticData_Handler(uint8_t *Rec_Buffer)
         }
         case Old_Protocol_CMD_VersionCheck: // 【版本查询】
         {
+            Bsp_OldProtocol_CmdVersionCheck_Handler();
             break;
         }
         case Old_Protocol_CMD_ProtocolSwich: // 【协议切换】
         {
+            Bsp_OldProtocol_CmdProtocolSwich_Handler();
             break;
         }
         default:
@@ -486,7 +492,7 @@ static void Bsp_OldProtocol_SyntheticData_Handler(uint8_t *Rec_Buffer)
         break;
     }
     case OLD_ADDR_PC: /* 若目的地是别的地址，进行转发 */
-    case update_pc_addr:
+    case OLD_UPDATE_PC_ADDR:
     {
         // 索引是0开始的，所以当==时数组大小是比索引多1
         if (OldProtocol_Package_Info.head_position + total_len > RX_BUFFER_SIZE) // 判断需要转发的数据是否连续
@@ -569,14 +575,69 @@ static void Bsp_OldProtocol_SyntheticData_Handler(uint8_t *Rec_Buffer)
     {
         if (OldProtocol_Package_Info.head_position + total_len > RX_BUFFER_SIZE)
         {
-            // 蓝牙发送
+            // 若不连续，先发缓冲数组底部数据
+            Bsp_Uart.Bsp_Uart_Ble_SendData(&Rec_Buffer[OldProtocol_Package_Info.head_position], RX_BUFFER_SIZE - OldProtocol_Package_Info.head_position);
+            // 再发缓冲数组顶部数据
+            Bsp_Uart.Bsp_Uart_Ble_SendData(&Rec_Buffer[0], total_len - (RX_BUFFER_SIZE - OldProtocol_Package_Info.head_position));
         }
         else
         {
+            // 若连续，直接发
+            Bsp_Uart.Bsp_Uart_Ble_SendData(&Rec_Buffer[OldProtocol_Package_Info.head_position], OldProtocol_Package_Info.data_len + OldProtocol_Exclude_Data_PackageLen);
         }
         break;
     }
     default:
         break;
     }
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ★旧协议解析成功功能控制部分★ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/**
+* @param    None
+* @retval   None
+* @brief    【按键板版本查询】命令 处理函数
+**/
+static void Bsp_OldProtocol_CmdVersionCheck_Handler(void)
+{
+    Bsp_Boot.Bsp_Boot_InfoGet(&Current_BootInfo); // 获取当前程序的固件信息
+
+    /*发送版本信息*/
+    uint8_t data[70];
+    
+    Public.Public_BufferInit(data, 70, 0x00);   // 初始化为0x00
+
+    data[0] = (uint8_t)(Current_BootInfo->Soft_Version);
+    data[1] = (uint8_t)(Current_BootInfo->Soft_Version >> 8);
+
+    data[2] = (uint8_t)(Current_BootInfo->Hard_Version);    
+    data[3] = (uint8_t)(Current_BootInfo->Hard_Version >> 8);
+
+
+    for (uint8_t i = 0; i < 16; i++)
+    {
+        data[38 + i] = System_KeyBoardInfo.device_compile_time_ptr[i];
+    }
+    Bsp_OldProtocol_SendPackage(OLD_ADDR_PC, Old_Protocol_CMD_VersionCheck, 70, data);
+}
+
+/**
+* @param    None
+* @retval   None
+* @brief    【协议切换】命令 处理函数
+**/
+static void Bsp_OldProtocol_CmdProtocolSwich_Handler(void)
+{
+	
+    /*发送【确认】信号*/
+    uint8_t data[2];
+    data[0] = Old_Protocol_CMD_ProtocolSwich;
+    data[1] = 0x00;
+    LOG_I_Bsp_OldProtocol("src: %x", OldProtocol_Package_Info.src);
+    Bsp_OldProtocol_SendPackage(OldProtocol_Package_Info.src, Old_Protocol_CMD_Confirm, 2, data);
+
+    // 串口变量初始化
+    Bsp_Uart.Bsp_Uart_ParameterInit();
+    System_Status.update_mode = FLAG_true;  // 固件更新模式置位
 }

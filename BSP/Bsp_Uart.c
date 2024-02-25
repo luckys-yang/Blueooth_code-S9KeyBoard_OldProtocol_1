@@ -5,8 +5,7 @@
  * description: 
  -----------------------------------
 串口：
-    uart1为云台串口，uart3为上位机串口，串口2为2.4g接收(ai)
-新协议(NewProtoocol)：
+    uart1为云台串口，uart3为上位机串口，串口2为2.4g接收(遥控器+AI)
  -----------------------------------
 ****************************************************************************/
 #include "AllHead.h"
@@ -17,9 +16,11 @@ static void Bsp_Uart_Init(void);
 static void Bsp_Uart_SerialPort1_SendData(uint8_t *data,uint16_t length);
 static void Bsp_Uart_SerialPort2_SendData(uint8_t *data,uint16_t length);
 static void Bsp_Uart_SerialPort3_SendData(uint8_t *data,uint16_t length);
+static void Bsp_Uart_Ble_SendData(uint8_t *data, uint16_t length);
 static void Bsp_Uart_SendFinish_Handler(UART_HandleTypeDef *huart);
 static void Bsp_Uart_RecData_Handler(UART_HandleTypeDef *huart);
 static void Bsp_Uart_RecData_AddPosition(uint16_t *count, uint16_t add_num);
+static void Bsp_Uart_ParameterInit(void);
 /* Public variables==========================================================*/
 uint8_t uart1_rx_buffer[RX_BUFFER_SIZE]; // uart1接收缓存数组
 uint8_t uart1_tx_buffer[TX_BUFFER_SIZE]; // uart1发送缓存数组
@@ -33,40 +34,56 @@ uint8_t uart3_rx_buffer[RX_BUFFER_SIZE]; // uart3接收缓存数组
 uint8_t uart3_tx_buffer[TX_BUFFER_SIZE]; // uart3发送缓存数组
 UART_HandleTypeDef UART3_Config;         // uart3句柄
 
+uint8_t ble_rx_buffer[BLE_SVC_BUFFER_SIZE]; // ble接收缓存数组
+uint8_t ble_tx_buffer[BLE_SVC_BUFFER_SIZE]; // ble发送缓存数组
+
 Bsp_Uart_st Bsp_Uart = 
 {
     .UartInnfo = 
     {
         {
-            .uart_rx_buffer_ptr = uart1_rx_buffer,
-            .uart_tx_buffer_ptr = uart1_tx_buffer,
-            .uart_rx_count = 0,
+            .uart_rx_buffer_ptr = uart1_rx_buffer,  // 只在使能串口中断时用
+            .uart_tx_buffer_ptr = uart1_tx_buffer,  // 发送中断会用
+            .uart_rx_index = 0,
             .uart_tx_index = 0,
             .uart_tx_busy_Flag = FLAG_true,
+            .uart_rx_busy_Flag = FLAG_true
         },  // 串口1
         {
             .uart_rx_buffer_ptr = uart2_rx_buffer,
             .uart_tx_buffer_ptr = uart2_tx_buffer,
-            .uart_rx_count = 0,
+            .uart_rx_index = 0,
             .uart_tx_index = 0,
-            .uart_tx_busy_Flag = FLAG_true,            
+            .uart_tx_busy_Flag = FLAG_true,     
+            .uart_rx_busy_Flag = FLAG_true       
         },  // 串口2
         {
             .uart_rx_buffer_ptr = uart3_rx_buffer,
             .uart_tx_buffer_ptr = uart3_tx_buffer,
-            .uart_rx_count = 0,
+            .uart_rx_index = 0,
             .uart_tx_index = 0,
-            .uart_tx_busy_Flag = FLAG_true,            
-        }   // 串口3       
+            .uart_tx_busy_Flag = FLAG_true, 
+            .uart_rx_busy_Flag = FLAG_true           
+        },   // 串口3
+        {
+            .uart_rx_buffer_ptr = ble_rx_buffer,
+            .uart_tx_buffer_ptr = ble_tx_buffer,
+            .uart_rx_index = 0,
+            .uart_tx_index = 0,
+            .uart_tx_busy_Flag = FLAG_true, 
+            .uart_rx_busy_Flag = FLAG_true   
+        },     // 蓝牙串口      
     },
     
     .Bsp_Uart_Init = &Bsp_Uart_Init,
     .Bsp_Uart_SerialPort1_SendData = &Bsp_Uart_SerialPort1_SendData,
     .Bsp_Uart_SerialPort2_SendData = &Bsp_Uart_SerialPort2_SendData,
     .Bsp_Uart_SerialPort3_SendData = &Bsp_Uart_SerialPort3_SendData,
+    .Bsp_Uart_Ble_SendData = &Bsp_Uart_Ble_SendData,
     .Bsp_Uart_SendFinish_Handler = &Bsp_Uart_SendFinish_Handler,
     .Bsp_Uart_RecData_Handler = &Bsp_Uart_RecData_Handler,
     .Bsp_Uart_RecData_AddPosition = &Bsp_Uart_RecData_AddPosition,
+    .Bsp_Uart_ParameterInit = &Bsp_Uart_ParameterInit
 };
 /*--------------------串口队列解析实例------------------------*/
 // 串口1队列数据解析结构体变量
@@ -90,8 +107,36 @@ Uart_QueueParse_st Uart_QueueParse_Uart3 =
     .deal_queue_index = 0,
     .Rec_Buffer_ptr = uart3_rx_buffer
 };
+// 蓝牙队列数据解析结构体变量
+Uart_QueueParse_st Uart_QueueParse_Ble = 
+{
+    .deal_queue = {0},
+    .deal_queue_index = 0,
+    .Rec_Buffer_ptr = ble_rx_buffer
+};
 
-
+/**
+* @param    None
+* @retval   None
+* @brief    串口参数初始化
+**/
+static void Bsp_Uart_ParameterInit(void)
+{
+	/*
+	注意不能在这里进行数组或者别的耗时初始化否则会导致蓝牙断开！！！
+    不初始化发送索引，否则会导致切换协议触发不会回复确认包
+	*/
+    /*串口信息结构体初始化*/
+    for (uint8_t i = UART_1; i < UART_MAX; i++)
+    {
+        /*另外两个数组指针不初始化了，暂时没问题*/
+        Bsp_Uart.UartInnfo[i].uart_rx_index = 0;
+        Bsp_Uart.UartInnfo[i].uart_tx_busy_Flag = FLAG_true;
+        Bsp_Uart.UartInnfo[i].uart_rx_busy_Flag = FLAG_true;
+    }
+    /*串口队列数据解析结构体初始化*/
+    // 不能初始化Uart_QueueParse_Uart1的否则也会卡死断开连接
+}
 
 /**
  * @param    None
@@ -178,6 +223,19 @@ static void Bsp_Uart_SerialPort3_SendData(uint8_t *data, uint16_t length)
 }
 
 /**
+ * @param    data -> 需要发送数据的地址
+ * @param    length -> 需要发送数据长度
+ * @retval   None
+ * @brief    蓝牙发送数据函数
+ **/
+static void Bsp_Uart_Ble_SendData(uint8_t *data, uint16_t length)
+{
+    LS_ASSERT((length + Bsp_Uart.UartInnfo[UART_BLE].uart_tx_index) <= BLE_SVC_BUFFER_SIZE);            // 使用 LS_ASSERT 宏进行断言检查，确保发送的数据长度不超过 BLE_SVC_BUFFER_SIZE
+    memcpy(&ble_tx_buffer[Bsp_Uart.UartInnfo[UART_BLE].uart_tx_index], (uint8_t *)data, length); // 将 data 指向的数据拷贝到 ble_tx_buffer 中
+    Bsp_Uart.UartInnfo[UART_BLE].uart_tx_index += length;                                          // 更新发送索引，指向下一个可用位置
+}
+
+/**
  * @param    *huart -> 串口对象指针@UART_HandleTypeDef
  * @retval   None
  * @brief    串口发送完成处理函数
@@ -213,20 +271,20 @@ static void Bsp_Uart_RecData_Handler(UART_HandleTypeDef *huart)
             if (FLAG_true == System_Status.update_mode) // 升级模式
             {
                 // 新协议数据解析处理
-                Bsp_NewProtocol.Bsp_NewProtocol_RxDataParse_Handler(&Uart_QueueParse_Uart1, Bsp_Uart.UartInnfo[UART_1].uart_rx_count, single_rec_len);
+                Bsp_NewProtocol.Bsp_NewProtocol_RxDataParse_Handler(&Uart_QueueParse_Uart1, Bsp_Uart.UartInnfo[UART_1].uart_rx_index, single_rec_len);
             }
             else
             {
                 // 旧协议数据解析处理
-                Bsp_OldProtocol.Bsp_OldProtocol_RxDataParse_Handler(&Uart_QueueParse_Uart1, Bsp_Uart.UartInnfo[UART_1].uart_rx_count, single_rec_len);
+                Bsp_OldProtocol.Bsp_OldProtocol_RxDataParse_Handler(&Uart_QueueParse_Uart1, Bsp_Uart.UartInnfo[UART_1].uart_rx_index, single_rec_len);
             }
         }
-        Bsp_Uart.UartInnfo[UART_1].uart_rx_count++; // uart1接收缓存索引加1
-        if (Bsp_Uart.UartInnfo[UART_1].uart_rx_count == Rec_Buffer_size)
+        Bsp_Uart.UartInnfo[UART_1].uart_rx_index++; // uart1接收缓存索引加1
+        if (Bsp_Uart.UartInnfo[UART_1].uart_rx_index == Rec_Buffer_size)
         {
-            Bsp_Uart.UartInnfo[UART_1].uart_rx_count = 0; // 如果到达缓存底部，重新偏移索引到缓存头部
+            Bsp_Uart.UartInnfo[UART_1].uart_rx_index = 0; // 如果到达缓存底部，重新偏移索引到缓存头部
         }
-        HAL_UART_Receive_IT(&UART1_Config, &uart1_rx_buffer[Bsp_Uart.UartInnfo[UART_1].uart_rx_count], single_rec_len); // 再次开启中断接收
+        HAL_UART_Receive_IT(&UART1_Config, &uart1_rx_buffer[Bsp_Uart.UartInnfo[UART_1].uart_rx_index], single_rec_len); // 再次开启中断接收
     }
     else if (huart == &UART2_Config) /*--------------串口2----------------*/
     {
@@ -235,20 +293,21 @@ static void Bsp_Uart_RecData_Handler(UART_HandleTypeDef *huart)
             if (FLAG_true == System_Status.update_mode) // 升级模式
             {
                 // 新协议数据解析处理
-                Bsp_NewProtocol.Bsp_NewProtocol_RxDataParse_Handler(&Uart_QueueParse_Uart2, Bsp_Uart.UartInnfo[UART_1].uart_rx_count, single_rec_len);            
+                Bsp_NewProtocol.Bsp_NewProtocol_RxDataParse_Handler(&Uart_QueueParse_Uart2, Bsp_Uart.UartInnfo[UART_1].uart_rx_index, single_rec_len);            
             }
             else
             {
                 // 旧协议数据解析处理
-                Bsp_OldProtocol.Bsp_OldProtocol_RxDataParse_Handler(&Uart_QueueParse_Uart2, Bsp_Uart.UartInnfo[UART_2].uart_rx_count, single_rec_len);
+                Bsp_OldProtocol.Bsp_OldProtocol_RxDataParse_Handler(&Uart_QueueParse_Uart2, Bsp_Uart.UartInnfo[UART_2].uart_rx_index, single_rec_len);
             }
         }
-        Bsp_Uart.UartInnfo[UART_2].uart_rx_count++; // uart2接收缓存索引加1
-        if (Bsp_Uart.UartInnfo[UART_2].uart_rx_count == Rec_Buffer_size)
+        Bsp_Uart.UartInnfo[UART_2].uart_rx_index++; // uart2接收缓存索引加1
+
+        if (Bsp_Uart.UartInnfo[UART_2].uart_rx_index == Rec_Buffer_size)
         {
-            Bsp_Uart.UartInnfo[UART_2].uart_rx_count = 0; // 如果到达缓存底部，重新偏移索引到缓存头部
+            Bsp_Uart.UartInnfo[UART_2].uart_rx_index = 0; // 如果到达缓存底部，重新偏移索引到缓存头部
         }
-        HAL_UART_Receive_IT(&UART2_Config, &uart2_rx_buffer[Bsp_Uart.UartInnfo[UART_2].uart_rx_count], single_rec_len); // 再次开启中断接收
+        HAL_UART_Receive_IT(&UART2_Config, &uart2_rx_buffer[Bsp_Uart.UartInnfo[UART_2].uart_rx_index], single_rec_len); // 再次开启中断接收
     }
     else if (huart == &UART3_Config) /*--------------串口3----------------*/
     {
@@ -257,20 +316,20 @@ static void Bsp_Uart_RecData_Handler(UART_HandleTypeDef *huart)
             if (FLAG_true == System_Status.update_mode) // 升级模式
             {
                 // 新协议数据解析处理
-                Bsp_NewProtocol.Bsp_NewProtocol_RxDataParse_Handler(&Uart_QueueParse_Uart3, Bsp_Uart.UartInnfo[UART_1].uart_rx_count, single_rec_len);                
+                Bsp_NewProtocol.Bsp_NewProtocol_RxDataParse_Handler(&Uart_QueueParse_Uart3, Bsp_Uart.UartInnfo[UART_1].uart_rx_index, single_rec_len);                
             }
             else
             {
                 // 旧协议数据解析处理
-                Bsp_OldProtocol.Bsp_OldProtocol_RxDataParse_Handler(&Uart_QueueParse_Uart3, Bsp_Uart.UartInnfo[UART_3].uart_rx_count, single_rec_len);
+                Bsp_OldProtocol.Bsp_OldProtocol_RxDataParse_Handler(&Uart_QueueParse_Uart3, Bsp_Uart.UartInnfo[UART_3].uart_rx_index, single_rec_len);
             }
         }
-        Bsp_Uart.UartInnfo[UART_3].uart_rx_count++; // uart3接收缓存索引加1
-        if (Bsp_Uart.UartInnfo[UART_3].uart_rx_count == Rec_Buffer_size)
+        Bsp_Uart.UartInnfo[UART_3].uart_rx_index++; // uart3接收缓存索引加1
+        if (Bsp_Uart.UartInnfo[UART_3].uart_rx_index == Rec_Buffer_size)
         {
-            Bsp_Uart.UartInnfo[UART_3].uart_rx_count = 0; // 如果到达缓存底部，重新偏移索引到缓存头部
+            Bsp_Uart.UartInnfo[UART_3].uart_rx_index = 0; // 如果到达缓存底部，重新偏移索引到缓存头部
         }
-        HAL_UART_Receive_IT(&UART3_Config, &uart3_rx_buffer[Bsp_Uart.UartInnfo[UART_3].uart_rx_count], single_rec_len); // 再次开启中断接收
+        HAL_UART_Receive_IT(&UART3_Config, &uart3_rx_buffer[Bsp_Uart.UartInnfo[UART_3].uart_rx_index], single_rec_len); // 再次开启中断接收
     }
 }
 

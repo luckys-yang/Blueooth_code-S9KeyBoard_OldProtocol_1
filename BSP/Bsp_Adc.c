@@ -318,5 +318,18 @@ static uint8_t Startup_Shutdown_Rocker_Check_Handler(void)
 **/
 static void Shutdown_Rocker_Check_Handler(void)
 {
-	Bsp_Adc.Startup_Shutdown_rocker_adc_signal = rocker_adc_close;
+    Bsp_Adc.Startup_Shutdown_rocker_adc_signal = rocker_adc_close;
+
+    Bsp_BlueTooth.ble_adv_info_Instance->ble_name_count = *(uint8_t *)(SYS_INFO_ADDR);
+    Bsp_BlueTooth.ble_adv_info_Instance->ble_name_count++;
+
+    if (Bsp_BlueTooth.ble_adv_info_Instance->ble_name_count >= BLE_DEVICE_NAME_MAX_LEN)
+    {
+        Bsp_BlueTooth.ble_adv_info_Instance->ble_name_count = 0;
+    }
+
+    hal_flash_page_erase(SYS_INFO_ADDR);
+    hal_flash_quad_page_program(SYS_INFO_ADDR, &Bsp_BlueTooth.ble_adv_info_Instance->ble_name_count, 1);
+    Bsp_BlueTooth.ble_adv_info_Instance->ble_mac_addr_ptr[5]++;
+    dev_manager_set_mac_addr(Bsp_BlueTooth.ble_adv_info_Instance->ble_mac_addr_ptr);   // 重新设置mac地址
 }

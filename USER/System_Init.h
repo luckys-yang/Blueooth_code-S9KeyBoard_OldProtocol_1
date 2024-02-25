@@ -42,7 +42,7 @@
 #define GPIO_PIN_UART3_RX PB01 // 串口3RX引脚
 
 /* -----------------响应时间配置---------------- */
-#define SYS_TIME 1                     // 切换固件后系统复位时间(ms) 关机后掉电时间(ms) (建议50ms以上，否则切换成功的回复包未发出系统就复位了)
+#define SYS_TIME 1                     // 系统定时时间(ms)
 #define KEY_DETECTION_TIME 50          // 按键查询时间(ms)
 #define PHOTO_TIME 200                 // 拍照键相邻两次按键检测时间间隔(ms)
 #define PHOTO_LONGPRESS_TIME 1000      // 拍照键长按时间(ms)
@@ -62,6 +62,7 @@
 #define LOW_POWER_SHUTDOWN_TIME 5000              // 低电量多久关机(ms)
 #define CHECK_LOW_POWER_TIME 1000                 // 低电量检查时间(ms)
 #define LOW_POWER_PTZ_MODE_TIME 500                 // 低电量下模式的LED闪烁时间(ms)
+#define SOFTWARE_RESET_TIME 1000    // 切换固件后系统复位时间(ms) (建议1s，否则切换成功的回复包未发出系统就复位了)
 
 /* -----------------电池电量对应电压配置(对应电压*1000)----------------- */
 #define four_electric 2780     // 四格电对应电压(2.78V*1000)
@@ -145,7 +146,7 @@ typedef struct
 {
     uint8_t update_mode;                // 升级模式
     uint8_t motorcal_mode;              // 电机校准模式
-    uint8_t key_test_mode;                  // 按键测试模式
+    uint8_t key_test_mode;              // 按键测试模式
     uint8_t console_mode;               // 云台现在所处模式
     uint8_t console_old_mode;           // 云台之前所处模式,为了在退出DM模式和GO模式时恢复之前的模式
     uint8_t wireless_charing;           // 云台无线充状态
@@ -168,6 +169,12 @@ typedef struct
     uint8_t remote_press_type;
 } System_Status_st;
 
+/*按键板信息存储*/
+typedef struct
+{
+    uint8_t *device_compile_time_ptr;   // 存储按键板编译时间数组指针
+} System_KeyBoardInfo_st;
+
 typedef struct
 {
     void (*Hardware_Init)(void); // 硬件初始化
@@ -175,5 +182,5 @@ typedef struct
 
 extern System_Init_st System_Init;
 extern System_Status_st System_Status;
-
+extern System_KeyBoardInfo_st System_KeyBoardInfo;
 #endif

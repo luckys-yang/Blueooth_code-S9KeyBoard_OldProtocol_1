@@ -43,7 +43,10 @@ static void Bsp_Hid_DeviceSendData(uint8_t report_idx, uint8_t *report_data, uin
 **/
 static void Bsp_Hid_VolumeBtn_Control_Photo(void)
 {
-    /*通过来回按下音量+和音量-来控制拍照键，模拟人按下拍照键，目的是为了保持音量不变*/
+    /*
+    通过来回按下音量+和音量-来控制拍照键，模拟人按下拍照键，目的是为了保持音量不变
+    就是如果手机处于拍照下则按下则拍照, 如果是视频录制下则按下则开始录屏/停止录屏
+    */
 
     if (FLAG_true == Bsp_Hid.photo_volume_status) // 拍照时音量状态
     {

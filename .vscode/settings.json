@@ -14,6 +14,10 @@
         "ls_hal_iwdg.h": "c",
         "ls_ble.h": "c",
         "builtin_timer.h": "c",
-        "cmsis_armcc.h": "c"
+        "cmsis_armcc.h": "c",
+        "bootconfig.h": "c",
+        "rssi_smoothing_algo.h": "c",
+        "stdbool.h": "c",
+        "co_math.h": "c"
     }
 }

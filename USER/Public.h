@@ -16,6 +16,7 @@ typedef enum
 typedef struct
 {
     void (*Public_Delay_Ms)(uint16_t);  // ms延时
+    void (*Public_BufferInit)(uint8_t *, uint16_t, uint8_t);    // 字符串/数组初始化为指定值
 } Public_st;
 
 extern Public_st Public;

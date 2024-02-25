@@ -24,6 +24,7 @@ static void vSysTimerEvent_DM_Done_Handler(void);
 static void vSysTimerEvent_SendCheckPtzStatusPackage_Handler(void);
 static void vSysTimerEvent_LowPowerShutdown_Handler(void);
 static void vSysTimerEvent_LowPowerMode_Handler(void);
+static void vSysTimerEvent_SoftwareReset_Handler(void);
 /* Public variables==========================================================*/
 struct builtin_timer *sys_timer_inst = NULL;    // 系统软件定时器句柄
 // 模块超时时间结构体
@@ -67,19 +68,20 @@ static void Bsp_SysTimer_Init(void)
  **/
 static void Bsp_SysTimer_CallBack(void *arg)
 {
-    vSysTimerEvent_ShutdownStep_Handler();            // 定时器事件--关机步骤事件处理
+    vSysTimerEvent_SoftwareReset_Handler();       // 定时器事件--软件复位处理
+    vSysTimerEvent_ShutdownStep_Handler();        // 定时器事件--关机步骤事件处理
     vSysTimerEvent_CheckElectric_Handler();       // 定时器事件--电量检测事件处理
     vSysTimerEvent_DM_Done_Handler();             // 定时器事件--DM模式完成事件处理
     vSysTimerEvent_SerialPort_SendData_Handler(); // 定时器事件--检测串口发送缓冲区是否有数据有则发送事件处理
 
-    vSysTimerEvent_AdcEnabledCheck_Handler();            // 定时器事件--ADC是否需要打开检测事件处理
-    vSysTimerEvent_SendCheckPtzStatusPackage_Handler();  // 定时器事件--发送查询云台状态包事件处理
-    vSysTimerEvent_LowPowerMode_Handler();               // 定时器事件--低电量模式处理
-    vSysTimerEvent_LowPowerShutdown_Handler();           // 定时器事件--低电量关机信号处理
+    vSysTimerEvent_AdcEnabledCheck_Handler();           // 定时器事件--ADC是否需要打开检测事件处理
+    vSysTimerEvent_SendCheckPtzStatusPackage_Handler(); // 定时器事件--发送查询云台状态包事件处理
+    vSysTimerEvent_LowPowerMode_Handler();              // 定时器事件--低电量模式处理
+    vSysTimerEvent_LowPowerShutdown_Handler();          // 定时器事件--低电量关机信号处理
 
     Bsp_Led.Bsp_Led_StatusUpdate_Handler();              // LED状态刷新
     Bsp_Dog.Bsp_Dog_FeedDog();                           // 喂狗
-    builtin_timer_start(sys_timer_inst, SYS_TIME, NULL); // 启动定时器
+    builtin_timer_start(sys_timer_inst, SYS_TIME, NULL); // 重新启动定时器
 }
 
 /**
@@ -129,14 +131,9 @@ static void vSysTimerEvent_ShutdownStep_Handler(void)
                 {
                     _ResetPin_ADC_POWER_EN(); // ADC采集失能
                 }
-
-                Public.Public_Delay_Ms(100);                                                    // 等待芯片掉电
+				
+                Public.Public_Delay_Ms(100); 									  // 等待芯片掉电
                 _clear_bit_value(System_Status.sys_timer_signal, EVENT_Shutdown); // 清除关机事件位
-
-                if (rocker_down == Bsp_Adc.Startup_Shutdown_rocker_adc_signal) // 关机时摇杆下推
-                {
-                    Bsp_Adc.Shutdown_Rocker_Check_Handler();
-                }
                 break;
             }
             default:
@@ -228,6 +225,11 @@ static void vSysTimerEvent_SerialPort_SendData_Handler(void)
         Bsp_Uart.UartInnfo[UART_3].uart_tx_busy_Flag = FLAG_false;                                                   // 改变串口状态为发送忙
         HAL_UART_Transmit_IT(&UART3_Config, Bsp_Uart.UartInnfo[UART_3].uart_tx_buffer_ptr, Bsp_Uart.UartInnfo[UART_3].uart_tx_index); // 开启串口发送
         Bsp_Uart.UartInnfo[UART_3].uart_tx_index = 0;
+    }
+
+    if (Bsp_BlueTooth.ble_connect_id != BLE_DISCONNECTED_ID)   // 蓝牙发送通知
+    {
+        Bsp_BlueTooth.Bsp_BlueTooth_Send_Notification();
     }
 }
 
@@ -338,5 +340,30 @@ static void vSysTimerEvent_LowPowerMode_Handler(void)
     else
     {
         Bsp_SysTimerCount.check_low_power_count++;
+    }
+}
+
+/**
+* @param    None
+* @retval   None
+* @brief    定时器事件--软件复位处理
+**/
+static void vSysTimerEvent_SoftwareReset_Handler(void)
+{
+    if (1 == _get_bit_value(System_Status.sys_timer_signal, EVENT_SoftwareReset))
+    {
+        if (Bsp_SysTimerCount.reset_count * SYS_TIME >= SOFTWARE_RESET_TIME)
+        {
+            Bsp_SysTimerCount.reset_count = 0;
+            Bsp_Boot.Bsp_Boot_InfoGet(&Current_BootInfo);    // 获取映像信息页
+            ota_boot_addr_set(Current_BootInfo->Image_Base); // 设置当前映像地址
+            platform_reset(0);                               // 芯片复位
+
+            _clear_bit_value(System_Status.sys_timer_signal, EVENT_SoftwareReset);
+        }
+        else
+        {
+            Bsp_SysTimerCount.reset_count++;
+        }
     }
 }

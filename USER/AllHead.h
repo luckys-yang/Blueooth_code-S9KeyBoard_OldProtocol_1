@@ -1,7 +1,7 @@
 #ifndef __ALLHEAD_H
 #define __ALLHEAD_H
 
-/*蓝牙协议栈相关*/
+/*蓝牙库相关*/
 // 平台头文件
 #include "platform.h"
 // JLinK调试需要
@@ -10,13 +10,15 @@
 #include "log.h"
 // 休眠头文件
 #include "sleep.h"
-#include "ls_ble.h"
 // GPIO
 #include "ls_soc_gpio.h"
 // 软件定时器
 #include "builtin_timer.h"
-// 蓝牙服务
+// 包含蓝牙协议栈相关头文件
+#include "ls_ble.h"
+// 包含HID服务配置文件
 #include "prf_hid.h"
+// 包含电池服务配置文件
 #include "prf_bass.h"
 // ADC
 #include "ls_hal_adc.h"
@@ -35,6 +37,13 @@
 #include "ls_hal_iwdg.h" 
 // HID
 #include "prf_hid.h"
+// 升级相关
+#include "ota_settings.h"
+// 接收信号的强度指示
+#include "rssi_smoothing_algo.h"
+// 文件系统
+#include "tinyfs.h"
+#include "co_math.h"
 
 /*C库相关*/
 #include <stdint.h>
@@ -43,6 +52,7 @@
 #include <stdlib.h>
 
 /*硬件外设相关*/
+#include "BootConfig.h"
 #include "Bsp_SysTimer.h"
 #include "Bsp_Led.h"
 #include "Bsp_Adc.h"
@@ -62,4 +72,5 @@
 #include "System_Init.h"
 #include "Public.h"
 #include "CallBack.h"
+
 #endif

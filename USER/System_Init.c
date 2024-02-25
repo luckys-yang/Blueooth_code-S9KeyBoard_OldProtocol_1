@@ -1,5 +1,5 @@
 /***************************************************************************
- * File: xxx.c
+ * File: System_Init.c
  * Author: Yang
  * Date: 2024-02-04 14:56:54
  * description: 
@@ -8,6 +8,14 @@ None
  -----------------------------------
 ****************************************************************************/
 #include "AllHead.h"
+
+/* Private variables=========================================================*/
+// 存储按键板编译时间数组(年 月 日 时 分 秒 秒)
+static uint8_t device_compile_time[16] = "20240220195151";
+
+/* Private function prototypes===============================================*/
+
+static void System_Info_Init(void);
 
 /* Public function prototypes=========================================================*/
 
@@ -41,6 +49,10 @@ System_Status_st System_Status =
 	.remote_press_type = FLAG_false
 };
 
+System_KeyBoardInfo_st System_KeyBoardInfo = 
+{
+    .device_compile_time_ptr = device_compile_time
+};
 
 System_Init_st System_Init = 
 {
@@ -63,10 +75,38 @@ static void Hardware_Init(void)
     Bsp_Adc.Bsp_Adc_Init();         // ADC初始化
     Bsp_Encoder.Bsp_Encoder_Init(); // 正交编码器初始化
     Bsp_Uart.Bsp_Uart_Init();       // 串口初始化
+    System_Info_Init();             // 系统信息初始化
 	
     Bsp_BlueTooth.Bsp_BlueTooth_Init();       // 蓝牙相关初始化
     Bsp_Power.Bsp_Power_StartingUp_Handler(); // 开机处理函数(用于没插着USB线时响应开机屏蔽则不会响应)
 	Bsp_Dog.Bsp_Dog_Init();                  // 看门狗初始化
 
     System_Status.ble_loop_switch = FLAG_true; // 标志位置1
+}
+
+/**
+* @param    None
+* @retval   None
+* @brief    系统信息初始化
+**/
+static void System_Info_Init(void)
+{
+    Bsp_Boot.Bsp_Boot_SysInfoGet(&SysInfo); // 获取系统信息
+
+    Bsp_BlueTooth.ble_adv_info_Instance->ble_name_count = (uint8_t)SysInfo->ble_name_count; // 获取名称计数
+
+    if (Bsp_BlueTooth.ble_adv_info_Instance->ble_name_count >= BLE_DEVICE_NAME_MAX_LEN) // 限制范围
+    {
+        Bsp_BlueTooth.ble_adv_info_Instance->ble_name_count = 0;
+    }
+
+    if (Bsp_BlueTooth.ble_adv_info_Instance->ble_name_count != 0)
+    {
+        Bsp_BlueTooth.ble_adv_info_Instance->ble_adv_name_ptr[sizeof(BLE_NAME) - 1] = '(';  // 把原有的字符串的\0覆盖
+        Bsp_BlueTooth.ble_adv_info_Instance->ble_adv_name_ptr[sizeof(BLE_NAME)] = '0';
+        Bsp_BlueTooth.ble_adv_info_Instance->ble_adv_name_ptr[sizeof(BLE_NAME) + 1] = ')';
+        Bsp_BlueTooth.ble_adv_info_Instance->ble_adv_name_ptr[sizeof(BLE_NAME)] += Bsp_BlueTooth.ble_adv_info_Instance->ble_name_count; // 名称计数值
+        // 数组最后一位是保存\0的...
+    }
+
 }
